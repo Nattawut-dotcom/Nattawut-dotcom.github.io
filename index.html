@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nattawut Khongdeepiean — Portfolio</title>
+<meta name="description" content="ณัฐวุฒิ คงดีเพียร (สตางค์) — ครู นักสร้างสื่อ และนักพัฒนาเครื่องมือเพื่อห้องเรียน | Teacher, media maker, EdTech builder">
+<meta property="og:title" content="Nattawut Khongdeepiean — Portfolio">
+<meta property="og:description" content="ครูที่สร้างสื่อ และสร้างเครื่องมือให้ห้องเรียน — A teacher who makes media and builds tools for the classroom.">
+<meta property="og:image" content="assets/profile/portrait-studio.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%236ee7ff'/%3E%3Cstop offset='1' stop-color='%23ff9ac8'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='18' fill='url(%23g)'/%3E%3Ctext x='32' y='42' font-family='Inter,Arial' font-weight='800' font-size='30' text-anchor='middle' fill='%230b0c14'%3EN%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#07080f; --ink:#f4f6ff; --muted:rgba(244,246,255,.64); --dim:rgba(244,246,255,.42);
+    --glass:rgba(255,255,255,.07); --glass2:rgba(255,255,255,.11); --stroke:rgba(255,255,255,.18);
+    --a:#6ee7ff; --b:#b58cff; --c:#ff9ac8; --d:#7cf5b4; --e:#ffd36e;
+    --radius:28px; --font:"Inter","IBM Plex Sans Thai",system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:var(--font);-webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.55}
+  body[lang-mode="th"] .en{display:none!important}
+  body[lang-mode="en"] .th{display:none!important}
+  img{display:block;max-width:100%}
+  a{color:inherit}
+  ::selection{background:var(--b);color:#0b0c14}
+
+  /* ---------- background ---------- */
+  .blobs{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;filter:blur(70px) saturate(140%)}
+  .blob{position:absolute;border-radius:50%;opacity:.5;mix-blend-mode:screen;will-change:transform}
+  .blob.a{width:60vmax;height:60vmax;background:radial-gradient(circle,var(--a),transparent 65%);top:-20vmax;left:-15vmax;animation:drift 22s ease-in-out infinite alternate}
+  .blob.b{width:55vmax;height:55vmax;background:radial-gradient(circle,var(--b),transparent 65%);top:20vh;right:-20vmax;animation:drift 27s ease-in-out infinite alternate-reverse}
+  .blob.c{width:45vmax;height:45vmax;background:radial-gradient(circle,var(--c),transparent 65%);bottom:-15vmax;left:20vw;animation:drift 31s ease-in-out infinite alternate}
+  @keyframes drift{from{transform:translate(0,0) scale(1)}to{transform:translate(8vw,-6vh) scale(1.15)}}
+  .grain{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.06;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+  #progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--a),var(--b),var(--c));z-index:60;transition:width .1s linear}
+
+  /* ---------- glass ---------- */
+  .glass{position:relative;background:var(--glass);-webkit-backdrop-filter:blur(24px) saturate(160%);backdrop-filter:blur(24px) saturate(160%);border:1px solid var(--stroke);border-radius:var(--radius);box-shadow:0 20px 60px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.35),inset 0 -1px 0 rgba(255,255,255,.06)}
+  .glass::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:linear-gradient(115deg,rgba(255,255,255,.26) 0%,rgba(255,255,255,.05) 22%,transparent 45%,transparent 70%,rgba(255,255,255,.10) 100%);mask:linear-gradient(#000,transparent 70%);-webkit-mask:linear-gradient(#000,transparent 70%)}
+  .glass::after{content:"";position:absolute;inset:-1px;border-radius:inherit;pointer-events:none;background:conic-gradient(from var(--ang,200deg),transparent,rgba(255,255,255,.35),transparent 30%,transparent 60%,rgba(255,255,255,.2),transparent);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;padding:1px;opacity:.9}
+  .glass > *{position:relative;z-index:1}
+
+  /* ---------- nav ---------- */
+  nav{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:50;display:flex;align-items:center;gap:4px;padding:8px 10px 8px 18px;border-radius:999px;max-width:calc(100vw - 24px)}
+  nav .brand{font-weight:800;letter-spacing:-.03em;margin-right:8px;font-size:15px;text-decoration:none;white-space:nowrap}
+  nav .brand span{background:linear-gradient(100deg,var(--a),var(--c));-webkit-background-clip:text;background-clip:text;color:transparent}
+  nav .links{display:flex}
+  nav .links a{color:var(--muted);text-decoration:none;font-size:14px;padding:8px 12px;border-radius:999px;transition:.25s;white-space:nowrap}
+  nav .links a:hover{color:var(--ink);background:rgba(255,255,255,.08)}
+  .lang{display:flex;background:rgba(255,255,255,.08);border-radius:999px;padding:3px;margin-left:6px;border:1px solid var(--stroke)}
+  .lang button{border:0;background:transparent;color:var(--muted);font:inherit;font-size:13px;font-weight:600;padding:6px 12px;border-radius:999px;cursor:pointer;transition:.25s}
+  .lang button.on{background:var(--ink);color:#0b0c14}
+  nav .cv{margin-left:6px;font-size:13px;font-weight:600;padding:8px 14px;border-radius:999px;background:var(--ink);color:#0b0c14;text-decoration:none;white-space:nowrap}
+  @media(max-width:860px){nav .links,nav .cv{display:none}}
+
+  /* chapter dots */
+  .dots{position:fixed;right:18px;top:50%;transform:translateY(-50%);z-index:40;display:flex;flex-direction:column;gap:10px}
+  .dots a{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.25);border:1px solid var(--stroke);transition:.3s;position:relative}
+  .dots a.on{background:var(--ink);transform:scale(1.35)}
+  .dots a span{position:absolute;right:20px;top:50%;transform:translateY(-50%);font-size:12px;color:var(--muted);white-space:nowrap;opacity:0;transition:.2s;pointer-events:none}
+  .dots a:hover span{opacity:1}
+  @media(max-width:900px){.dots{display:none}}
+
+  /* ---------- layout ---------- */
+  main{position:relative;z-index:2}
+  section{padding:110px 24px;max-width:1180px;margin:0 auto}
+  .eyebrow{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:14px}
+  h1,h2,h3{letter-spacing:-.03em;line-height:1.08}
+  h2{font-size:clamp(32px,4.6vw,56px);font-weight:800;margin-bottom:14px}
+  .lead{color:var(--muted);font-size:clamp(16px,1.35vw,19px);max-width:680px}
+  .grad{background:linear-gradient(100deg,var(--a),var(--b) 50%,var(--c));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:999px;text-decoration:none;font-weight:600;font-size:15px;transition:transform .25s,box-shadow .25s;cursor:pointer;border:0;font-family:inherit}
+  .btn:hover{transform:translateY(-2px)}
+  .btn.primary{background:var(--ink);color:#0b0c14;box-shadow:0 10px 30px rgba(255,255,255,.18)}
+  .btn.ghost{color:var(--ink)}
+  .tags{display:flex;gap:6px;flex-wrap:wrap}
+  .tags span{font-size:12px;padding:5px 11px;border-radius:999px;background:rgba(255,255,255,.09);border:1px solid var(--stroke);color:var(--ink);white-space:nowrap}
+
+  /* ---------- hero ---------- */
+  #hero{min-height:100vh;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:40px;padding-top:130px}
+  #hero h1{font-size:clamp(38px,5.5vw,76px);font-weight:800}
+  #hero .who{margin:22px 0 10px;font-size:clamp(17px,1.5vw,21px);font-weight:600}
+  #hero .who small{display:block;color:var(--muted);font-weight:400;font-size:.85em;margin-top:4px}
+  .chips{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 30px}
+  .chip{padding:9px 16px;border-radius:999px;font-size:14px;color:var(--ink)}
+  .cta{display:flex;gap:12px;flex-wrap:wrap}
+  #stage{position:relative;height:min(78vh,680px);perspective:1200px}
+  #three{position:absolute;inset:0;width:100%;height:100%}
+  .portrait-card{position:absolute;left:50%;top:50%;width:min(62%,320px);aspect-ratio:4/5;transform:translate(-50%,-50%);border-radius:34px;overflow:hidden;transform-style:preserve-3d;box-shadow:0 40px 90px rgba(0,0,0,.55),0 0 0 1px var(--stroke);will-change:transform}
+  .portrait-card img{width:100%;height:100%;object-fit:cover}
+  .portrait-card::after{content:"";position:absolute;inset:0;background:linear-gradient(160deg,rgba(255,255,255,.25),transparent 35%,transparent 70%,rgba(255,255,255,.08));pointer-events:none}
+  .float-card{position:absolute;padding:12px 16px;font-size:13px;transform-style:preserve-3d;will-change:transform;z-index:3}
+  .float-card b{display:block;font-size:24px;letter-spacing:-.03em;line-height:1.1}
+  .float-card.f1{top:6%;left:0}
+  .float-card.f2{bottom:10%;left:4%}
+  .float-card.f3{top:30%;right:0}
+  .float-card.f4{bottom:26%;right:2%}
+  @media(max-width:900px){#hero{grid-template-columns:1fr;padding-top:110px}#stage{height:62vh;min-height:420px}.float-card b{font-size:20px}}
+
+  /* ---------- highlights ---------- */
+  .hl{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px;perspective:1400px}
+  .hl a{text-decoration:none;color:inherit}
+  .hl .card{padding:0;overflow:hidden;min-height:400px;display:flex;flex-direction:column;transform-style:preserve-3d;transition:transform .12s ease-out}
+  .hl .card img{width:100%;aspect-ratio:16/10;object-fit:cover;opacity:.9}
+  .hl .card .body{padding:22px 24px 26px;display:flex;flex-direction:column;gap:8px;flex:1}
+  .hl .card .tag{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700}
+  .hl .card h3{font-size:22px}
+  .hl .card p{color:var(--muted);font-size:14.5px}
+  .hl .card .more{margin-top:auto;font-size:13px;font-weight:600;color:var(--a)}
+  @media(max-width:900px){.hl{grid-template-columns:1fr}}
+
+  /* ---------- journey / chapters ---------- */
+  #journey{max-width:1180px}
+  .chapter{display:grid;grid-template-columns:300px 1fr;gap:36px;padding:70px 0;border-top:1px solid rgba(255,255,255,.08)}
+  .chapter:first-of-type{border-top:0}
+  .ch-side{position:sticky;top:110px;align-self:start}
+  .badge{display:inline-flex;align-items:center;gap:10px;padding:8px 14px 8px 10px;border-radius:999px;font-size:13px;font-weight:700;margin-bottom:16px}
+  .badge i{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-style:normal;font-size:12px;background:linear-gradient(135deg,var(--a),var(--b));color:#0b0c14}
+  .ch-side h3{font-size:clamp(26px,2.6vw,34px);font-weight:800;margin-bottom:12px}
+  .ch-side p{color:var(--muted);font-size:15px}
+  .ch-side .nums{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}
+  .ch-side .num{padding:12px 14px;border-radius:18px}
+  .ch-side .num b{display:block;font-size:22px;letter-spacing:-.03em}
+  .ch-side .num span{font-size:12px;color:var(--muted)}
+  .ch-body{display:grid;gap:18px;perspective:1400px}
+  .proj{padding:24px;transform-style:preserve-3d;transition:transform .12s ease-out}
+  .proj.big{padding:0;overflow:hidden}
+  .proj.big .media{position:relative;background:#000;border-radius:var(--radius) var(--radius) 0 0;overflow:hidden}
+  .proj.big .media img,.proj.big .media video{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .proj.big .media video{background:#000}
+  .proj.big .text{padding:24px}
+  .ptag{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:8px}
+  .ptag em{font-style:normal;color:var(--e)}
+  .proj h4{font-size:22px;letter-spacing:-.02em;margin-bottom:8px;line-height:1.2}
+  .proj p{color:var(--muted);font-size:15px;margin-bottom:10px}
+  .proj .tags{margin-top:12px}
+  .proj .links{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+  .proj .links a{font-size:13px;font-weight:600;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid var(--stroke);text-decoration:none;transition:.2s}
+  .proj .links a:hover{background:rgba(255,255,255,.18)}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .gal{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:14px}
+  .gal img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:14px;cursor:zoom-in;border:1px solid var(--stroke);transition:.25s}
+  .gal img:hover{transform:scale(1.03)}
+  .gal.g3{grid-template-columns:repeat(3,1fr)}
+  .gal.g5{grid-template-columns:repeat(5,1fr)}
+  .gal.g5 img{aspect-ratio:3/2}
+  .yt{position:relative;aspect-ratio:16/9;background:#000 center/cover no-repeat;cursor:pointer;overflow:hidden}
+  .yt::after{content:"";position:absolute;left:50%;top:50%;width:74px;height:74px;transform:translate(-50%,-50%);border-radius:50%;background:rgba(255,255,255,.92);box-shadow:0 10px 40px rgba(0,0,0,.5);transition:.25s}
+  .yt::before{content:"";position:absolute;left:50%;top:50%;transform:translate(-40%,-50%);border-style:solid;border-width:13px 0 13px 22px;border-color:transparent transparent transparent #0b0c14;z-index:2}
+  .yt:hover::after{transform:translate(-50%,-50%) scale(1.08)}
+  .yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .yt.loaded::after,.yt.loaded::before{display:none}
+  .quote{padding:22px 26px;font-size:17px;line-height:1.6;border-left:3px solid var(--a);border-radius:18px}
+  .quote small{display:block;color:var(--muted);margin-top:8px;font-size:13px}
+  .unlock{margin-top:22px}
+  .unlock .eyebrow{margin-bottom:8px}
+  @media(max-width:900px){.chapter{grid-template-columns:1fr;gap:22px;padding:50px 0}.ch-side{position:static}.two{grid-template-columns:1fr}.gal,.gal.g5{grid-template-columns:repeat(2,1fr)}.gal.g3{grid-template-columns:repeat(3,1fr)}}
+
+  /* ---------- skills ---------- */
+  .skills{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:34px;perspective:1400px}
+  .skill{padding:22px;transform-style:preserve-3d;transition:transform .15s ease-out}
+  .skill .ic{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;font-size:22px;margin-bottom:14px;background:rgba(255,255,255,.1);border:1px solid var(--stroke)}
+  .skill h3{font-size:18px;margin-bottom:10px}
+  .skill .tags span{font-size:12px}
+  @media(max-width:900px){.skills{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:520px){.skills{grid-template-columns:1fr}}
+
+  /* ---------- awards ---------- */
+  .awards{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:30px}
+  .award{display:grid;grid-template-columns:44px 1fr;gap:14px;padding:16px 18px;border-radius:20px;align-items:start}
+  .award i{font-style:normal;width:44px;height:44px;border-radius:12px;display:grid;place-items:center;font-size:20px;background:rgba(255,255,255,.1);border:1px solid var(--stroke)}
+  .award b{display:block;font-size:15px;line-height:1.3}
+  .award span{font-size:13px;color:var(--muted)}
+  @media(max-width:760px){.awards{grid-template-columns:1fr}}
+
+  /* ---------- about / contact ---------- */
+  .about{display:grid;grid-template-columns:1fr 1.35fr;gap:24px;align-items:stretch;margin-top:30px}
+  .about .pic{overflow:hidden;padding:0;aspect-ratio:4/5}
+  .about .pic img{width:100%;height:100%;object-fit:cover;border-radius:inherit}
+  .about .text{padding:34px}
+  .about .text p{color:var(--muted);font-size:16px;margin-bottom:14px}
+  .about .text p strong{color:var(--ink)}
+  @media(max-width:900px){.about{grid-template-columns:1fr}}
+  #contact .glass{padding:clamp(32px,6vw,70px);text-align:center}
+  #contact h2{margin-bottom:10px}
+  .links-row{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:30px}
+  footer{position:relative;z-index:2;text-align:center;color:var(--dim);font-size:13px;padding:30px 24px 50px}
+
+  /* ---------- lightbox ---------- */
+  #lb{position:fixed;inset:0;z-index:100;background:rgba(5,6,12,.9);display:none;place-items:center;padding:24px;cursor:zoom-out;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+  #lb.on{display:grid}
+  #lb img{max-width:min(96vw,1400px);max-height:92vh;border-radius:18px;box-shadow:0 30px 100px rgba(0,0,0,.7)}
+
+  /* ---------- reveal ---------- */
+  .reveal{opacity:0;transform:translateY(40px) rotateX(8deg);transform-origin:top;transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){.reveal{transition:none;opacity:1;transform:none}.blob{animation:none}}
+</style>
+</head>
+<body lang-mode="th">
+<div id="progress"></div>
+<div class="blobs"><div class="blob a"></div><div class="blob b"></div><div class="blob c"></div></div>
+<div class="grain"></div>
+
+<nav class="glass">
+  <a class="brand" href="#hero">Nattawut<span>.</span></a>
+  <span class="links">
+    <a href="#highlights"><span class="th">ไฮไลต์</span><span class="en">Highlights</span></a>
+    <a href="#journey"><span class="th">เส้นทาง</span><span class="en">Journey</span></a>
+    <a href="#skills"><span class="th">ทักษะ</span><span class="en">Skills</span></a>
+    <a href="#about"><span class="th">เกี่ยวกับ</span><span class="en">About</span></a>
+    <a href="#contact"><span class="th">ติดต่อ</span><span class="en">Contact</span></a>
+  </span>
+  <div class="lang"><button data-lang="th" class="on">ไทย</button><button data-lang="en">EN</button></div>
+  <a class="cv" href="resume.pdf" download><span class="th">เรซูเม่</span><span class="en">Résumé</span> ↓</a>
+</nav>
+
+<div class="dots">
+  <a href="#ch-hs" data-ch="ch-hs"><span>2562–65 · <span class="th">มัธยม</span><span class="en">High school</span></span></a>
+  <a href="#ch-y1" data-ch="ch-y1"><span>2566 · <span class="th">ปี 1</span><span class="en">Year 1</span></span></a>
+  <a href="#ch-y2" data-ch="ch-y2"><span>2567 · <span class="th">ปี 2</span><span class="en">Year 2</span></span></a>
+  <a href="#ch-y3" data-ch="ch-y3"><span>2568 · <span class="th">ปี 3</span><span class="en">Year 3</span></span></a>
+  <a href="#ch-y4" data-ch="ch-y4"><span>2569 · <span class="th">ปี 4</span><span class="en">Year 4</span></span></a>
+</div>
+
+<main>
+<!-- ============ HERO ============ -->
+<section id="hero">
+  <div>
+    <div class="eyebrow"><span class="th">ครู · สื่อการศึกษา · EdTech</span><span class="en">Teacher · Educational Media · EdTech</span></div>
+    <h1>
+      <span class="th">ครูที่<span class="grad">สร้างสื่อ</span><br>และสร้างเครื่องมือ<br>ให้ห้องเรียน</span>
+      <span class="en">A teacher who<br><span class="grad">makes media</span><br>and builds tools<br>for the classroom.</span>
+    </h1>
+    <div class="who">
+      <span class="th">ณัฐวุฒิ คงดีเพียร (สตางค์)</span><span class="en">Nattawut Khongdeepiean (Satang)</span>
+      <small><span class="th">นิสิตปี 4 สาขาเทคโนโลยีการศึกษา คณะครุศาสตร์ จุฬาลงกรณ์มหาวิทยาลัย · กำลังฝึกสอนที่โรงเรียนสามเสนวิทยาลัย</span><span class="en">4th-year Educational Technology student, Faculty of Education, Chulalongkorn University · Student teacher at Samsenwittayalai School</span></small>
+    </div>
+    <div class="chips">
+      <span class="chip glass"><span class="th">กำกับ · ถ่าย · ตัดต่อ</span><span class="en">Direct · Shoot · Edit</span></span>
+      <span class="chip glass"><span class="th">ถ่ายทอดสด &amp; โสตฯ</span><span class="en">Live production &amp; AV</span></span>
+      <span class="chip glass"><span class="th">AI &amp; เว็บเพื่อการศึกษา</span><span class="en">AI &amp; web for learning</span></span>
+    </div>
+    <div class="cta">
+      <a class="btn primary" href="#journey"><span class="th">ดูเส้นทางของผม</span><span class="en">See my journey</span> ↓</a>
+      <a class="btn ghost glass" href="resume.pdf" download><span class="th">ดาวน์โหลดเรซูเม่</span><span class="en">Download résumé</span></a>
+    </div>
+  </div>
+  <div id="stage">
+    <canvas id="three"></canvas>
+    <div class="portrait-card" id="portrait"><img src="assets/profile/portrait-studio.jpg" alt="Nattawut Khongdeepiean"></div>
+    <div class="float-card glass f1" data-depth="30"><b>272</b><span class="th">นักเรียนที่สอนจริง</span><span class="en">students taught</span></div>
+    <div class="float-card glass f2" data-depth="55"><b>2</b><span class="th">รางวัลหนังสั้น</span><span class="en">short-film awards</span></div>
+    <div class="float-card glass f3" data-depth="40"><b>96</b><span class="th">ครูและผู้สนใจที่อบรม AI</span><span class="en">educators trained in AI</span></div>
+    <div class="float-card glass f4" data-depth="48"><b>69→93%</b><span class="th">ผลวิจัยในชั้นเรียน</span><span class="en">classroom research gain</span></div>
+  </div>
+</section>
+
+<!-- ============ HIGHLIGHTS ============ -->
+<section id="highlights">
+  <div class="eyebrow reveal"><span class="th">ถ้ามีเวลา 30 วินาที</span><span class="en">If you only have 30 seconds</span></div>
+  <h2 class="reveal"><span class="th">สามชิ้นที่บอกได้ว่าผมเป็นใคร</span><span class="en">Three things that say who I am</span></h2>
+  <div class="hl">
+    <a href="#p-routes" class="reveal"><article class="card glass tilt">
+      <img src="assets/y3/film-poster.jpg" alt="The Routes poster" loading="lazy">
+      <div class="body"><div class="tag"><span class="th">หนังสั้น · รางวัลบทภาพยนตร์ยอดเยี่ยม</span><span class="en">Short film · Best Screenplay</span></div>
+      <h3>The Routes</h3>
+      <p><span class="th">กำกับ ถ่าย และตัดต่อเอง ได้รางวัลจาก ThaiAECT Short Film Festival 2025 และฉายในโรงหนังที่ One Bangkok</span><span class="en">Directed, shot and edited. Best Screenplay at ThaiAECT Short Film Festival 2025, screened at One Bangkok.</span></p>
+      <div class="more"><span class="th">ดูรายละเอียด →</span><span class="en">See details →</span></div></div>
+    </article></a>
+    <a href="#p-research" class="reveal"><article class="card glass tilt">
+      <img src="assets/y4/roblox-cover.jpg" alt="Roblox × SketchUp" loading="lazy" onerror="this.src='assets/hs/school-3d.jpg'">
+      <div class="body"><div class="tag"><span class="th">วิจัยในชั้นเรียน · โรงเรียนสามเสนวิทยาลัย</span><span class="en">Classroom research · Samsenwittayalai</span></div>
+      <h3><span class="th">สอน SketchUp ผ่านโลก Roblox</span><span class="en">Teaching SketchUp inside Roblox</span></h3>
+      <p><span class="th">สร้างโลกเสมือนขึ้นเองเพื่อสอนโมเดล 3 มิติ คะแนนทักษะนักเรียน ม.5 ขึ้นจาก 69% เป็น 93% ผ่านเกณฑ์ครบทั้งห้อง</span><span class="en">Built a game world to teach 3D modelling. Grade-11 skill scores rose from 69% to 93%, whole class passing.</span></p>
+      <div class="more"><span class="th">ดูรายละเอียด →</span><span class="en">See details →</span></div></div>
+    </article></a>
+    <a href="#p-visura" class="reveal"><article class="card glass tilt">
+      <img src="assets/y3/visura-web-home.jpg" alt="Visura website" loading="lazy">
+      <div class="body"><div class="tag"><span class="th">เว็บนิทรรศการ 3 มิติ · หัวหน้าโครงการ</span><span class="en">3D web exhibition · Project lead</span></div>
+      <h3>Visura</h3>
+      <p><span class="th">เว็บ WordPress ที่สแกนงานศิลปะเป็นโมเดล 3 มิติด้วย LiDAR และฝัง AI Chatbot ที่ตอบเฉพาะเรื่องในนิทรรศการ</span><span class="en">A WordPress site with LiDAR-scanned 3D artworks and an embedded AI chatbot trained on the exhibition.</span></p>
+      <div class="more"><span class="th">ดูรายละเอียด →</span><span class="en">See details →</span></div></div>
+    </article></a>
+  </div>
+</section>
+
+<!-- ============ JOURNEY ============ -->
+<section id="journey">
+  <div class="eyebrow reveal"><span class="th">เส้นทาง 5 บท</span><span class="en">The journey in five chapters</span></div>
+  <h2 class="reveal"><span class="th">จากกล้องตัวแรก สู่ห้องเรียนจริง</span><span class="en">From my first camera to a real classroom</span></h2>
+  <p class="lead reveal"><span class="th">เลื่อนลงเพื่ออ่านทีละปี ผลงานทุกชิ้นมีรูปหรือวิดีโอจริงประกอบ กดที่รูปเพื่อขยายได้</span><span class="en">Scroll through year by year. Every project has real photos or video. Click any photo to enlarge.</span></p>
+
+  <!-- ---- CHAPTER: HIGH SCHOOL ---- -->
+  <div class="chapter" id="ch-hs">
+    <aside class="ch-side">
+      <div class="badge glass"><i>0</i>2562–2565 · <span class="th">มัธยม</span><span class="en">High school</span></div>
+      <h3><span class="th">จุดเริ่มต้น: กล้อง โดรน และห้องเรียนที่อยากเปลี่ยน</span><span class="en">Where it started: cameras, drones, and a classroom I wanted to change</span></h3>
+      <p><span class="th">เด็กสายวิทย์-คณิตที่โรงเรียนอยุธยาวิทยาลัย ใช้เวลาหลังเลิกเรียนกับกล้อง โปรแกรมตัดต่อ และโดรน เริ่มจากช่างภาพชมรม จนได้เป็นประธานชมรม AYW TV ผลิตสื่อให้ทั้งโรงเรียน และค้นพบว่าสิ่งที่สนุกที่สุดคือการทำให้คนอื่น "เข้าใจ" ผ่านสื่อ</span><span class="en">A science-math kid at Ayutthaya Wittayalai School who spent every afternoon with cameras, editing software and drones. Started as the club photographer, became president of AYW TV producing media for the whole school, and discovered that the best part was helping people understand.</span></p>
+      <div class="nums">
+        <div class="num glass"><b>200</b><span class="th">โดรนแปรอักษร</span><span class="en">drones in a light show</span></div>
+        <div class="num glass"><b>2+1</b><span class="th">เหรียญทอง + เหรียญเงินระดับชาติ</span><span class="en">golds + a national silver</span></div>
+        <div class="num glass"><b>3.80</b><span class="th">GPAX ม.ปลาย วิทย์-คณิต</span><span class="en">GPAX, science-math</span></div>
+        <div class="num glass"><b>1</b><span class="th">คลิปที่ครูเอาไปใช้สอนจริง</span><span class="en">clip used in real lessons</span></div>
+      </div>
+    </aside>
+    <div class="ch-body">
+      <article class="proj big glass reveal tilt" id="p-tuajing">
+        <div class="media"><img src="assets/hs/film-tuajing-team.jpg" alt="ทีมหนังสั้น ตัวจริง" loading="lazy" style="aspect-ratio:21/9"></div>
+        <div class="text">
+          <div class="ptag"><em>★</em> <span class="th">ผู้กำกับหนังสั้น · เหรียญเงินระดับชาติ</span><span class="en">Short-film director · National silver medal</span></div>
+          <h4><span class="th">หนังสั้น "ตัวจริง"</span><span class="en">Short film "Tua Jing" (The Real One)</span></h4>
+          <p><span class="th">งานศิลปหัตถกรรมนักเรียนครั้งที่ 69: เหรียญทองระดับเขต และเหรียญเงินระดับชาติ ผมเป็นผู้กำกับ เขียนสตอรี่บอร์ดเอง เรื่องนี้กลายเป็นคติสอนใจที่โรงเรียนใช้ต่อ และเป็นครั้งแรกที่รู้ว่าการเล่าเรื่องเปลี่ยนคนดูได้</span><span class="en">69th National Student Arts &amp; Crafts Competition: gold at district level and silver at national level. I directed and storyboarded it. The film became a moral lesson the school kept using, and my first proof that storytelling changes people.</span></p>
+          <div class="gal g3"><img src="assets/hs/cert-silver-national.jpg" alt="เกียรติบัตรเหรียญเงินระดับชาติ" loading="lazy"><img src="assets/hs/aywtv-work.jpg" alt="งานชมรม AYW TV" loading="lazy"><img src="assets/hs/old-portfolio-cover.jpg" alt="พอร์ตโฟลิโอสมัยมัธยม" loading="lazy"></div>
+          <div class="tags"><span>Premiere Pro</span><span>Storyboard</span><span>Directing</span></div>
+        </div>
+      </article>
+      <div class="two">
+        <article class="proj glass reveal tilt">
+          <div class="ptag"><span class="th">ผู้นำ · สื่อโรงเรียน</span><span class="en">Leadership · School media</span></div>
+          <h4><span class="th">ประธานชมรม AYW TV</span><span class="en">President, AYW TV club</span></h4>
+          <p><span class="th">ดูแลทีมช่างภาพ ถ่ายวิดีโอ และตัดต่อ ผลิตสื่อให้โรงเรียน เป็นแอดมินเพจ Facebook และ YouTube ของโรงเรียน ทำ Live สำรวจการเลือกตั้งประธานนักเรียน และเป็นหัวหน้าฝ่ายโสตฯ ของสภานักเรียน</span><span class="en">Led the photo, video and editing team, ran the school's Facebook and YouTube pages, produced a live student-election broadcast, and headed the student council's AV team.</span></p>
+          <div class="gal"><img src="assets/hs/aywtv-logo.jpg" alt="AYW TV logo" loading="lazy"><img src="assets/hs/election-live.jpg" alt="Live เลือกตั้ง" loading="lazy"><img src="assets/hs/esport-logo.jpg" alt="โลโก้ E-Sport" loading="lazy"><img src="assets/hs/school-3d.jpg" alt="ผังโรงเรียน 3 มิติ" loading="lazy"></div>
+        </article>
+        <article class="proj glass reveal tilt">
+          <div class="ptag"><span class="th">งาน EdTech ชิ้นแรก</span><span class="en">First EdTech pieces</span></div>
+          <h4><span class="th">Science Clip &amp; คู่มือ Google Classroom</span><span class="en">Science Clip &amp; a Google Classroom guide</span></h4>
+          <p><span class="th">คลิปวิทยาศาสตร์ที่ได้รองชนะเลิศอันดับ 2 และถูกครูนำไปใช้เป็นสื่อการสอนจริง กับคู่มือการใช้ Google Classroom สำหรับนักเรียนที่เขียนขึ้นเองช่วงเรียนออนไลน์ นี่คือครั้งแรกที่ผมทำ "สื่อเพื่อการเรียน" โดยตั้งใจ</span><span class="en">A science clip that placed 2nd runner-up and was used by teachers in real lessons, plus a Google Classroom manual I wrote for classmates during online learning. My first deliberate learning media.</span></p>
+          <div class="gal"><img src="assets/hs/science-clip.jpg" alt="Science Clip" loading="lazy"><img src="assets/hs/gclassroom-manual.jpg" alt="คู่มือ Google Classroom" loading="lazy"><img src="assets/hs/drone-letters.jpg" alt="โดรนแปรอักษร" loading="lazy"><img src="assets/hs/rc-plane.jpg" alt="เครื่องบินบังคับ" loading="lazy"></div>
+        </article>
+      </div>
+      <article class="proj glass reveal tilt">
+        <div class="ptag"><span class="th">เทคโนโลยี · การแข่งขัน</span><span class="en">Technology · Competitions</span></div>
+        <h4><span class="th">โดรนแปรอักษร 200 ลำ และเครื่องบินบังคับเหรียญทอง</span><span class="en">A 200-drone light show and a gold-medal RC plane</span></h4>
+        <p><span class="th">อบรมเทคโนโลยีโดรนแปรอักษรกับสำนักงานการวิจัยแห่งชาติ (วช.) จนวางแผนการบินโดรน 200 ลำแปรอักษรได้ และออกแบบ-สร้างเครื่องบินบังคับวิทยุ "พิชิตเป้าหมาย" ได้เหรียญทองระดับเขตในงานศิลปหัตถกรรมครั้งที่ 70 รวมถึงค่าย MUSC STEM Day Camp ม.มหิดล</span><span class="en">Trained with the National Research Council of Thailand to program a 200-drone light show, designed and built a radio-controlled plane that won district gold at the 70th Arts &amp; Crafts Competition, and joined Mahidol's MUSC STEM Day Camp.</span></p>
+        <div class="gal g3"><img src="assets/hs/drone-training.jpg" alt="อบรมโดรน" loading="lazy"><img src="assets/hs/drone-letters.jpg" alt="AYUTTHAYA drone" loading="lazy"><img src="assets/hs/rc-plane.jpg" alt="RC plane" loading="lazy"></div>
+        <div class="tags"><span>Drone</span><span>SketchUp</span><span>Photoshop</span><span>Illustrator</span><span>After Effects</span></div>
+      </article>
+    </div>
+  </div>
+
+  <!-- ---- CHAPTER: YEAR 1 ---- -->
+  <div class="chapter" id="ch-y1">
+    <aside class="ch-side">
+      <div class="badge glass"><i>1</i>2566 · <span class="th">ปี 1</span><span class="en">Year 1</span></div>
+      <h3><span class="th">ปีแรกที่จุฬาฯ: หลังเวที หน้ากล้อง และการ์ตูนเรื่องแรก</span><span class="en">First year at Chula: backstage, on camera, and my first cartoon</span></h3>
+      <p><span class="th">เข้าคณะครุศาสตร์ สาขาเทคโนโลยีการศึกษา แล้วเอาทักษะจากชมรมมาใช้กับงานจริงของคณะทันที ทั้งคุมเสียงและภาพให้ค่ายร้อยกว่าคน ตั้งสตูดิโอถ่ายภาพให้ Open House และเป็นครั้งแรกที่ได้ "สอนจริง" โดยสร้างสื่อขึ้นมาเองทั้งเรื่อง</span><span class="en">Joined the Faculty of Education (Educational Technology) and put club skills to work right away: running sound and video for a 100-plus camp, building a studio for Open House, and teaching for the first time with a cartoon I made from scratch.</span></p>
+      <div class="nums">
+        <div class="num glass"><b>2:23</b><span class="th">นาที แอนิเมชันวาดเองทั้งเรื่อง</span><span class="en">min of hand-drawn animation</span></div>
+        <div class="num glass"><b>100+</b><span class="th">ผู้เข้าค่าย ทีมโสตฯ 4 คน</span><span class="en">campers, AV team of 4</span></div>
+      </div>
+    </aside>
+    <div class="ch-body">
+      <article class="proj big glass reveal tilt" id="p-dream3">
+        <div class="media"><video controls preload="none" poster="assets/y1/anim-frame2.jpg" src="assets/y1/dream3.mp4"></video></div>
+        <div class="text">
+          <div class="ptag"><em>★</em> <span class="th">สอนจริงครั้งแรก · โรงเรียนสาธิตจุฬาฯ ฝ่ายประถม</span><span class="en">First real teaching · Chula Demonstration Elementary</span></div>
+          <h4><span class="th">สอน ป.6 ทำแอนิเมชันด้วย Procreate พร้อมสื่อตัวอย่าง "Dream 3"</span><span class="en">Teaching Grade 6 to animate in Procreate, with my own demo film "Dream 3"</span></h4>
+          <p><span class="th">อาจารย์ชวนไปสอนนักเรียนประถมเรื่องพื้นฐานการทำแอนิเมชัน ผมวาดตัวละคร ฉาก และตัดต่อแอนิเมชันเรื่อง "Dream 3" ยาว 2 นาที 23 วินาทีบน iPad เพื่อใช้เป็นตัวอย่างในห้อง เรื่องราวคือการผจญภัยตามแผนที่สมบัติ ผ่านถ้ำ เจอปีศาจ และใช้ "ไอเดีย" แก้ปัญหา นี่คือจุดที่ "ครู" กับ "เทคโนโลยี" มาบรรจบกันครั้งแรกในเส้นทางของผม</span><span class="en">A lecturer invited me to teach elementary students the basics of animation. I drew every character and background and cut "Dream 3", a 2:23 film on iPad, as the classroom example: a treasure-map adventure through a cave, a monster, and an idea that saves the day. The first time "teacher" and "technology" met on my path.</span></p>
+          <div class="gal"><img src="assets/y1/anim-frame1.jpg" alt="Dream 3 frame" loading="lazy"><img src="assets/y1/anim-frame3.jpg" alt="Dream 3 frame" loading="lazy"><img src="assets/y1/anim-procreate.jpg" alt="วาดใน Procreate" loading="lazy"><img src="assets/y1/anim-timeline.jpg" alt="ไทม์ไลน์ตัดต่อ" loading="lazy"></div>
+          <div class="tags"><span>Procreate</span><span>2D Animation</span><span>iPad editing</span><span><span class="th">สอนประถม</span><span class="en">Elementary teaching</span></span></div>
+        </div>
+      </article>
+      <div class="two">
+        <article class="proj glass reveal tilt">
+          <div class="ptag"><span class="th">ฝ่ายโสตทัศนูปกรณ์</span><span class="en">AV team</span></div>
+          <h4><span class="th">ค่ายอยากเป็นครู ครั้งที่ 17</span><span class="en">Kru Camp 17 (Teacher Aspirants' Camp)</span></h4>
+          <p><span class="th">4–7 มกราคม 2567 ค่ายแนะแนวของคณะครุศาสตร์ รับนักเรียน ม.ปลายที่ผ่านการคัดเลือก 100–120 คน ผมอยู่ในทีมโสตฯ 4 คน เตรียมห้องประชุม คุมมิกเซอร์เสียง สวิตเชอร์ภาพ และประสานงานกับทุกฝ่าย</span><span class="en">4–7 Jan 2024. The faculty's guidance camp for 100–120 selected high-schoolers. On a four-person AV team I set up the hall, ran the audio mixer and video switcher, and coordinated with every other team.</span></p>
+          <div class="gal"><img src="assets/y1/krucamp-mixer.jpg" alt="มิกเซอร์" loading="lazy"><img src="assets/y1/krucamp-switcher.jpg" alt="สวิตเชอร์" loading="lazy"><img src="assets/y1/krucamp-group.jpg" alt="รวมค่าย" loading="lazy"><img src="assets/y1/krucamp-cert.jpg" alt="เกียรติบัตร" loading="lazy"></div>
+        </article>
+        <article class="proj glass reveal tilt">
+          <div class="ptag"><span class="th">ถ่ายภาพ · Open House</span><span class="en">Photography · Open House</span></div>
+          <h4><span class="th">Photobooth "Techno Ocean 2024"</span><span class="en">"Techno Ocean 2024" photobooth</span></h4>
+          <p><span class="th">ตั้งสตูดิโอถ่ายภาพเต็มรูปแบบให้งาน Open House ของสาขา ไฟ softbox ร่มสะท้อน ฉาก กล้องต่อคอมพิวเตอร์ และออกแบบเฟรมภาพธีมทะเลให้ผู้เข้าร่วมทุกคน</span><span class="en">Built a full studio for the department's Open House: softboxes, reflectors, backdrop, tethered camera, and an ocean-themed photo frame for every visitor.</span></p>
+          <div class="gal"><img src="assets/y1/photobooth-studio.jpg" alt="สตูดิโอ" loading="lazy"><img src="assets/y1/photobooth-setup.jpg" alt="จัดไฟ" loading="lazy"><img src="assets/y1/photobooth-frame.jpg" alt="เฟรมภาพ" loading="lazy"><img src="assets/y1/photobooth-team.jpg" alt="ทีม" loading="lazy"></div>
+          <div class="links"><a href="https://linktr.ee/OPHtechno2567" target="_blank" rel="noopener"><span class="th">ดูรวมผลงาน</span><span class="en">See the photos</span> ↗</a></div>
+        </article>
+      </div>
+      <div class="unlock reveal"><div class="eyebrow"><span class="th">ทักษะที่ปลดล็อกในปีนี้</span><span class="en">Skills unlocked this year</span></div><div class="tags"><span><span class="th">ระบบเสียง-ภาพงานอีเวนต์</span><span class="en">Event audio &amp; video systems</span></span><span><span class="th">จัดแสงสตูดิโอ</span><span class="en">Studio lighting</span></span><span><span class="th">แอนิเมชัน 2D</span><span class="en">2D animation</span></span><span><span class="th">ออกแบบสื่อสำหรับเด็กประถม</span><span class="en">Designing for young learners</span></span></div></div>
+    </div>
+  </div>
+
+  <!-- ---- CHAPTER: YEAR 2 ---- -->
+  <div class="chapter" id="ch-y2">
+    <aside class="ch-side">
+      <div class="badge glass"><i>2</i>2567 · <span class="th">ปี 2</span><span class="en">Year 2</span></div>
+      <h3><span class="th">ปีที่สอง: คุมภาพทั้งงาน จัดการทั้งโครงการ และแขวนภาพของตัวเอง</span><span class="en">Second year: running the live feed, managing a whole project, and hanging my own photos</span></h3>
+      <p><span class="th">งานใหญ่ขึ้นและความรับผิดชอบสูงขึ้น ได้ควบคุมการถ่ายทอดสดงานประชุมนานาชาติ เป็นรองหัวหน้าโครงการที่ดูแลเอกสาร งบประมาณ และการประสานงานทั้งหมดของค่ายถ่ายภาพ และปิดปีด้วยการเอาภาพถ่ายของตัวเองขึ้นแขวนในนิทรรศการจริง</span><span class="en">Bigger events, bigger responsibility: directing the live feed of an international conference, deputy-leading a funded photography camp from proposal to final report, and ending the year with my own photographs on a gallery wall.</span></p>
+      <div class="nums">
+        <div class="num glass"><b>76th</b><span class="th">OMEP งานประชุมนานาชาติ</span><span class="en">OMEP World Assembly</span></div>
+        <div class="num glass"><b>30/16</b><span class="th">ผู้เข้าค่าย / ทีมงาน 3 วัน 2 คืน</span><span class="en">campers / staff, 3 days</span></div>
+        <div class="num glass"><b>30</b><span class="th">โจทย์ภาพถ่าย จัดแสดง 5 ภาพ</span><span class="en">photo briefs, 5 exhibited</span></div>
+        <div class="num glass"><b>2</b><span class="th">ปีติดกันในทีมโสตฯ ค่ายครู</span><span class="en">years running on Kru Camp AV</span></div>
+      </div>
+    </aside>
+    <div class="ch-body">
+      <article class="proj big glass reveal tilt" id="p-omep">
+        <div class="media"><div class="yt" data-id="S-sazWWdxvE" style="background-image:url('https://i.ytimg.com/vi/S-sazWWdxvE/hqdefault.jpg')"></div></div>
+        <div class="text">
+          <div class="ptag"><em>★</em> <span class="th">ควบคุมการถ่ายทอดสด &amp; ฝ่ายประมวลผล</span><span class="en">Live-stream director &amp; post-production</span></div>
+          <h4><span class="th">76th OMEP World Assembly and Conference</span><span class="en">76th OMEP World Assembly and Conference</span></h4>
+          <p><span class="th">งานประชุมวิชาการนานาชาติด้านการศึกษาปฐมวัย จัดที่คณะครุศาสตร์ จุฬาฯ กรกฎาคม 2567 ผมรับหน้าที่ควบคุมการ Live สด คุมสวิตเชอร์หลายกล้อง สตรีมและบันทึกด้วย OBS ถ่ายวิดีโอประจำห้องประชุม และตัดต่อวิดีโอหลังงานด้วย Premiere Pro (กดดูวิดีโอที่ตัดต่อได้ด้านบน)</span><span class="en">An international early-childhood education conference hosted at Chula's Faculty of Education, July 2024. I directed the live stream: multi-camera switching, OBS streaming and recording, room camera work, and post-event editing in Premiere Pro (watch the edit above).</span></p>
+          <div class="gal"><img src="assets/y2/omep-switcher.jpg" alt="สวิตเชอร์" loading="lazy"><img src="assets/y2/omep-control.jpg" alt="ห้องควบคุม" loading="lazy"><img src="assets/y2/omep-cameraman.jpg" alt="ถ่ายวิดีโอ" loading="lazy"><img src="assets/y2/omep-team-banner.jpg" alt="ทีม OMEP" loading="lazy"></div>
+          <div class="tags"><span>OBS</span><span>Video switcher</span><span>Multi-cam</span><span>Premiere Pro</span></div>
+        </div>
+      </article>
+      <article class="proj big glass reveal tilt" id="p-fieldtrip">
+        <div class="media"><img src="assets/y2/fieldtrip-lawn.jpg" alt="ค่ายถ่ายภาพ สจล." loading="lazy" style="aspect-ratio:21/9"></div>
+        <div class="text">
+          <div class="ptag"><em>★</em> <span class="th">รองหัวหน้าโครงการ · โครงการที่ได้รับทุน</span><span class="en">Deputy project lead · Funded project</span></div>
+          <h4><span class="th">ค่ายถ่ายภาพนอกสถานที่ให้นักศึกษา สจล. (ทุนโลกกว้าง จุฬาฯ)</span><span class="en">A funded photography field camp for KMITL students</span></h4>
+          <p><span class="th">โครงการในวิชาการจัดการศึกษานอกสถานที่ ได้รับทุนจากโครงการเสริมประสบการณ์การเรียนรู้สู่โลกกว้าง จัด 4–6 มีนาคม 2568 ที่หาดน้ำใส สัตหีบ ผู้เข้าร่วม 30 คนจาก สจล. ทีมงาน 16 คน สปอนเซอร์หลักคือแลคตาซอย ผมดูแลเอกสารทั้งระบบ ตั้งแต่เขียนแบบเสนอโครงการขอทุน ประสานงานในมหาวิทยาลัย ขอสปอนเซอร์ ประสานกับ สจล. จนถึงรายงานสรุปโครงการ ผลประเมินผู้เข้าร่วมพัฒนาทักษะถ่ายภาพอย่างมากและบรรลุตัวชี้วัดทุกข้อ</span><span class="en">A course project that won a faculty "Wide World" learning grant. Held 4–6 March 2025 at Nam Sai Beach, Sattahip, for 30 KMITL students with a 16-person team and Lactasoy as main sponsor. I owned every document: the grant proposal, university coordination, sponsorship requests, liaison with KMITL, and the final report. Participants reported strong photography gains and every indicator was met.</span></p>
+          <div class="gal"><img src="assets/y2/fieldtrip-prep.jpg" alt="เตรียมงาน" loading="lazy"><img src="assets/y2/fieldtrip-hall.jpg" alt="กิจกรรมในห้อง" loading="lazy"><img src="assets/y2/fieldtrip-beach-team.jpg" alt="ทีมงาน" loading="lazy"><img src="assets/y2/fieldtrip-lawn.jpg" alt="กิจกรรมกลางแจ้ง" loading="lazy"></div>
+          <div class="tags"><span><span class="th">เขียนโครงการขอทุน</span><span class="en">Grant writing</span></span><span><span class="th">ประสานงานข้ามสถาบัน</span><span class="en">Cross-institution coordination</span></span><span><span class="th">หาสปอนเซอร์</span><span class="en">Sponsorship</span></span><span><span class="th">รายงานสรุปโครงการ</span><span class="en">Project reporting</span></span></div>
+        </div>
+      </article>
+      <article class="proj big glass reveal tilt" id="p-expo">
+        <div class="media"><img src="assets/y2/expo-gallery-talk.jpg" alt="นิทรรศการ Journey Through the Lens" loading="lazy" style="aspect-ratio:21/9"></div>
+        <div class="text">
+          <div class="ptag"><em>★</em> <span class="th">นิทรรศการภาพถ่าย</span><span class="en">Photography exhibition</span></div>
+          <h4>Journey Through the Lens</h4>
+          <p><span class="th">12–15 พฤศจิกายน 2567 ห้องนิทรรศการ 104 คณะครุศาสตร์ จากวิชาการถ่ายภาพเพื่อการสื่อสารทางการศึกษา ผมทำแฟ้ม 30 โจทย์ ตั้งแต่ค่ากล้องพื้นฐาน มาโคร พอร์เทรต ภาพเล่าเรื่อง จนถึงการใช้ AI ช่วยงานภาพ และภาพชุด "สิ่งมีชีวิตตัวเล็ก" 5 ภาพได้ขึ้นแขวนในนิทรรศการ พร้อมยืนอธิบายแนวคิดให้ผู้ชมและอาจารย์ฟัง</span><span class="en">12–15 Nov 2024, Gallery 104, Faculty of Education. From the Photography for Educational Communication course: a 30-brief portfolio from exposure basics through macro, portrait and story to AI-assisted imaging. Five of my "tiny lives" macro photos were exhibited, and I presented them to visitors and lecturers.</span></p>
+          <div class="gal g5"><img src="assets/y2/photo-DSC00417.jpg" alt="แมลงปอ" loading="lazy"><img src="assets/y2/photo-DSC08268.jpg" alt="ผึ้ง" loading="lazy"><img src="assets/y2/photo-DSC08767.jpg" alt="ผีเสื้อ" loading="lazy"><img src="assets/y2/photo-DSC00505.jpg" alt="มด" loading="lazy"><img src="assets/y2/photo-DSC09388.jpg" alt="หอยทาก" loading="lazy"></div>
+          <div class="gal g3" style="margin-top:8px"><img src="assets/y2/expo-poster.jpg" alt="โปสเตอร์นิทรรศการ" loading="lazy"><img src="assets/y2/expo-presenting.jpg" alt="นำเสนอผลงาน" loading="lazy"><img src="assets/y2/expo-wall.jpg" alt="ผลงานบนผนัง" loading="lazy"></div>
+          <div class="tags"><span>Sony A7 II</span><span>Macro</span><span>Lightroom</span><span>Generative AI</span></div>
+        </div>
+      </article>
+      <article class="proj glass reveal tilt">
+        <div class="ptag"><span class="th">ฝ่ายโสตทัศนูปกรณ์ · ปีที่สอง</span><span class="en">AV team · second year</span></div>
+        <h4><span class="th">ค่ายอยากเป็นครู ครั้งที่ 18</span><span class="en">Kru Camp 18</span></h4>
+        <p><span class="th">19–22 ธันวาคม 2567 ปีนี้ดูแลทั้งระบบ วิทยุสื่อสารทั้งทีม มิกเซอร์ สวิตเชอร์ ภาพขึ้นจอ และเป็นช่างภาพงานพิธี</span><span class="en">19–22 Dec 2024. This year I owned the whole system: team radios, mixer, switcher, projection, and ceremony photography.</span></p>
+        <div class="gal"><img src="assets/y2/krucamp18-collage.jpg" alt="ห้องควบคุม" loading="lazy"><img src="assets/y2/krucamp18-photographer.jpg" alt="ถ่ายภาพ" loading="lazy"><img src="assets/y2/krucamp18-candle.jpg" alt="กิจกรรมเทียน" loading="lazy"><img src="assets/y2/krucamp18-team.jpg" alt="ทีมโสตฯ" loading="lazy"></div>
+      </article>
+      <div class="unlock reveal"><div class="eyebrow"><span class="th">ทักษะที่ปลดล็อกในปีนี้</span><span class="en">Skills unlocked this year</span></div><div class="tags"><span><span class="th">ถ่ายทอดสดหลายกล้อง</span><span class="en">Multi-camera live streaming</span></span><span><span class="th">บริหารโครงการและงบประมาณ</span><span class="en">Project &amp; budget management</span></span><span><span class="th">ถ่ายภาพขั้นสูง</span><span class="en">Advanced photography</span></span><span><span class="th">นำเสนอผลงานต่อสาธารณะ</span><span class="en">Presenting to the public</span></span></div></div>
+    </div>
+  </div>
+
+  <!-- ---- CHAPTER: YEAR 3 ---- -->
+  <div class="chapter" id="ch-y3">
+    <aside class="ch-side">
+      <div class="badge glass"><i>3</i>2568 · <span class="th">ปี 3</span><span class="en">Year 3</span></div>
+      <h3><span class="th">ปีที่สาม: กำกับ ออกแบบ สร้างเว็บ และสอนครูใช้ AI</span><span class="en">Third year: directing, designing, building a 3D web gallery, and teaching teachers AI</span></h3>
+      <p><span class="th">ปีที่ผลงานออกไปนอกรั้วคณะ หนังสั้นที่กำกับเองได้รางวัลระดับสมาคมและฉายในโรงหนัง ได้ออกแบบงานให้บุคลากรทั้งมหาวิทยาลัย สร้างเว็บนิทรรศการ 3 มิติที่ใครก็เข้าชมได้ และเป็นครั้งแรกที่ได้ยืนสอน "ครู" ให้ใช้ AI สร้างสื่อการเรียนรู้</span><span class="en">The year my work left the faculty. A film I directed won an association award and screened in a cinema, I designed for a university-wide event, led a 3D exhibition website anyone can visit, and taught teachers to make learning media with AI.</span></p>
+      <div class="nums">
+        <div class="num glass"><b>1</b><span class="th">รางวัลบทภาพยนตร์ยอดเยี่ยม</span><span class="en">Best Screenplay award</span></div>
+        <div class="num glass"><b>96</b><span class="th">ผู้เข้าอบรม AI (ครู 41 คน)</span><span class="en">AI workshop attendees (41 educators)</span></div>
+        <div class="num glass"><b>3D</b><span class="th">เว็บนิทรรศการ + AI chatbot</span><span class="en">web gallery + AI chatbot</span></div>
+        <div class="num glass"><b>1</b><span class="th">งานระดับมหาวิทยาลัย (Townhall)</span><span class="en">university-wide event (Townhall)</span></div>
+      </div>
+    </aside>
+    <div class="ch-body">
+      <article class="proj big glass reveal tilt" id="p-routes">
+        <div class="media"><div class="yt" data-id="q_wkzMhoZu4" style="background-image:url('https://i.ytimg.com/vi/q_wkzMhoZu4/hqdefault.jpg')"></div></div>
+        <div class="text">
+          <div class="ptag"><em>★★</em> <span class="th">ผู้กำกับ · ถ่ายวิดีโอ · ตัดต่อ</span><span class="en">Director · Cinematographer · Editor</span></div>
+          <h4><span class="th">หนังสั้น "The Routes" — รางวัลบทภาพยนตร์ยอดเยี่ยม ThaiAECT Short Film Festival 2025</span><span class="en">"The Routes" — Best Screenplay, ThaiAECT Short Film Festival 2025</span></h4>
+          <p><span class="th">เทศกาลหนังสั้นหัวข้อ "Gateway to Tomorrow's Education" ของสมาคมเทคโนโลยีและสื่อสารการศึกษาแห่งประเทศไทย รับรางวัล 28 พฤศจิกายน 2568 ในงานประชุมวิชาการโสตฯ-เทคโนฯ สัมพันธ์แห่งประเทศไทย ครั้งที่ 38 และได้ฉายในโรงภาพยนตร์ที่ One Bangkok จากเหรียญเงินระดับชาติตอน ม.ปลาย สู่จอโรงหนังในปี 3 เรื่องเล่าเดิมของผมยังเหมือนเดิม: ไม่ใช่ทุกเส้นทางสู่อนาคตจะเริ่มในห้องเรียน</span><span class="en">Made for the Thailand Association for Educational Communications and Technology festival themed "Gateway to Tomorrow's Education". Awarded 28 Nov 2025 at the 38th national conference and screened in a cinema at One Bangkok. From a national silver medal in high school to a cinema screen in year three, the story stayed the same: not all routes to the future begin in a classroom.</span></p>
+          <div class="gal"><img src="assets/y3/film-onebangkok.jpg" alt="จอ One Bangkok" loading="lazy"><img src="assets/y3/film-best-screenplay.jpg" alt="รับรางวัล" loading="lazy"><img src="assets/y3/film-award-team.jpg" alt="ทีมงาน" loading="lazy"><img src="assets/y3/film-edit1.jpg" alt="ตัดต่อ" loading="lazy"></div>
+          <div class="tags"><span>Directing</span><span>Cinematography</span><span>Premiere Pro</span><span>Screenwriting</span></div>
+        </div>
+      </article>
+      <article class="proj big glass reveal tilt" id="p-visura">
+        <div class="media"><img src="assets/y3/visura-web-home.jpg" alt="Visura website" loading="lazy" style="aspect-ratio:21/9"></div>
+        <div class="text">
+          <div class="ptag"><em>★★</em> <span class="th">หัวหน้าโครงการ · เว็บไซต์นิทรรศการ 3 มิติ</span><span class="en">Project lead · 3D exhibition website</span></div>
+          <h4>Visura: Where Art Meets Immersion</h4>
+          <p><span class="th">เว็บไซต์ของนิทรรศการ "ART × ED-TECH: Philosophy and Journey of Art Education" (28 ตุลาคม – 4 พฤศจิกายน 2568) การบูรณาการระหว่างสาขาศิลปศึกษาและเทคโนโลยีการศึกษา ผมตั้งค่า WordPress ทั้งระบบ เลือกปลั๊กอิน แบ่งงานให้ทีม สแกนผลงานศิลปะของนิสิตเอกศิลป์เป็นโมเดล 3 มิติด้วยกล้อง LiDAR ให้หมุนดูบนเว็บได้ และฝัง AI Chatbot (ChatGPT API) ที่เทรนให้ตอบเฉพาะเรื่องในนิทรรศการ</span><span class="en">The website for "ART × ED-TECH: Philosophy and Journey of Art Education" (28 Oct – 4 Nov 2025), a collaboration between Art Education and Educational Technology. I set up the whole WordPress stack, chose plugins, split the work across the team, LiDAR-scanned art students' works into rotatable 3D models, and embedded an AI chatbot (ChatGPT API) trained to answer only about the exhibition.</span></p>
+          <div class="gal"><img src="assets/y3/visura-3d-model.jpg" alt="โมเดล 3 มิติ" loading="lazy"><img src="assets/y3/visura-web-gallery.jpg" alt="Gallery" loading="lazy"><img src="assets/y3/visura-visitors.jpg" alt="ผู้ชม" loading="lazy"><img src="assets/y3/visura-poster.jpg" alt="โปสเตอร์" loading="lazy"></div>
+          <div class="tags"><span>WordPress</span><span>LiDAR 3D scan</span><span>ChatGPT API</span><span>UX</span></div>
+          <div class="links"><a href="https://visura.edii.in.th/" target="_blank" rel="noopener"><span class="th">เข้าชมเว็บไซต์</span><span class="en">Visit the site</span> ↗</a></div>
+        </div>
+      </article>
+      <article class="proj big glass reveal tilt" id="p-heygen">
+        <div class="media"><div class="yt" data-id="cQ6ijVkWBrI" style="background-image:url('https://i.ytimg.com/vi/cQ6ijVkWBrI/hqdefault.jpg')"></div></div>
+        <div class="text">
+          <div class="ptag"><em>★</em> <span class="th">วิทยากร · อบรมออนไลน์</span><span class="en">Speaker · Online workshop</span></div>
+          <h4><span class="th">AI Empowered Educator: สอนครูสร้างวิดีโอการสอนด้วย HeyGen</span><span class="en">AI Empowered Educator: teaching teachers to build lesson videos with HeyGen</span></h4>
+          <p><span class="th">โครงการอบรม "การประยุกต์ใช้เครื่องมือ AI เพื่อการผลิตสื่อการศึกษาแบบครบวงจร" 26 เมษายน 2569 ผ่าน Zoom ผมรับผิดชอบช่วง HeyGen: ทำไมครูควรรู้จัก ใช้ในชั้นเรียนได้อย่างไร และสร้างอวตารสอนใน 4 ขั้นตอน พร้อมทำสไลด์ คู่มือ Zoom และวิดีโอตัวอย่าง ผมประชาสัมพันธ์เองผ่านเพจต่างๆ และปฏิทินเว็บไซต์จุฬาฯ จนมีผู้เข้าอบรม 96 คน เป็นบุคลากรทางการศึกษา 41 คน</span><span class="en">"Applying AI tools for end-to-end educational media", 26 April 2026 on Zoom. I ran the HeyGen session: why teachers should know it, how to use it in class, and a four-step avatar workflow, plus slides, a Zoom guide and a finished demo video. I promoted it myself through Facebook pages and Chula's event calendar to 96 attendees, 41 of them educators.</span></p>
+          <div class="gal"><img src="assets/y3/heygen-poster.jpg" alt="โปสเตอร์" loading="lazy"><img src="assets/y3/heygen-slide2.jpg" alt="สไลด์" loading="lazy"><img src="assets/y3/heygen-slide4.jpg" alt="สไลด์ 4 ขั้นตอน" loading="lazy"><img src="assets/y3/heygen-live2.jpg" alt="ถ่ายทอดสด" loading="lazy"></div>
+          <div class="tags"><span>HeyGen</span><span>AI avatars</span><span>Zoom</span><span><span class="th">การเป็นวิทยากร</span><span class="en">Public speaking</span></span></div>
+          <div class="links"><a href="https://www.chula.ac.th/event-calendar/294352/" target="_blank" rel="noopener"><span class="th">ประกาศบนเว็บจุฬาฯ</span><span class="en">Chula event listing</span> ↗</a><a href="https://drive.google.com/file/d/1a44Z-9F7nQQEgkM4V9Eo4y8Mo59LLJtx/view" target="_blank" rel="noopener"><span class="th">วิดีโอตัวอย่างอวตาร</span><span class="en">Avatar demo video</span> ↗</a></div>
+        </div>
+      </article>
+      <article class="proj glass reveal tilt">
+        <div class="ptag"><span class="th">ออกแบบกราฟิก · วิดีโอแนะนำระบบ</span><span class="en">Graphic design · How-to video</span></div>
+        <h4>Chula Townhall 2026</h4>
+        <p><span class="th">งานพบปะบุคลากรทั้งมหาวิทยาลัย 13 กุมภาพันธ์ 2569 ผมออกแบบป้ายนำทางทั้งงาน (ทางเข้า ลงทะเบียน จุดรับกระเป๋า Photo Booth) และทำวิดีโอแนวตั้งสอนบุคลากรใช้ระบบ CU ERP ยื่นเบิกสวัสดิการทีละขั้นตอน</span><span class="en">The university-wide staff gathering, 13 Feb 2026. I designed all event signage (entrance, registration, bag pickup, photo booth) and a vertical how-to video guiding staff through benefit claims on CU ERP.</span></p>
+        <div class="two" style="align-items:start">
+          <div class="gal" style="margin-top:0"><img src="assets/y3/townhall-sign2.jpg" alt="ป้ายลงทะเบียน" loading="lazy"><img src="assets/y3/townhall-sign3.jpg" alt="ป้ายจุดรับกระเป๋า" loading="lazy"><img src="assets/y3/townhall-hall.jpg" alt="ห้องงาน" loading="lazy"><img src="assets/y3/townhall-team.jpg" alt="ทีม" loading="lazy"></div>
+          <video controls preload="none" poster="assets/y3/townhall-video2.jpg" src="assets/y3/townhall-howto.mp4" style="width:100%;max-height:360px;border-radius:16px;background:#000;border:1px solid var(--stroke)"></video>
+        </div>
+        <div class="tags"><span>Illustrator</span><span>Canva</span><span>CapCut</span><span>Motion</span></div>
+      </article>
+      <div class="unlock reveal"><div class="eyebrow"><span class="th">ทักษะที่ปลดล็อกในปีนี้</span><span class="en">Skills unlocked this year</span></div><div class="tags"><span><span class="th">กำกับภาพยนตร์สั้นครบวงจร</span><span class="en">End-to-end short-film directing</span></span><span>WordPress</span><span><span class="th">สแกน 3D ด้วย LiDAR</span><span class="en">LiDAR 3D scanning</span></span><span><span class="th">ฝัง AI ด้วย API</span><span class="en">Embedding AI via API</span></span><span><span class="th">วิทยากรออนไลน์</span><span class="en">Online facilitation</span></span></div></div>
+    </div>
+  </div>
+
+  <!-- ---- CHAPTER: YEAR 4 ---- -->
+  <div class="chapter" id="ch-y4">
+    <aside class="ch-side">
+      <div class="badge glass"><i>4</i>2569 · <span class="th">ปี 4 · ฝึกสอน</span><span class="en">Year 4 · Practicum</span></div>
+      <h3><span class="th">ปีที่สี่: ห้องเรียนจริง 272 คน และเครื่องมือที่สร้างเองเพื่อพวกเขา</span><span class="en">Fourth year: 272 real students, and the tools I built for them</span></h3>
+      <p><span class="th">ทุกอย่างที่สะสมมาถูกใช้พร้อมกันในหนึ่งภาคเรียนที่โรงเรียนสามเสนวิทยาลัย (11 พฤษภาคม – 30 กันยายน 2569) สอน 2 วิชา 8 ห้อง สร้างโลกเสมือนบน Roblox เพื่อสอน SketchUp เขียนระบบเช็คชื่อ QR ใช้เองทุกห้อง และพานักเรียน ม.6 ทำพอร์ตโฟลิโอยื่น TCAS จริง</span><span class="en">Everything came together in one semester at Samsenwittayalai School, Bangkok (11 May – 30 Sep 2026): two courses across eight classes, a Roblox world built to teach SketchUp, a QR attendance system I coded and used in every class, and 199 seniors building real TCAS portfolios.</span></p>
+      <div class="nums">
+        <div class="num glass"><b>272</b><span class="th">นักเรียน 8 ห้อง ม.5–ม.6</span><span class="en">students, 8 classes, grades 11–12</span></div>
+        <div class="num glass"><b>450</b><span class="th">ชั่วโมงฝึกปฏิบัติ · 24 แผน</span><span class="en">practicum hours · 24 lesson plans</span></div>
+        <div class="num glass"><b>69→93%</b><span class="th">คะแนนทักษะ ผ่านเกณฑ์ 5→33 คน</span><span class="en">skill score, 5→33 students passing</span></div>
+        <div class="num glass"><b>~1 <span class="th">นาที</span><span class="en">min</span></b><span class="th">เช็คชื่อด้วยระบบ QR ที่สร้างเอง</span><span class="en">attendance with my QR system</span></div>
+      </div>
+    </aside>
+    <div class="ch-body">
+      <article class="proj big glass reveal tilt" id="p-research">
+        <div class="media"><img src="assets/y4/roblox-cover.jpg" alt="โลกเสมือน SketchUp เรียนรู้ บน Roblox" loading="lazy" style="aspect-ratio:21/9" onerror="this.parentElement.style.display='none'"></div>
+        <div class="text">
+          <div class="ptag"><em>★★</em> <span class="th">วิจัยปฏิบัติการในชั้นเรียน · ม.5/11</span><span class="en">Classroom action research · Grade 11/11</span></div>
+          <h4><span class="th">การจัดการเรียนรู้โดยใช้เกมเป็นฐานผ่าน Roblox เพื่อพัฒนาทักษะสร้างโมเดล 3 มิติด้วย SketchUp</span><span class="en">Game-based learning through Roblox to develop 3D-modelling skills in SketchUp</span></h4>
+          <p><span class="th">นักเรียนสร้างโมเดลไม่เสร็จในคาบและพลาดขั้นตอนตอนครูสาธิต ผมจึงสร้างโลกเสมือน "SketchUp เรียนรู้" ด้วย Roblox Studio: คอนโดริมทะเล 6 พื้นที่ มีโซนความรู้ โซนสำรวจโมเดล ประตูภารกิจ และระบบตรวจงานอัตโนมัติ ทดลอง 3 วงจร (PAOR) ในเดือนสิงหาคม 2569 กับนักเรียน 33 คน</span><span class="en">Students weren't finishing models in class and missed steps during demos, so I built "SketchUp Learn" in Roblox Studio: a seaside condo with six zones, knowledge rooms, model-exploration areas, quest gates and auto-grading. Three action-research cycles in August 2026 with 33 students.</span></p>
+          <p><strong style="color:var(--ink)"><span class="th">ผล:</span><span class="en">Result:</span></strong> <span class="th">คะแนนทักษะเฉลี่ยจาก 6.94/10 (69%) เป็น 9.27/10 (93%) ผ่านเกณฑ์จาก 5 คนเป็น 33 คนทั้งห้อง ความถูกต้องของขนาดเพิ่มเกือบเท่าตัว นักเรียนทำเสร็จในคาบ 31 คน และการประเมินตนเองเพิ่มจาก 3.44 เป็น 4.38 ที่ปรึกษาวิจัย รศ.ดร.ปราวีณยา สุวรรณณัฐโชติ</span><span class="en">mean skill score rose from 6.94/10 (69%) to 9.27/10 (93%), students passing went from 5 to all 33, dimensional accuracy nearly doubled, 31 finished within class time, and self-assessment rose from 3.44 to 4.38. Advisor: Assoc. Prof. Dr. Praweenya Suwannatthachote.</span></p>
+          <div class="tags"><span>Roblox Studio</span><span>SketchUp</span><span>Game-based learning</span><span>Action research</span></div>
+        </div>
+      </article>
+      <div class="two">
+        <article class="proj glass reveal tilt" id="p-qr">
+          <div class="ptag"><em>★</em> <span class="th">สร้างเครื่องมือเอง</span><span class="en">Built my own tool</span></div>
+          <h4><span class="th">ระบบเช็คชื่อด้วย QR Code</span><span class="en">QR-code attendance system</span></h4>
+          <p><span class="th">เขียนด้วย React + Google Apps Script + Google Sheets ใช้จริงทุกห้องทั้ง 2 วิชาตั้งแต่ 22 มิถุนายน 2569 เช็คชื่อทั้งห้องเหลือประมาณ 1 นาที ป้องกันการเช็คแทน 3 ชั้น สรุปมา/สาย/ลา/ขาดอัตโนมัติ และสุ่มชื่อนักเรียนตอบคำถามได้</span><span class="en">React + Google Apps Script + Google Sheets, used in every class of both courses from 22 June 2026. Attendance takes about a minute, with three layers of anti-proxy checks, automatic present/late/leave/absent reports, and a random-name picker.</span></p>
+          <div class="tags"><span>React</span><span>Apps Script</span><span>Google Sheets</span></div>
+          <div class="links"><a href="https://nattawut01.netlify.app" target="_blank" rel="noopener"><span class="th">เปิดระบบ</span><span class="en">Open the app</span> ↗</a></div>
+        </article>
+        <article class="proj glass reveal tilt" id="p-tcas">
+          <div class="ptag"><em>★</em> <span class="th">การสอน ม.6 · 199 คน</span><span class="en">Teaching grade 12 · 199 students</span></div>
+          <h4><span class="th">พอร์ตโฟลิโอยื่น TCAS จริง และ PLC บูรณาการ 4 วิชา</span><span class="en">Real TCAS portfolios and a four-subject integrated project</span></h4>
+          <p><span class="th">วิชา I30204 การสื่อสารและการนำเสนอด้วยเทคโนโลยี พานักเรียน ม.6 ทั้ง 6 ห้องออกแบบกราฟิก สร้างแฟ้มบนระบบ TCASFolio ปีแรก และทำเว็บพอร์ตโฟลิโอด้วย Canva ทุกคน ร่วมกลุ่ม PLC กับครู 3 กลุ่มสาระออกแบบภาระงาน VLOG ชิ้นเดียวเก็บคะแนน 4 วิชา นักเรียนใช้เวลาน้อยลงราว 3 เท่า ส่งงาน 193 คน ผ่านเกณฑ์ทุกคน</span><span class="en">In I30204 Communication and Presentation with Technology, all six grade-12 classes learned graphic design, built TCASFolio entries in the system's first year, and made Canva web portfolios. In a PLC with teachers from three departments we designed one VLOG task graded across four subjects: students spent about a third of the time, 193 submitted, all passed.</span></p>
+          <div class="tags"><span>Canva</span><span>TCASFolio</span><span>CapCut</span><span>Mentimeter</span><span>Gemini</span></div>
+        </article>
+      </div>
+      <div class="two">
+        <article class="proj glass reveal tilt">
+          <div class="ptag"><span class="th">การสอน ม.5 · 73 คน</span><span class="en">Teaching grade 11 · 73 students</span></div>
+          <h4><span class="th">ว30261 การออกแบบและเทคโนโลยี</span><span class="en">Design &amp; Technology (SketchUp)</span></h4>
+          <p><span class="th">12 แผน 4 หน่วย จากรูปทรงพื้นฐาน ภาชนะ เฟอร์นิเจอร์และโคมไฟ จนถึงโมเดลห้องคอนโดสอบปลายภาค ให้นักเรียนวัดของจริงด้วยแอป AR แล้วนำขนาดมาสร้างโมเดล และใช้ Generative AI หาภาพอ้างอิง</span><span class="en">12 plans in 4 units, from basic shapes and vessels to furniture, lamps and a final condo-room model. Students measured real objects with AR apps and used generative AI for reference images.</span></p>
+          <div class="tags"><span>SketchUp</span><span>AR Measure</span><span>Google Classroom</span></div>
+        </article>
+        <article class="proj glass reveal tilt">
+          <div class="ptag"><span class="th">งานครูและงานโสตฯ ของโรงเรียน</span><span class="en">Teacher duties &amp; school AV</span></div>
+          <h4><span class="th">เกม AR วันวิทย์ · วิดีโอไหว้ครู · ฝ่ายโสตงาน พสวท.</span><span class="en">Science-day AR game · Wai Kru video · DPST conference AV</span></h4>
+          <p><span class="th">ครูที่ปรึกษา ม.6/4 ออกแบบเกม AR และบูธนิทรรศการวันวิทยาศาสตร์ ถ่ายและตัดต่อวิดีโอพิธีไหว้ครู ทำ Infographic Video ด้วย After Effects ถ่ายภาพประชุมผู้ปกครอง 4 ครั้ง และเป็นฝ่ายโสตฯ งานประชุมวิชาการ พสวท. ระดับชาติ ครั้งที่ 6 ตลอด 3 วัน</span><span class="en">Homeroom teacher for 6/4. Designed an AR game and booth for Science Day, shot and edited the Wai Kru ceremony video, made an After Effects infographic video, photographed four parent meetings, and ran AV for the 6th national DPST conference for three days.</span></p>
+          <div class="links"><a href="https://ar-explorer-pc.vercel.app/" target="_blank" rel="noopener"><span class="th">ลองเล่นเกม AR</span><span class="en">Try the AR game</span> ↗</a></div>
+        </article>
+      </div>
+      <div class="quote glass reveal"><span class="th">"เทคโนโลยีที่ครูสร้างขึ้นเอง ใช้เวลาพัฒนาไม่นาน แต่คืนเวลาสอนให้ทุกคาบ"</span><span class="en">"Technology a teacher builds herself takes little time to make, and gives teaching time back in every single period."</span><small><span class="th">บันทึกสะท้อนคิดจากการฝึกสอน ภาคต้น 2569</span><span class="en">From my practicum reflection, first semester 2026</span></small></div>
+      <div class="unlock reveal"><div class="eyebrow"><span class="th">ทักษะที่ปลดล็อกในปีนี้</span><span class="en">Skills unlocked this year</span></div><div class="tags"><span><span class="th">ออกแบบการสอนและวัดผล</span><span class="en">Instructional design &amp; assessment</span></span><span><span class="th">วิจัยในชั้นเรียน</span><span class="en">Classroom research</span></span><span><span class="th">พัฒนาเว็บแอปเพื่อครู</span><span class="en">Building web apps for teachers</span></span><span>Roblox Studio</span><span><span class="th">งานครูที่ปรึกษาและ PLC</span><span class="en">Homeroom &amp; PLC</span></span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section id="skills">
+  <div class="eyebrow reveal"><span class="th">ทักษะ</span><span class="en">Skills</span></div>
+  <h2 class="reveal"><span class="th">เครื่องมือในกระเป๋า</span><span class="en">My toolkit</span></h2>
+  <p class="lead reveal"><span class="th">ทุกชิ้นด้านบนใช้เครื่องมือเหล่านี้จริง ไม่ใช่รายการที่แค่เคยเปิดดู</span><span class="en">Everything above was made with these. No tools listed that I merely opened once.</span></p>
+  <div class="skills">
+    <div class="skill glass reveal tilt"><div class="ic">🎬</div><h3><span class="th">ผลิตวิดีโอ &amp; ถ่ายทอดสด</span><span class="en">Video &amp; live production</span></h3><div class="tags"><span>Premiere Pro</span><span>After Effects</span><span>CapCut</span><span>OBS</span><span>Video switcher</span><span>Audio mixer</span><span>Directing</span></div></div>
+    <div class="skill glass reveal tilt"><div class="ic">📷</div><h3><span class="th">ภาพถ่าย &amp; กราฟิก</span><span class="en">Photography &amp; graphics</span></h3><div class="tags"><span>Sony A7 II</span><span>Macro</span><span>Studio lighting</span><span>Lightroom</span><span>Photoshop</span><span>Illustrator</span><span>Canva</span><span>Procreate</span></div></div>
+    <div class="skill glass reveal tilt"><div class="ic">🧑‍🏫</div><h3><span class="th">การสอน &amp; EdTech</span><span class="en">Teaching &amp; EdTech</span></h3><div class="tags"><span><span class="th">ออกแบบแผนการสอน</span><span class="en">Lesson design</span></span><span>Game-based learning</span><span>Google Classroom</span><span>TCASFolio</span><span>Mentimeter</span><span>HeyGen</span><span>Gemini / ChatGPT</span><span>SketchUp</span></div></div>
+    <div class="skill glass reveal tilt"><div class="ic">💻</div><h3><span class="th">เว็บ &amp; การพัฒนา</span><span class="en">Web &amp; development</span></h3><div class="tags"><span>React</span><span>Google Apps Script</span><span>WordPress</span><span>Roblox Studio</span><span>ChatGPT API</span><span>LiDAR 3D scan</span><span>AR (web)</span><span>Netlify / Vercel</span></div></div>
+  </div>
+  <div class="eyebrow reveal" style="margin-top:50px"><span class="th">รางวัลและการรับรอง</span><span class="en">Awards &amp; certificates</span></div>
+  <div class="awards">
+    <div class="award glass reveal"><i>🏆</i><div><b><span class="th">รางวัลบทภาพยนตร์ยอดเยี่ยม — ThaiAECT Short Film Festival 2025</span><span class="en">Best Screenplay — ThaiAECT Short Film Festival 2025</span></b><span><span class="th">"The Routes" ฉายในโรงภาพยนตร์ One Bangkok · 2568</span><span class="en">"The Routes", screened at One Bangkok · 2025</span></span></div></div>
+    <div class="award glass reveal"><i>🥈</i><div><b><span class="th">เหรียญเงินระดับชาติ การประกวดภาพยนตร์สั้น</span><span class="en">National silver medal, short film</span></b><span><span class="th">งานศิลปหัตถกรรมนักเรียน ครั้งที่ 69 (+ เหรียญทองระดับเขต)</span><span class="en">69th National Student Arts &amp; Crafts Competition (+ district gold)</span></span></div></div>
+    <div class="award glass reveal"><i>🥇</i><div><b><span class="th">เหรียญทอง อากาศยานบังคับวิทยุ</span><span class="en">Gold medal, radio-controlled aircraft</span></b><span><span class="th">งานศิลปหัตถกรรมนักเรียน ครั้งที่ 70 ระดับเขตพื้นที่</span><span class="en">70th Arts &amp; Crafts Competition, district level</span></span></div></div>
+    <div class="award glass reveal"><i>💰</i><div><b><span class="th">ทุนโครงการเสริมประสบการณ์การเรียนรู้สู่โลกกว้าง</span><span class="en">"Wide World" learning-experience grant</span></b><span><span class="th">คณะครุศาสตร์ จุฬาฯ ภาคปลาย 2567 (รองหัวหน้าโครงการ)</span><span class="en">Faculty of Education, Chula, 2024–25 (deputy lead)</span></span></div></div>
+    <div class="award glass reveal"><i>🎓</i><div><b><span class="th">เกียรติบัตรปฏิบัติงานค่ายอยากเป็นครู ครั้งที่ 17 และ 18</span><span class="en">Kru Camp 17 &amp; 18 staff certificates</span></b><span><span class="th">คณบดีคณะครุศาสตร์ จุฬาฯ · 2567, 2567</span><span class="en">Dean, Faculty of Education, Chula · 2024</span></span></div></div>
+    <div class="award glass reveal"><i>🛸</i><div><b><span class="th">อบรมเทคโนโลยีโดรนแปรอักษร</span><span class="en">Drone light-show technology training</span></b><span><span class="th">สำนักงานการวิจัยแห่งชาติ (วช.) · รองชนะเลิศ Science Clip · MUSC STEM Camp มหิดล</span><span class="en">NRCT · Science Clip runner-up · Mahidol MUSC STEM Camp</span></span></div></div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about">
+  <div class="eyebrow reveal"><span class="th">เกี่ยวกับผม</span><span class="en">About me</span></div>
+  <h2 class="reveal"><span class="th">ทำไมถึงอยากเป็นครู</span><span class="en">Why I want to teach</span></h2>
+  <div class="about">
+    <div class="glass pic reveal"><img src="assets/profile/portrait-camera.jpg" alt="Nattawut with camera" loading="lazy"></div>
+    <div class="glass text reveal">
+      <p class="th"><strong>คุณแม่ผมเป็นครู</strong> ตอนเด็กผมตามแม่ไปโรงเรียนบ่อยๆ และเห็นว่าท่านสอนด้วยความตั้งใจ อดทน และหยิบเทคโนโลยีมาใช้ให้เกิดประโยชน์กับเด็กจริงๆ นั่นคือแรงบันดาลใจว่าผมอยากสอนผู้คน และเรียนรู้เทคโนโลยีไปพร้อมกัน</p>
+      <p class="th">ผมเชื่อว่านักเรียนไม่จำเป็นต้องเก่งทุกคน แต่ทุกคนควรได้ค้นพบความถนัดของตัวเอง หน้าที่ของครูคือทำให้สิ่งที่ยากมองเห็นเป็นภาพได้ และหน้าที่ของเทคโนโลยีคือคืนเวลาให้ครูได้อยู่กับนักเรียนมากขึ้น ตลอดเส้นทางที่ผ่านมาผมจึงทำสองอย่างนี้สลับกันเสมอ: สร้างสื่อ แล้วสร้างเครื่องมือ</p>
+      <p class="th"><strong>สิ่งที่มองหาต่อไป</strong> คือโรงเรียนหรือทีม EdTech ที่ให้ผมได้ทั้งสอนและสร้าง ไม่ว่าจะเป็นครูเทคโนโลยี ผู้ผลิตสื่อการศึกษา หรือคนออกแบบประสบการณ์การเรียนรู้</p>
+      <p class="en"><strong>My mother is a teacher.</strong> As a kid I tagged along to her school and watched her teach with patience and care, using technology in ways that actually helped children. That is where the wish to teach people, and keep learning technology alongside them, comes from.</p>
+      <p class="en">I believe not every student has to be brilliant, but every student deserves to find what they are good at. A teacher's job is to make hard things visible; technology's job is to give teachers more time with their students. That is why my path keeps alternating between two moves: make the media, then build the tool.</p>
+      <p class="en"><strong>What I'm looking for next</strong> is a school or EdTech team where I can both teach and build, whether as a technology teacher, an educational media producer, or a learning-experience designer.</p>
+      <div class="tags" style="margin-top:6px"><span><span class="th">คติ: ทุกอย่างจะไม่สำเร็จถ้าไม่ลงมือทำ</span><span class="en">Motto: nothing gets done unless you start</span></span><span><span class="th">ภาษาไทย · อังกฤษ</span><span class="en">Thai · English</span></span><span><span class="th">พระนครศรีอยุธยา → กรุงเทพฯ</span><span class="en">Ayutthaya → Bangkok</span></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact">
+  <div class="glass reveal">
+    <div class="eyebrow"><span class="th">ติดต่อ</span><span class="en">Contact</span></div>
+    <h2><span class="th">มาสร้างห้องเรียนที่ดีกว่าด้วยกัน</span><span class="en">Let's build better classrooms together.</span></h2>
+    <p class="lead" style="margin:0 auto"><span class="th">เปิดรับงานสายครู สื่อการศึกษา และ EdTech ทั้งงานประจำและโปรเจกต์ เริ่มงานได้หลังจบการศึกษา ปี 2570</span><span class="en">Open to teaching, educational media and EdTech roles, full-time or project-based, available after graduation in 2027.</span></p>
+    <div class="links-row">
+      <a class="btn primary" href="mailto:satang16530@gmail.com">✉️ satang16530@gmail.com</a>
+      <a class="btn ghost glass" href="https://www.instagram.com/_s_atang.248__" target="_blank" rel="noopener">Instagram @_s_atang.248__</a>
+      <a class="btn ghost glass" href="resume.pdf" download><span class="th">เรซูเม่ (PDF)</span><span class="en">Résumé (PDF)</span> ↓</a>
+    </div>
+  </div>
+</section>
+</main>
+<footer>© <span id="year"></span> Nattawut Khongdeepiean · <span class="th">ออกแบบและสร้างเว็บนี้เอง</span><span class="en">Designed and built by me</span></footer>
+<div id="lb"><img alt=""></div>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+<script>
+  // ---- language ----
+  const body=document.body;
+  const setLang=l=>{body.setAttribute('lang-mode',l);document.documentElement.lang=l;
+    document.querySelectorAll('.lang button').forEach(b=>b.classList.toggle('on',b.dataset.lang===l));
+    try{localStorage.setItem('lang',l)}catch(e){}};
+  document.querySelectorAll('.lang button').forEach(b=>b.onclick=()=>setLang(b.dataset.lang));
+  try{const s=localStorage.getItem('lang');if(s)setLang(s)}catch(e){}
+  document.getElementById('year').textContent=new Date().getFullYear();
+
+  // ---- progress + chapter dots ----
+  const prog=document.getElementById('progress');
+  const chapters=[...document.querySelectorAll('.chapter')];
+  const dots=[...document.querySelectorAll('.dots a')];
+  function onScroll(){
+    const h=document.documentElement;prog.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';
+    let cur=null;chapters.forEach(c=>{if(c.getBoundingClientRect().top<innerHeight*.45)cur=c.id});
+    dots.forEach(d=>d.classList.toggle('on',d.dataset.ch===cur));
+  }
+  addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  // ---- reveal ----
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // ---- 3D tilt ----
+  const fine=matchMedia('(hover:hover) and (pointer:fine)').matches;
+  if(fine) document.querySelectorAll('.tilt').forEach(card=>{
+    card.addEventListener('pointermove',e=>{
+      const r=card.getBoundingClientRect();const x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+      card.style.transform=`rotateY(${x*8}deg) rotateX(${-y*8}deg) translateZ(6px)`;
+      card.style.setProperty('--ang',`${Math.atan2(y,x)*180/Math.PI+90}deg`);
+    });
+    card.addEventListener('pointerleave',()=>{card.style.transform='';});
+  });
+
+  // ---- hero parallax ----
+  const floats=[...document.querySelectorAll('.float-card')],portrait=document.getElementById('portrait');
+  let mx=0,my=0,smx=0,smy=0;
+  addEventListener('pointermove',e=>{mx=e.clientX/innerWidth-.5;my=e.clientY/innerHeight-.5;});
+  (function loop(){smx+=(mx-smx)*.06;smy+=(my-smy)*.06;
+    floats.forEach(f=>{const d=+f.dataset.depth;f.style.transform=`translate3d(${smx*d}px,${smy*d}px,0) rotateY(${smx*10}deg) rotateX(${-smy*10}deg)`;});
+    portrait.style.transform=`translate(-50%,-50%) rotateY(${smx*16}deg) rotateX(${-smy*12}deg)`;
+    requestAnimationFrame(loop);})();
+
+  // ---- lightbox ----
+  const lb=document.getElementById('lb'),lbi=lb.querySelector('img');
+  document.querySelectorAll('.gal img').forEach(im=>im.addEventListener('click',()=>{lbi.src=im.src;lbi.alt=im.alt;lb.classList.add('on')}));
+  lb.addEventListener('click',()=>lb.classList.remove('on'));
+  addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on')});
+
+  // ---- lite YouTube ----
+  document.querySelectorAll('.yt').forEach(y=>y.addEventListener('click',()=>{
+    if(y.classList.contains('loaded'))return;
+    const f=document.createElement('iframe');f.src=`https://www.youtube-nocookie.com/embed/${y.dataset.id}?autoplay=1&rel=0`;f.allow='accelerometer; autoplay; encrypted-media; picture-in-picture';f.allowFullscreen=true;
+    y.appendChild(f);y.classList.add('loaded');
+  }));
+
+  // ---- Three.js liquid glass ----
+  (function(){
+    if(!window.THREE) return;
+    const canvas=document.getElementById('three');
+    let renderer;try{renderer=new THREE.WebGLRenderer({canvas,alpha:true,antialias:true});}catch(e){return}
+    renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.toneMapping=THREE.ACESFilmicToneMapping;
+    const scene=new THREE.Scene();const cam=new THREE.PerspectiveCamera(38,1,.1,100);cam.position.set(0,0,7);
+    const envMat=new THREE.ShaderMaterial({side:THREE.BackSide,uniforms:{t:{value:0}},
+      vertexShader:`varying vec3 p;void main(){p=position;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}`,
+      fragmentShader:`varying vec3 p;uniform float t;void main(){vec3 n=normalize(p);vec3 a=vec3(.43,.9,1.),b=vec3(.71,.55,1.),c=vec3(1.,.6,.78);float k=n.y*.5+.5;float s=sin(n.x*2.+t)*.5+.5;vec3 col=mix(mix(a,b,k),c,s*.5);gl_FragColor=vec4(col*.9,1.);}`});
+    const envMesh=new THREE.Mesh(new THREE.SphereGeometry(30,32,32),envMat);envMesh.visible=false;scene.add(envMesh);
+    const pmrem=new THREE.PMREMGenerator(renderer);
+    const glassMat=new THREE.MeshPhysicalMaterial({color:0xeaf6ff,metalness:0,roughness:.03,transmission:1,thickness:2.4,ior:1.5,attenuationColor:new THREE.Color(0x9fd8ff),attenuationDistance:3.5,clearcoat:1,clearcoatRoughness:.02,iridescence:.35,iridescenceIOR:1.3,envMapIntensity:1.6,specularIntensity:1});
+    const ring=new THREE.Mesh(new THREE.TorusGeometry(2.35,.42,48,140),glassMat);ring.rotation.x=Math.PI/2.6;scene.add(ring);
+    const drops=[];for(let i=0;i<7;i++){const m=new THREE.Mesh(new THREE.SphereGeometry(.14+Math.random()*.18,32,32),glassMat);scene.add(m);drops.push({m,a:Math.random()*6.28,r:2.6+Math.random()*.9,s:.3+Math.random()*.4,y:(Math.random()-.5)*2.4});}
+    scene.add(new THREE.AmbientLight(0xffffff,.6));
+    const key=new THREE.DirectionalLight(0xffffff,2.2);key.position.set(4,6,5);scene.add(key);
+    const rim=new THREE.DirectionalLight(0xb58cff,1.4);rim.position.set(-5,-3,-4);scene.add(rim);
+    function resize(){const w=canvas.clientWidth,h=canvas.clientHeight;renderer.setSize(w,h,false);cam.aspect=w/h;cam.updateProjectionMatrix();}
+    resize();addEventListener('resize',resize);
+    let env=null,tick=0;const clock=new THREE.Clock();
+    function frame(){
+      const t=clock.getElapsedTime();envMat.uniforms.t.value=t*.4;
+      if(tick++%60===0){if(env)env.dispose();envMesh.visible=true;ring.visible=false;drops.forEach(d=>d.m.visible=false);env=pmrem.fromScene(scene,0,.1,50).texture;scene.environment=env;envMesh.visible=false;ring.visible=true;drops.forEach(d=>d.m.visible=true);}
+      ring.rotation.z=t*.25+smx*.8;ring.rotation.x=Math.PI/2.6+smy*.6;ring.position.y=Math.sin(t*.8)*.12;
+      const sy=Math.min(1,scrollY/innerHeight);ring.scale.setScalar(1-sy*.35);
+      drops.forEach(d=>{d.a+=d.s*.01;d.m.position.set(Math.cos(d.a)*d.r,d.y+Math.sin(t+d.a)*.3,Math.sin(d.a)*d.r);});
+      if(scrollY<innerHeight*1.2)renderer.render(scene,cam);
+      requestAnimationFrame(frame);
+    }
+    frame();
+  })();
+</script>
+</body>
+</html>

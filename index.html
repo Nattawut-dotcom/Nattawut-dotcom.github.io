@@ -90,8 +90,8 @@
   .chip{padding:9px 16px;border-radius:999px;font-size:14px;color:var(--ink)}
   .cta{display:flex;gap:12px;flex-wrap:wrap}
   #stage{position:relative;height:min(78vh,680px);perspective:1200px}
-  #three{position:absolute;inset:0;width:100%;height:100%}
-  .portrait-card{position:absolute;left:50%;top:50%;width:min(62%,320px);aspect-ratio:4/5;transform:translate(-50%,-50%);border-radius:34px;overflow:hidden;transform-style:preserve-3d;box-shadow:0 40px 90px rgba(47,140,255,.22),0 0 0 1px var(--stroke);will-change:transform}
+  #three{position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none}
+  .portrait-card{position:absolute;z-index:1;left:50%;top:50%;width:min(62%,320px);aspect-ratio:4/5;transform:translate(-50%,-50%);border-radius:34px;overflow:hidden;transform-style:preserve-3d;box-shadow:0 40px 90px rgba(47,140,255,.22),0 0 0 1px var(--stroke);will-change:transform}
   .portrait-card img{width:100%;height:100%;object-fit:cover}
   .portrait-card::after{content:"";position:absolute;inset:0;background:linear-gradient(160deg,rgba(255,255,255,.35),transparent 35%,transparent 70%,rgba(255,255,255,.15));pointer-events:none}
   .float-card{position:absolute;padding:12px 16px;font-size:13px;transform-style:preserve-3d;will-change:transform;z-index:3}
@@ -777,20 +777,32 @@
     const envMesh=new THREE.Mesh(new THREE.SphereGeometry(30,32,32),envMat);envMesh.visible=false;scene.add(envMesh);
     const pmrem=new THREE.PMREMGenerator(renderer);
     const glassMat=new THREE.MeshPhysicalMaterial({color:0xeef7ff,metalness:0,roughness:.03,transmission:1,thickness:2.4,ior:1.5,attenuationColor:new THREE.Color(0x7fc0ff),attenuationDistance:1.6,clearcoat:1,clearcoatRoughness:.02,iridescence:.35,iridescenceIOR:1.3,envMapIntensity:1.6,specularIntensity:1});
-    const ring=new THREE.Mesh(new THREE.TorusGeometry(2.35,.42,48,140),glassMat);ring.rotation.x=Math.PI/2.6;scene.add(ring);
-    const drops=[];for(let i=0;i<7;i++){const m=new THREE.Mesh(new THREE.SphereGeometry(.14+Math.random()*.18,32,32),glassMat);scene.add(m);drops.push({m,a:Math.random()*6.28,r:2.6+Math.random()*.9,s:.3+Math.random()*.4,y:(Math.random()-.5)*2.4});}
+    const R=2.75;
+    const ring=new THREE.Mesh(new THREE.TorusGeometry(R,.07,32,180),glassMat);ring.rotation.x=-Math.PI/2.7;scene.add(ring);
+    const drops=[];for(let i=0;i<0;i++){const m=new THREE.Mesh(new THREE.SphereGeometry(.09+Math.random()*.1,24,24),glassMat);scene.add(m);drops.push({m,a:Math.random()*6.28,r:3.2+Math.random()*.6,s:.25+Math.random()*.3,y:(Math.random()-.5)*2.6});}
+    // invisible depth-only plane matching the portrait card: badges behind it are hidden, badges in front pass over it
+    const occ=new THREE.Mesh(new THREE.PlaneGeometry(1,1),new THREE.MeshBasicMaterial({colorWrite:false}));occ.renderOrder=-5;scene.add(occ);
+    const loader=new THREE.TextureLoader();
+    const badges=[['assets/logos/chula.png','Chulalongkorn University'],['assets/logos/samsen.png','Samsenwittayalai School'],['assets/logos/ayw.png','Ayutthaya Wittayalai School']].map((b,i)=>{
+      const t=loader.load(b[0]);t.colorSpace=THREE.SRGBColorSpace;t.anisotropy=4;
+      const sp=new THREE.Sprite(new THREE.SpriteMaterial({map:t,transparent:true,depthTest:true,depthWrite:false}));sp.scale.setScalar(1.05);sp.renderOrder=2;scene.add(sp);
+      return {m:sp,a:i*Math.PI*2/3};});
+    const tmp=new THREE.Vector3();
     scene.add(new THREE.AmbientLight(0xffffff,.6));
     const key=new THREE.DirectionalLight(0xffffff,2.6);key.position.set(4,6,5);scene.add(key);
     const rim=new THREE.DirectionalLight(0x7cc4ff,1.4);rim.position.set(-5,-3,-4);scene.add(rim);
-    function resize(){const w=canvas.clientWidth,h=canvas.clientHeight;renderer.setSize(w,h,false);cam.aspect=w/h;cam.updateProjectionMatrix();}
+    const card=document.getElementById('portrait');
+    function resize(){const w=canvas.clientWidth,h=canvas.clientHeight;renderer.setSize(w,h,false);cam.aspect=w/h;cam.updateProjectionMatrix();
+      const upp=(2*cam.position.z*Math.tan(cam.fov*Math.PI/360))/h;occ.scale.set(card.clientWidth*upp*0.98,card.clientHeight*upp*0.98,1);}
     resize();addEventListener('resize',resize);
     let env=null,tick=0;const clock=new THREE.Clock();
     function frame(){
       const t=clock.getElapsedTime();envMat.uniforms.t.value=t*.4;
-      if(tick++%60===0){if(env)env.dispose();envMesh.visible=true;ring.visible=false;drops.forEach(d=>d.m.visible=false);env=pmrem.fromScene(scene,0,.1,50).texture;scene.environment=env;envMesh.visible=false;ring.visible=true;drops.forEach(d=>d.m.visible=true);}
-      ring.rotation.z=t*.25+smx*.8;ring.rotation.x=Math.PI/2.6+smy*.6;ring.position.y=Math.sin(t*.8)*.12;
-      const sy=Math.min(1,scrollY/innerHeight);ring.scale.setScalar(1-sy*.35);
-      drops.forEach(d=>{d.a+=d.s*.01;d.m.position.set(Math.cos(d.a)*d.r,d.y+Math.sin(t+d.a)*.3,Math.sin(d.a)*d.r);});
+      if(tick++%60===0){if(env)env.dispose();envMesh.visible=true;ring.visible=false;occ.visible=false;drops.forEach(d=>d.m.visible=false);badges.forEach(b=>b.m.visible=false);env=pmrem.fromScene(scene,0,.1,50).texture;scene.environment=env;envMesh.visible=false;ring.visible=true;occ.visible=true;drops.forEach(d=>d.m.visible=true);badges.forEach(b=>b.m.visible=true);}
+      ring.rotation.x=-Math.PI/2.7-smy*.3;ring.rotation.y=smx*.5;ring.position.y=Math.sin(t*.8)*.08;
+      const sy=Math.min(1,scrollY/innerHeight);const sc=1-sy*.35;ring.scale.setScalar(sc);
+      badges.forEach((b,i)=>{const a=t*.42+b.a;tmp.set(Math.cos(a)*R*sc,Math.sin(a)*R*sc,0).applyEuler(ring.rotation);tmp.y+=ring.position.y;b.m.position.copy(tmp);const k=1.05*sc*(0.85+0.25*((tmp.z/R)+1)/2);b.m.scale.setScalar(k);});
+      drops.forEach(d=>{d.a+=d.s*.01;d.m.position.set(Math.cos(d.a)*d.r*sc,d.y+Math.sin(t+d.a)*.3,Math.sin(d.a)*d.r*sc);});
       if(scrollY<innerHeight*1.2)renderer.render(scene,cam);
       requestAnimationFrame(frame);
     }

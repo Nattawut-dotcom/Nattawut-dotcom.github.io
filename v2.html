@@ -8,244 +8,253 @@
 <meta property="og:title" content="Nattawut Khongdeepiean — Portfolio">
 <meta property="og:description" content="ครูที่สร้างสื่อ และสร้างเครื่องมือให้ห้องเรียน — A teacher who makes media and builds tools for the classroom.">
 <meta property="og:image" content="assets/profile/portrait-studio.jpg">
-<meta name="theme-color" content="#f4f9ff">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232f8cff'/%3E%3Cstop offset='1' stop-color='%233fd2ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='18' fill='url(%23g)'/%3E%3Ctext x='32' y='42' font-family='Inter,Arial' font-weight='800' font-size='30' text-anchor='middle' fill='%23ffffff'%3EN%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231d1d1f'/%3E%3Ctext x='32' y='43' font-family='-apple-system,Inter,Arial' font-weight='800' font-size='32' text-anchor='middle' fill='%23ffffff'%3EN%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;600;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#f4f9ff; --ink:#132241; --muted:rgba(19,34,65,.66); --dim:rgba(19,34,65,.45);
-    --glass:rgba(255,255,255,.58); --glass2:rgba(255,255,255,.75); --stroke:rgba(47,140,255,.22);
-    --a:#2f8cff; --b:#7b7dff; --c:#3fd2ff; --d:#3ccfa0; --e:#1f6fe0; --onink:#fff;
-    --radius:28px; --font:"Inter","IBM Plex Sans Thai",system-ui,sans-serif;
+    --primary:#0071E3; --link:#0066CC; --link-dark:#2997FF;
+    --ink:#1D1D1F; --ink-strong:#000; --body:#414143; --muted:#6E6E73; --muted-light:#86868B;
+    --surface:#fff; --subtle:#FAFAFC; --footer:#F5F5F7; --alt:#E8E8ED; --hair:#D2D2D7; --warm:#B64400;
+    --r-sm:8px; --r-md:11px; --r-lg:18px; --r-xl:28px; --pill:980px;
+    --display:-apple-system,"SF Pro Display","SF Pro Text",Inter,"IBM Plex Sans Thai",system-ui,sans-serif;
+    --text:-apple-system,"SF Pro Text",Inter,"IBM Plex Sans Thai",system-ui,sans-serif;
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{background:linear-gradient(180deg,#f8fbff 0%,#eaf3ff 45%,#eef4ff 100%) fixed,var(--bg);color:var(--ink);font-family:var(--font);-webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.55}
+  html{scroll-behavior:smooth;scroll-padding-top:60px}
+  body{background:var(--surface);color:var(--ink);font-family:var(--text);font-size:17px;line-height:1.45;letter-spacing:-.374px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
   body[lang-mode="th"] .en{display:none!important}
   body[lang-mode="en"] .th{display:none!important}
   img{display:block;max-width:100%}
-  a{color:inherit}
-  ::selection{background:var(--a);color:#fff}
-
-  /* ---------- background ---------- */
-  .blobs{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;filter:blur(70px) saturate(140%)}
-  .blob{position:absolute;border-radius:50%;opacity:.75;will-change:transform}
-  .blob.a{width:60vmax;height:60vmax;background:radial-gradient(circle,#b9dcff,transparent 65%);top:-20vmax;left:-15vmax;animation:drift 22s ease-in-out infinite alternate}
-  .blob.b{width:55vmax;height:55vmax;background:radial-gradient(circle,#d3d6ff,transparent 65%);top:20vh;right:-20vmax;animation:drift 27s ease-in-out infinite alternate-reverse}
-  .blob.c{width:45vmax;height:45vmax;background:radial-gradient(circle,#bff0ff,transparent 65%);bottom:-15vmax;left:20vw;animation:drift 31s ease-in-out infinite alternate}
-  @keyframes drift{from{transform:translate(0,0) scale(1)}to{transform:translate(8vw,-6vh) scale(1.15)}}
-  .grain{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.035;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
-  #progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--a),var(--b),var(--c));z-index:60;transition:width .1s linear}
-
-  /* ---------- glass ---------- */
-  .glass{position:relative;background:var(--glass);-webkit-backdrop-filter:blur(24px) saturate(160%);backdrop-filter:blur(24px) saturate(160%);border:1px solid var(--stroke);border-radius:var(--radius);box-shadow:0 18px 50px rgba(47,140,255,.13),0 2px 6px rgba(40,80,140,.05),inset 0 1px 0 rgba(255,255,255,.95),inset 0 -1px 0 rgba(255,255,255,.4)}
-  .glass::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:linear-gradient(115deg,rgba(255,255,255,.9) 0%,rgba(255,255,255,.25) 22%,transparent 45%,transparent 70%,rgba(255,255,255,.5) 100%);mask:linear-gradient(#000,transparent 70%);-webkit-mask:linear-gradient(#000,transparent 70%)}
-  .glass::after{content:"";position:absolute;inset:-1px;border-radius:inherit;pointer-events:none;background:conic-gradient(from var(--ang,200deg),transparent,rgba(47,140,255,.45),transparent 30%,transparent 60%,rgba(63,210,255,.4),transparent);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;padding:1px;opacity:.9}
-  .glass > *{position:relative;z-index:1}
+  a{color:inherit;text-decoration:none}
+  ::selection{background:#b3d7ff}
+  .chev{font-weight:400;margin-left:2px}
 
   /* ---------- nav ---------- */
-  nav{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:50;display:flex;align-items:center;gap:4px;padding:8px 10px 8px 18px;border-radius:999px;max-width:calc(100vw - 24px)}
-  nav .brand{font-weight:800;letter-spacing:-.03em;margin-right:8px;font-size:15px;text-decoration:none;white-space:nowrap}
-  nav .brand span{background:linear-gradient(100deg,var(--a),var(--c));-webkit-background-clip:text;background-clip:text;color:transparent}
-  nav .links{display:flex}
-  nav .links a{color:var(--muted);text-decoration:none;font-size:14px;padding:8px 12px;border-radius:999px;transition:.25s;white-space:nowrap}
-  nav .links a:hover{color:var(--ink);background:rgba(47,140,255,.10)}
-  .lang{display:flex;background:rgba(47,140,255,.10);border-radius:999px;padding:3px;margin-left:6px;border:1px solid var(--stroke)}
-  .lang button{border:0;background:transparent;color:var(--muted);font:inherit;font-size:13px;font-weight:600;padding:6px 12px;border-radius:999px;cursor:pointer;transition:.25s}
+  nav{position:fixed;top:0;left:0;right:0;height:44px;z-index:50;background:rgba(255,255,255,.72);-webkit-backdrop-filter:saturate(1.8) blur(20px);backdrop-filter:saturate(1.8) blur(20px)}
+  nav .in{max-width:1024px;margin:0 auto;height:44px;display:flex;align-items:center;gap:0;padding:0 22px}
+  nav .brand{font-family:var(--display);font-weight:600;font-size:14px;letter-spacing:-.2px;margin-right:auto}
+  nav .links{display:flex;gap:30px}
+  nav .links a{font-size:12px;font-weight:600;line-height:1;letter-spacing:-.12px;color:#333336;opacity:.85;transition:opacity .2s}
+  nav .links a:hover{opacity:1;color:var(--link)}
+  nav .cv{font-size:12px;font-weight:600;color:#333336;margin-left:30px;opacity:.85}
+  nav .cv:hover{color:var(--link);opacity:1}
+  .lang{display:flex;gap:2px;margin-left:26px;border:1px solid var(--hair);border-radius:var(--pill);padding:2px}
+  .lang button{border:0;background:transparent;color:var(--muted);font:inherit;font-size:11px;font-weight:600;padding:4px 9px;border-radius:var(--pill);cursor:pointer;line-height:1}
   .lang button.on{background:var(--ink);color:#fff}
-  nav .cv{margin-left:6px;font-size:13px;font-weight:600;padding:8px 14px;border-radius:999px;background:var(--ink);color:#fff;text-decoration:none;white-space:nowrap}
   @media(max-width:860px){nav .links,nav .cv{display:none}}
-
-  /* chapter dots */
-  .dots{position:fixed;right:18px;top:50%;transform:translateY(-50%);z-index:40;display:flex;flex-direction:column;gap:10px}
-  .dots a{width:10px;height:10px;border-radius:50%;background:rgba(47,140,255,.25);border:1px solid var(--stroke);transition:.3s;position:relative}
-  .dots a.on{background:var(--ink);transform:scale(1.35)}
-  .dots a span{position:absolute;right:20px;top:50%;transform:translateY(-50%);font-size:12px;color:var(--muted);white-space:nowrap;opacity:0;transition:.2s;pointer-events:none}
+  .dots{position:fixed;right:14px;top:50%;transform:translateY(-50%);z-index:40;display:flex;flex-direction:column;gap:9px}
+  .dots a{width:7px;height:7px;border-radius:50%;background:var(--hair);transition:.3s;position:relative}
+  .dots a.on{background:var(--ink);transform:scale(1.3)}
+  .dots a span{position:absolute;right:16px;top:50%;transform:translateY(-50%);font-size:12px;color:var(--muted);white-space:nowrap;opacity:0;transition:.2s;pointer-events:none}
   .dots a:hover span{opacity:1}
   @media(max-width:900px){.dots{display:none}}
+  #progress{display:none}
+
+  /* ---------- type ---------- */
+  h1,h2,h3,h4{font-family:var(--display)}
+  h1{font-size:clamp(40px,5.6vw,64px);font-weight:800;line-height:1.05;letter-spacing:-.028em}
+  h2{font-size:clamp(28px,3.4vw,40px);font-weight:600;line-height:1.15;letter-spacing:.2px;margin-bottom:10px}
+  h2.big{font-size:clamp(36px,5vw,56px);font-weight:800;line-height:1.05;letter-spacing:-.028em}
+  .eyebrow{font-size:12px;font-weight:600;letter-spacing:-.12px;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+  .lead{font-size:21px;font-weight:400;line-height:1.2;letter-spacing:.231px;color:var(--body);max-width:640px}
+  .grad{color:var(--ink)}
+  .btn{display:inline-flex;align-items:center;gap:6px;border-radius:var(--pill);padding:9px 18px;font-size:17px;letter-spacing:-.374px;line-height:1.25;border:0;font-family:inherit;cursor:pointer;transition:background .2s,transform .2s}
+  .btn.primary{background:var(--primary);color:#fff}
+  .btn.primary:hover{background:#0077ED}
+  .btn.ghost,.btn.secondary{background:var(--alt);color:var(--ink)}
+  .link{color:var(--link);font-size:17px;letter-spacing:-.374px;display:inline-flex;align-items:center;gap:4px}
+  .link:hover{text-decoration:underline}
+  .tags{display:flex;gap:6px;flex-wrap:wrap}
+  .tags span{font-size:12px;font-weight:600;letter-spacing:-.12px;padding:5px 11px;border-radius:var(--pill);background:var(--alt);color:var(--ink);white-space:nowrap}
+  .glass{background:transparent}
 
   /* ---------- layout ---------- */
   main{position:relative;z-index:2}
-  section{padding:110px 24px;max-width:1180px;margin:0 auto}
-  .eyebrow{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:14px}
-  h1,h2,h3{letter-spacing:-.03em;line-height:1.08}
-  h2{font-size:clamp(32px,4.6vw,56px);font-weight:800;margin-bottom:14px}
-  .lead{color:var(--muted);font-size:clamp(16px,1.35vw,19px);max-width:680px}
-  .grad{background:linear-gradient(100deg,var(--a),var(--b) 50%,var(--c));-webkit-background-clip:text;background-clip:text;color:transparent}
-  .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:999px;text-decoration:none;font-weight:600;font-size:15px;transition:transform .25s,box-shadow .25s;cursor:pointer;border:0;font-family:inherit}
-  .btn:hover{transform:translateY(-2px)}
-  .btn.primary{background:var(--ink);color:#fff;box-shadow:0 12px 30px rgba(19,34,65,.22)}
-  .btn.ghost{color:var(--ink)}
-  .tags{display:flex;gap:6px;flex-wrap:wrap}
-  .tags span{font-size:12px;padding:5px 11px;border-radius:999px;background:rgba(255,255,255,.7);border:1px solid var(--stroke);color:var(--ink);white-space:nowrap}
+  section{padding:88px 22px;max-width:1024px;margin:0 auto}
+  .full{max-width:none;padding-left:0;padding-right:0}
+  .in{max-width:1024px;margin:0 auto;padding:0 22px}
 
   /* ---------- hero ---------- */
-  #hero{min-height:100vh;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:40px;padding-top:130px}
-  #hero h1{font-size:clamp(38px,5.5vw,76px);font-weight:800}
-  #hero .who{margin:22px 0 10px;font-size:clamp(17px,1.5vw,21px);font-weight:600}
-  #hero .who small{display:block;color:var(--muted);font-weight:400;font-size:.85em;margin-top:4px}
-  .chips{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 30px}
-  .chip{padding:9px 16px;border-radius:999px;font-size:14px;color:var(--ink)}
-  .cta{display:flex;gap:12px;flex-wrap:wrap}
-  #stage{position:relative;height:min(78vh,680px);perspective:1200px}
+  #hero{padding-top:120px;padding-bottom:40px;text-align:center;max-width:1100px}
+  .hero-copy{max-width:820px;margin:0 auto}
+  .hero-copy .eyebrow{margin-bottom:12px}
+  .hero-copy .lead{margin:18px auto 0;max-width:640px}
+  .hero-links{display:flex;gap:26px;justify-content:center;align-items:center;margin:26px 0 0;flex-wrap:wrap}
+  #stage{position:relative;height:min(74vh,640px);width:min(100%,900px);margin:20px auto 0;perspective:1200px}
   #three{position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none}
-  .portrait-card{position:absolute;z-index:1;left:50%;top:50%;width:min(62%,320px);aspect-ratio:4/5;transform:translate(-50%,-50%);border-radius:34px;overflow:hidden;transform-style:preserve-3d;box-shadow:0 40px 90px rgba(47,140,255,.22),0 0 0 1px var(--stroke);will-change:transform}
+  .portrait-card{position:absolute;z-index:1;left:50%;top:50%;width:min(56%,300px);aspect-ratio:4/5;transform:translate(-50%,-50%);border-radius:var(--r-xl);overflow:hidden;transform-style:preserve-3d;box-shadow:rgba(0,0,0,.12) 2px 8px 28px;will-change:transform;background:#111}
   .portrait-card img{width:100%;height:100%;object-fit:cover}
-  .portrait-card::after{content:"";position:absolute;inset:0;background:linear-gradient(160deg,rgba(255,255,255,.35),transparent 35%,transparent 70%,rgba(255,255,255,.15));pointer-events:none}
-  .float-card{position:absolute;padding:12px 16px;font-size:13px;transform-style:preserve-3d;will-change:transform;z-index:3}
-  .float-card b{display:block;font-size:24px;letter-spacing:-.03em;line-height:1.1}
-  .float-card.f1{top:6%;left:0}
-  .float-card.f2{bottom:10%;left:4%}
-  .float-card.f3{top:30%;right:0}
-  .float-card.f4{bottom:26%;right:2%}
-  @media(max-width:900px){#hero{grid-template-columns:1fr;padding-top:110px}#stage{height:62vh;min-height:420px}.float-card b{font-size:20px}}
+  .float-card{position:absolute;padding:11px 15px;font-size:12px;letter-spacing:-.12px;color:var(--muted);background:rgba(255,255,255,.85);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-radius:var(--r-lg);box-shadow:rgba(0,0,0,.08) 2px 4px 12px;transform-style:preserve-3d;will-change:transform;z-index:3;text-align:left}
+  .float-card b{display:block;font-family:var(--display);font-size:22px;font-weight:600;letter-spacing:-.3px;color:var(--ink);line-height:1.1}
+  .float-card.f1{top:10%;left:6%}.float-card.f2{bottom:12%;left:9%}.float-card.f3{top:30%;right:5%}.float-card.f4{bottom:24%;right:7%}
+  .hero-stats{display:none}
+  @media(max-width:700px){.float-card{display:none}.hero-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:14px 20px;margin:26px auto 0;max-width:420px;text-align:left}.hero-stats b{display:block;font-family:var(--display);font-size:26px;font-weight:600;letter-spacing:-.4px}.hero-stats span{font-size:12px;color:var(--muted)}#stage{height:56vh;min-height:380px}}
 
-  /* ---------- highlights ---------- */
-  .hl{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px;perspective:1400px}
-  .hl a{text-decoration:none;color:inherit}
-  .hl .card{padding:0;overflow:hidden;min-height:400px;display:flex;flex-direction:column;transform-style:preserve-3d;transition:transform .12s ease-out}
+  /* ---------- highlights (product tiles) ---------- */
+  #highlights{text-align:center}
+  #highlights h2{margin-bottom:6px}
+  .hl{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px;text-align:left;perspective:1400px}
+  .hl .card{background:var(--subtle);border-radius:var(--r-xl);overflow:hidden;box-shadow:rgba(0,0,0,.08) 2px 4px 12px;display:flex;flex-direction:column;min-height:400px;transform-style:preserve-3d;transition:transform .15s ease-out}
   .hl .card img{width:100%;aspect-ratio:16/10;object-fit:cover}
-  .hl .card .body{padding:22px 24px 26px;display:flex;flex-direction:column;gap:8px;flex:1}
-  .hl .card .tag{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700}
-  .hl .card h3{font-size:22px}
-  .hl .card p{color:var(--muted);font-size:14.5px}
-  .hl .card .more{margin-top:auto;font-size:13px;font-weight:600;color:var(--a)}
+  .hl .card .body{padding:22px 24px 26px;display:flex;flex-direction:column;gap:6px;flex:1}
+  .hl .card .tag{font-size:12px;font-weight:600;letter-spacing:-.12px;color:var(--muted)}
+  .hl .card h3{font-size:24px;font-weight:600;letter-spacing:.1px;line-height:1.15}
+  .hl .card p{font-size:14px;letter-spacing:-.224px;line-height:1.3;color:var(--body)}
+  .hl .card .more{margin-top:auto;padding-top:10px;color:var(--link);font-size:14px;font-weight:400}
   @media(max-width:900px){.hl{grid-template-columns:1fr}}
+  .bookcta{display:flex;align-items:center;gap:22px;padding:22px 26px;margin-top:18px;background:var(--subtle);border-radius:var(--r-xl);box-shadow:rgba(0,0,0,.08) 2px 4px 12px;text-align:left;flex-wrap:wrap}
+  .bookcta img{width:150px;aspect-ratio:1400/990;object-fit:cover;border-radius:var(--r-sm);box-shadow:rgba(0,0,0,.12) 2px 4px 12px}
+  .bookcta b{display:block;font-family:var(--display);font-size:21px;font-weight:600;letter-spacing:.2px;line-height:1.2}
+  .bookcta > div > span{color:var(--muted);font-size:14px;letter-spacing:-.224px;display:block;margin-top:4px}
+  .bookcta .link{margin-left:auto}
+  @media(max-width:640px){.bookcta .link{margin-left:0}}
 
-  /* ---------- journey / chapters ---------- */
-  #journey{max-width:1180px}
-  .chapter{display:grid;grid-template-columns:300px 1fr;gap:36px;padding:70px 0;border-top:1px solid rgba(47,140,255,.18)}
-  .chapter:first-of-type{border-top:0}
-  .ch-side{position:sticky;top:110px;align-self:start}
-  .badge{display:inline-flex;align-items:center;gap:10px;padding:8px 14px 8px 10px;border-radius:999px;font-size:13px;font-weight:700;margin-bottom:16px}
-  .badge i{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-style:normal;font-size:12px;background:linear-gradient(135deg,var(--a),var(--b));color:#fff}
-  .ch-side h3{font-size:clamp(26px,2.6vw,34px);font-weight:800;margin-bottom:12px}
-  .ch-side p{color:var(--muted);font-size:15px}
-  .ch-side .nums{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}
-  .ch-side .num{padding:12px 14px;border-radius:18px}
-  .ch-side .num b{display:block;font-size:22px;letter-spacing:-.03em}
-  .ch-side .num span{font-size:12px;color:var(--muted)}
+  /* ---------- journey ---------- */
+  #journey{max-width:none;padding:0}
+  #journey > .eyebrow,#journey > h2,#journey > .lead{max-width:1024px;margin-left:auto;margin-right:auto;padding:0 22px;text-align:center}
+  #journey > .eyebrow{padding-top:88px}
+  #journey > .lead{margin:14px auto 60px}
+  .chapter{padding:80px 22px;background:var(--surface)}
+  .chapter:nth-of-type(even){background:var(--footer)}
+  .chapter.dark{background:var(--ink-strong);color:#f5f5f7}
+  .chapter.dark .ch-side p,.chapter.dark .proj p,.chapter.dark .ptag,.chapter.dark .num span,.chapter.dark .unlock .eyebrow{color:#a1a1a6}
+  .chapter.dark .proj,.chapter.dark .quote{background:#1d1d1f;color:#f5f5f7;box-shadow:none}
+  .chapter.dark .tags span{background:#2c2c2e;color:#f5f5f7}
+  .chapter.dark .proj .links a{background:transparent;color:var(--link-dark)}
+  .chapter.dark .proj .links a:hover{text-decoration:underline}
+  .chapter.dark .num b{color:#fff}
+  .chapter.dark .num{border-top-color:#3a3a3c}
+  .chapter.dark .badge{background:#2c2c2e;color:#f5f5f7}
+  .chapter.dark .proj.big .media{background:#000}
+  .chapter.dark .ptag em{color:#ffd60a}
+  .ch-inner{max-width:1024px;margin:0 auto;display:grid;grid-template-columns:300px 1fr;gap:44px}
+  .ch-side{position:sticky;top:80px;align-self:start}
+  .badge{display:inline-flex;align-items:center;gap:8px;padding:5px 12px 5px 6px;border-radius:var(--pill);font-size:12px;font-weight:600;letter-spacing:-.12px;background:var(--alt);color:var(--ink);margin-bottom:16px}
+  .badge i{width:20px;height:20px;border-radius:50%;display:grid;place-items:center;font-style:normal;font-size:11px;background:var(--ink);color:#fff}
+  .ch-side h3{font-size:clamp(28px,2.6vw,34px);font-weight:800;letter-spacing:-.6px;line-height:1.08;margin-bottom:12px}
+  .ch-side p{font-size:14px;letter-spacing:-.224px;line-height:1.4;color:var(--body)}
+  .ch-side .nums{display:grid;grid-template-columns:1fr 1fr;gap:0 18px;margin-top:22px}
+  .ch-side .num{padding:12px 0 10px;border-top:1px solid var(--hair)}
+  .ch-side .num b{display:block;font-family:var(--display);font-size:24px;font-weight:600;letter-spacing:-.4px;line-height:1.1}
+  .ch-side .num span{font-size:12px;letter-spacing:-.12px;color:var(--muted)}
   .ch-body{display:grid;gap:18px;perspective:1400px}
-  .proj{padding:24px;transform-style:preserve-3d;transition:transform .12s ease-out}
+  .proj{background:var(--subtle);border-radius:var(--r-xl);padding:26px;box-shadow:rgba(0,0,0,.08) 2px 4px 12px;transform-style:preserve-3d;transition:transform .15s ease-out}
+  .chapter:nth-of-type(even) .proj,.chapter:nth-of-type(even) .quote{background:var(--surface)}
   .proj.big{padding:0;overflow:hidden}
-  .proj.big .media{position:relative;background:#e9f1fb;border-radius:var(--radius) var(--radius) 0 0;overflow:hidden}
+  .proj.big .media{position:relative;background:var(--alt);overflow:hidden}
   .proj.big .media img,.proj.big .media video{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
-  .proj.big .media video{background:#0f1a2e}
-  .proj.big .text{padding:24px}
-  .ptag{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:8px}
-  .ptag em{font-style:normal;color:var(--e)}
-  .proj h4{font-size:22px;letter-spacing:-.02em;margin-bottom:8px;line-height:1.2}
-  .proj p{color:var(--muted);font-size:15px;margin-bottom:10px}
+  .proj.big .media video{background:#000}
+  .proj.big .text{padding:26px}
+  .ptag{font-size:12px;font-weight:600;letter-spacing:-.12px;color:var(--muted);margin-bottom:8px}
+  .ptag em{font-style:normal;color:var(--warm)}
+  .proj h4{font-size:24px;font-weight:600;letter-spacing:.1px;line-height:1.15;margin-bottom:8px}
+  .proj p{font-size:14px;letter-spacing:-.224px;line-height:1.4;color:var(--body);margin-bottom:10px}
   .proj .tags{margin-top:12px}
-  .proj .links{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
-  .proj .links a{font-size:13px;font-weight:600;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.75);border:1px solid var(--stroke);text-decoration:none;transition:.2s}
-  .proj .links a:hover{background:#fff;box-shadow:0 6px 18px rgba(47,140,255,.2)}
+  .proj .links{display:flex;gap:18px;flex-wrap:wrap;margin-top:12px}
+  .proj .links a{color:var(--link);font-size:14px;letter-spacing:-.224px}
+  .proj .links a:hover{text-decoration:underline}
   .two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
   .gal{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:14px}
-  .gal img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:14px;cursor:zoom-in;border:1px solid var(--stroke);transition:.25s}
+  .gal img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r-md);cursor:zoom-in;transition:.25s}
   .gal img:hover{transform:scale(1.03)}
   .gal.g3{grid-template-columns:repeat(3,1fr)}
   .gal.g5{grid-template-columns:repeat(5,1fr)}
   .gal.g5 img{aspect-ratio:3/2}
   .yt{position:relative;aspect-ratio:16/9;background:#000 center/cover no-repeat;cursor:pointer;overflow:hidden}
-  .yt::after{content:"";position:absolute;left:50%;top:50%;width:74px;height:74px;transform:translate(-50%,-50%);border-radius:50%;background:rgba(255,255,255,.95);box-shadow:0 10px 40px rgba(0,0,0,.35);transition:.25s}
-  .yt::before{content:"";position:absolute;left:50%;top:50%;transform:translate(-40%,-50%);border-style:solid;border-width:13px 0 13px 22px;border-color:transparent transparent transparent #0b0c14;z-index:2}
-  .yt:hover::after{transform:translate(-50%,-50%) scale(1.08)}
+  .yt::after{content:"";position:absolute;left:50%;top:50%;width:70px;height:70px;transform:translate(-50%,-50%);border-radius:50%;background:rgba(255,255,255,.94);box-shadow:0 8px 30px rgba(0,0,0,.35);transition:.25s}
+  .yt::before{content:"";position:absolute;left:50%;top:50%;transform:translate(-40%,-50%);border-style:solid;border-width:12px 0 12px 20px;border-color:transparent transparent transparent #1d1d1f;z-index:2}
+  .yt:hover::after{transform:translate(-50%,-50%) scale(1.06)}
   .yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
   .yt.loaded::after,.yt.loaded::before{display:none}
-  .quote{padding:22px 26px;font-size:17px;line-height:1.6;border-left:3px solid var(--a);border-radius:18px}
-  .quote small{display:block;color:var(--muted);margin-top:8px;font-size:13px}
+  .quote{padding:26px 30px;font-family:var(--display);font-size:24px;font-weight:600;letter-spacing:.1px;line-height:1.25;background:var(--subtle);border-radius:var(--r-xl);box-shadow:rgba(0,0,0,.08) 2px 4px 12px}
+  .quote small{display:block;font-family:var(--text);color:var(--muted);margin-top:10px;font-size:12px;font-weight:400;letter-spacing:-.12px}
   .unlock{margin-top:22px}
   .unlock .eyebrow{margin-bottom:8px}
-  @media(max-width:900px){.chapter{grid-template-columns:1fr;gap:22px;padding:50px 0}.ch-side{position:static}.two{grid-template-columns:1fr}.gal,.gal.g5{grid-template-columns:repeat(2,1fr)}.gal.g3{grid-template-columns:repeat(3,1fr)}}
-
-  /* ---------- skills ---------- */
-  .skills{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:34px;perspective:1400px}
-  .skill{padding:22px;transform-style:preserve-3d;transition:transform .15s ease-out}
-  .skill .ic{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;font-size:22px;margin-bottom:14px;background:rgba(255,255,255,.8);border:1px solid var(--stroke)}
-  .skill h3{font-size:18px;margin-bottom:10px}
-  .skill .tags span{font-size:12px}
-  @media(max-width:900px){.skills{grid-template-columns:repeat(2,1fr)}}
-  @media(max-width:520px){.skills{grid-template-columns:1fr}}
-
-  /* ---------- awards ---------- */
-  .awards{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:30px}
-  .award{display:grid;grid-template-columns:44px 1fr;gap:14px;padding:16px 18px;border-radius:20px;align-items:start}
-  .award i{font-style:normal;width:44px;height:44px;border-radius:12px;display:grid;place-items:center;font-size:20px;background:rgba(255,255,255,.8);border:1px solid var(--stroke)}
-  .award b{display:block;font-size:15px;line-height:1.3}
-  .award span{font-size:13px;color:var(--muted)}
-  @media(max-width:760px){.awards{grid-template-columns:1fr}}
-
-  /* ---------- about / contact ---------- */
-  .about{display:grid;grid-template-columns:1fr 1.35fr;gap:24px;align-items:stretch;margin-top:30px}
-  .about .pic{overflow:hidden;padding:0;aspect-ratio:4/5}
-  .about .pic img{width:100%;height:100%;object-fit:cover;border-radius:inherit}
-  .about .text{padding:34px}
-  .about .text p{color:var(--muted);font-size:16px;margin-bottom:14px}
-  .about .text p strong{color:var(--ink)}
-  @media(max-width:900px){.about{grid-template-columns:1fr}}
-  #contact .glass{padding:clamp(32px,6vw,70px);text-align:center}
-  #contact h2{margin-bottom:10px}
-  .links-row{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:30px}
-  footer{position:relative;z-index:2;text-align:center;color:var(--dim);font-size:13px;padding:30px 24px 50px}
+  @media(max-width:900px){.ch-inner{grid-template-columns:1fr;gap:26px}.ch-side{position:static}.two{grid-template-columns:1fr}.gal,.gal.g5{grid-template-columns:repeat(2,1fr)}.gal.g3{grid-template-columns:repeat(3,1fr)}.chapter{padding:56px 22px}}
 
   /* ---------- photobook ---------- */
   .book{padding:0;overflow:hidden}
-  .book .head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding:24px 24px 14px;flex-wrap:wrap}
+  .book .head{padding:26px 26px 14px}
   .book .head h4{margin:0}
-  .book .stage{position:relative;margin:0 24px;perspective:2200px;background:linear-gradient(180deg,#dfeaf8,#cfdff2);border-radius:20px;padding:18px;box-shadow:inset 0 2px 12px rgba(19,34,65,.12)}
-  .book .page{position:relative;aspect-ratio:1400/990;border-radius:8px;overflow:hidden;box-shadow:0 18px 40px rgba(19,34,65,.28),0 0 0 1px rgba(19,34,65,.08);background:#fff;transform-style:preserve-3d;transform-origin:left center;transition:transform .55s cubic-bezier(.4,0,.2,1),opacity .4s}
+  .book .stage{position:relative;margin:0 26px;perspective:2200px;background:var(--alt);border-radius:var(--r-lg);padding:18px}
+  .chapter.dark .book .stage{background:#2c2c2e}
+  .book .page{position:relative;aspect-ratio:1400/990;border-radius:var(--r-sm);overflow:hidden;box-shadow:rgba(0,0,0,.25) 0 14px 34px;background:#fff;transform-style:preserve-3d;transform-origin:left center;transition:transform .55s cubic-bezier(.4,0,.2,1),opacity .4s}
   .book .page img{width:100%;height:100%;object-fit:contain;display:block;background:#fff}
   .book .page.flip-out{transform:rotateY(-80deg);opacity:0}
   .book .page.flip-in{transform:rotateY(60deg);opacity:0;transform-origin:right center;transition:none}
   .book .page::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(0,0,0,.10),transparent 6%,transparent 94%,rgba(0,0,0,.05))}
-  .book .nav{position:absolute;top:50%;transform:translateY(-50%);width:46px;height:46px;border-radius:50%;border:1px solid var(--stroke);background:rgba(255,255,255,.9);color:var(--ink);font-size:20px;display:grid;place-items:center;cursor:pointer;box-shadow:0 8px 24px rgba(19,34,65,.18);transition:.2s;user-select:none}
+  .book .nav{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:0;background:rgba(255,255,255,.92);color:var(--ink);font-size:20px;display:grid;place-items:center;cursor:pointer;box-shadow:rgba(0,0,0,.15) 0 6px 18px;transition:.2s;user-select:none}
   .book .nav:hover{background:#fff;transform:translateY(-50%) scale(1.06)}
   .book .nav.prev{left:-6px}.book .nav.next{right:-6px}
-  .book .bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 24px 22px;flex-wrap:wrap}
-  .book .counter{font-weight:700;font-variant-numeric:tabular-nums}
-  .book .counter span{color:var(--muted);font-weight:500}
-  .book .thumbs{display:flex;gap:6px;overflow-x:auto;padding:4px 24px 20px;scrollbar-width:thin}
-  .book .thumbs img{height:44px;aspect-ratio:1400/990;object-fit:cover;border-radius:5px;cursor:pointer;opacity:.55;border:2px solid transparent;transition:.2s;flex:none}
-  .book .thumbs img.on,.book .thumbs img:hover{opacity:1;border-color:var(--a)}
-  .book .kbd{font-size:12px;color:var(--muted)}
-  .bookcta{display:flex;align-items:center;gap:18px;padding:18px 22px;margin-top:18px;flex-wrap:wrap}
-  .bookcta img{width:120px;aspect-ratio:1400/990;object-fit:cover;border-radius:10px;box-shadow:0 8px 24px rgba(19,34,65,.18)}
-  .bookcta b{display:block;font-size:17px;letter-spacing:-.02em}
-  .bookcta > div > span{color:var(--muted);font-size:14px}
-  .bookcta .btn{margin-left:auto;color:#fff;font-size:15px}
-  .bookcta .btn span{color:#fff;font-size:15px}
-  @media(max-width:640px){.book .stage{margin:0 12px;padding:10px}.book .nav{width:38px;height:38px;font-size:16px}.bookcta .btn{margin-left:0}}
+  .book .bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 26px 20px;flex-wrap:wrap}
+  .book .counter{font-weight:600;font-variant-numeric:tabular-nums;font-size:14px}
+  .book .counter span{color:var(--muted);font-weight:400}
+  .book .bar .btn{padding:7px 14px;font-size:14px}
+  .book .thumbs{display:flex;gap:6px;overflow-x:auto;padding:4px 26px 22px;scrollbar-width:thin}
+  .book .thumbs img{height:44px;aspect-ratio:1400/990;object-fit:cover;border-radius:4px;cursor:pointer;opacity:.5;border:2px solid transparent;transition:.2s;flex:none}
+  .book .thumbs img.on,.book .thumbs img:hover{opacity:1;border-color:var(--primary)}
+  .book .kbd{font-size:12px;letter-spacing:-.12px;color:var(--muted)}
+  @media(max-width:640px){.book .stage{margin:0 12px;padding:10px}.book .nav{width:36px;height:36px;font-size:16px}}
 
-  /* ---------- lightbox ---------- */
-  #lb{position:fixed;inset:0;z-index:100;background:rgba(12,24,48,.88);display:none;place-items:center;padding:24px;cursor:zoom-out;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+  /* ---------- skills / awards ---------- */
+  #skills{text-align:center}
+  .skills{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px;text-align:left;perspective:1400px}
+  .skill{padding:24px;background:var(--subtle);border-radius:var(--r-xl);box-shadow:rgba(0,0,0,.08) 2px 4px 12px;transform-style:preserve-3d;transition:transform .15s ease-out}
+  .skill .ic{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;font-size:22px;margin-bottom:14px;background:var(--alt)}
+  .skill h3{font-size:17px;font-weight:600;letter-spacing:-.374px;margin-bottom:10px}
+  @media(max-width:900px){.skills{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:520px){.skills{grid-template-columns:1fr}}
+  .awards{display:grid;grid-template-columns:1fr 1fr;gap:0 40px;margin-top:22px;text-align:left}
+  .award{display:grid;grid-template-columns:40px 1fr;gap:14px;padding:16px 0;border-top:1px solid var(--hair);align-items:start}
+  .award i{font-style:normal;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font-size:18px;background:var(--alt)}
+  .award b{display:block;font-size:14px;font-weight:600;letter-spacing:-.224px;line-height:1.3}
+  .award span{font-size:12px;letter-spacing:-.12px;color:var(--muted)}
+  @media(max-width:760px){.awards{grid-template-columns:1fr}}
+
+  /* ---------- about / contact ---------- */
+  #about{text-align:center}
+  .about{display:grid;grid-template-columns:1fr 1.35fr;gap:26px;align-items:stretch;margin-top:36px;text-align:left}
+  .about .pic{overflow:hidden;border-radius:var(--r-xl);aspect-ratio:4/5;box-shadow:rgba(0,0,0,.08) 2px 4px 12px}
+  .about .pic img{width:100%;height:100%;object-fit:cover}
+  .about .text{padding:6px 8px}
+  .about .text p{font-size:17px;letter-spacing:-.374px;line-height:1.45;color:var(--body);margin-bottom:16px}
+  .about .text p strong{color:var(--ink);font-weight:600}
+  @media(max-width:900px){.about{grid-template-columns:1fr}}
+  #contact{max-width:none;background:var(--footer);padding:96px 22px}
+  #contact .glass{max-width:760px;margin:0 auto;text-align:center;background:transparent}
+  #contact h2{font-size:clamp(32px,4.4vw,48px);font-weight:800;letter-spacing:-.028em;line-height:1.05;margin-bottom:12px}
+  .links-row{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;align-items:center;margin-top:26px}
+  .links-row .btn.ghost{background:transparent;color:var(--link);padding:0;font-size:17px}
+  .links-row .btn.ghost:hover{text-decoration:underline}
+  footer{background:var(--footer);color:var(--muted);font-size:12px;letter-spacing:-.12px;padding:0 22px 34px}
+  footer .in{border-top:1px solid var(--hair);padding-top:16px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+  /* ---------- lightbox / reveal ---------- */
+  #lb{position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.86);display:none;place-items:center;padding:24px;cursor:zoom-out}
   #lb.on{display:grid}
-  #lb img{max-width:min(96vw,1400px);max-height:92vh;border-radius:18px;box-shadow:0 30px 100px rgba(0,0,0,.5)}
-
-  /* ---------- reveal ---------- */
-  .reveal{opacity:0;transform:translateY(40px) rotateX(8deg);transform-origin:top;transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+  #lb img{max-width:min(96vw,1400px);max-height:92vh;border-radius:var(--r-md)}
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
   .reveal.in{opacity:1;transform:none}
-  @media(prefers-reduced-motion:reduce){.reveal{transition:none;opacity:1;transform:none}.blob{animation:none}}
+  @media(prefers-reduced-motion:reduce){.reveal{transition:none;opacity:1;transform:none}}
 </style>
 </head>
 <body lang-mode="th">
-<div id="progress"></div>
-<div class="blobs"><div class="blob a"></div><div class="blob b"></div><div class="blob c"></div></div>
-<div class="grain"></div>
-
-<nav class="glass">
-  <a class="brand" href="#hero">Nattawut<span>.</span></a>
-  <span class="links">
-    <a href="#highlights"><span class="th">ไฮไลต์</span><span class="en">Highlights</span></a>
-    <a href="#journey"><span class="th">เส้นทาง</span><span class="en">Journey</span></a>
-    <a href="#skills"><span class="th">ทักษะ</span><span class="en">Skills</span></a>
-    <a href="#about"><span class="th">เกี่ยวกับ</span><span class="en">About</span></a>
-    <a href="#contact"><span class="th">ติดต่อ</span><span class="en">Contact</span></a>
-  </span>
-  <div class="lang"><button data-lang="th" class="on">ไทย</button><button data-lang="en">EN</button></div>
-  <a class="cv" href="resume.pdf" download><span class="th">เรซูเม่</span><span class="en">Résumé</span> ↓</a>
+<nav>
+  <div class="in">
+    <a class="brand" href="#hero">Nattawut Khongdeepiean</a>
+    <span class="links">
+      <a href="#highlights"><span class="th">ไฮไลต์</span><span class="en">Highlights</span></a>
+      <a href="#journey"><span class="th">เส้นทาง</span><span class="en">Journey</span></a>
+      <a href="#skills"><span class="th">ทักษะ</span><span class="en">Skills</span></a>
+      <a href="#about"><span class="th">เกี่ยวกับ</span><span class="en">About</span></a>
+      <a href="#contact"><span class="th">ติดต่อ</span><span class="en">Contact</span></a>
+    </span>
+    <a class="cv" href="resume.pdf" download><span class="th">เรซูเม่</span><span class="en">Résumé</span></a>
+    <div class="lang"><button data-lang="th" class="on">ไทย</button><button data-lang="en">EN</button></div>
+  </div>
 </nav>
 
 <div class="dots">
@@ -255,37 +264,35 @@
   <a href="#ch-y3" data-ch="ch-y3"><span>2568 · <span class="th">ปี 3</span><span class="en">Year 3</span></span></a>
   <a href="#ch-y4" data-ch="ch-y4"><span>2569 · <span class="th">ปี 4</span><span class="en">Year 4</span></span></a>
 </div>
-
+<div id="progress"></div>
 <main>
 <!-- ============ HERO ============ -->
 <section id="hero">
-  <div>
-    <div class="eyebrow"><span class="th">ครู · สื่อการศึกษา · EdTech</span><span class="en">Teacher · Educational Media · EdTech</span></div>
+  <div class="hero-copy">
+    <p class="eyebrow"><span class="th">ณัฐวุฒิ คงดีเพียร (สตางค์)</span><span class="en">Nattawut Khongdeepiean (Satang)</span></p>
     <h1>
-      <span class="th">ครูที่<span class="grad">สร้างสื่อ</span><br>และสร้างเครื่องมือ<br>ให้ห้องเรียน</span>
-      <span class="en">A teacher who<br><span class="grad">makes media</span><br>and builds tools<br>for the classroom.</span>
+      <span class="th">ครูที่สร้างสื่อ<br>และสร้างเครื่องมือให้ห้องเรียน</span>
+      <span class="en">A teacher who makes media<br>and builds tools for the classroom.</span>
     </h1>
-    <div class="who">
-      <span class="th">ณัฐวุฒิ คงดีเพียร (สตางค์)</span><span class="en">Nattawut Khongdeepiean (Satang)</span>
-      <small><span class="th">นิสิตปี 4 สาขาเทคโนโลยีการศึกษา คณะครุศาสตร์ จุฬาลงกรณ์มหาวิทยาลัย · กำลังฝึกสอนที่โรงเรียนสามเสนวิทยาลัย</span><span class="en">4th-year Educational Technology student, Faculty of Education, Chulalongkorn University · Student teacher at Samsenwittayalai School</span></small>
-    </div>
-    <div class="chips">
-      <span class="chip glass"><span class="th">กำกับ · ถ่าย · ตัดต่อ</span><span class="en">Direct · Shoot · Edit</span></span>
-      <span class="chip glass"><span class="th">ถ่ายทอดสด &amp; โสตฯ</span><span class="en">Live production &amp; AV</span></span>
-      <span class="chip glass"><span class="th">AI &amp; เว็บเพื่อการศึกษา</span><span class="en">AI &amp; web for learning</span></span>
-    </div>
-    <div class="cta">
-      <a class="btn primary" href="#journey"><span class="th">ดูเส้นทางของผม</span><span class="en">See my journey</span> ↓</a>
-      <a class="btn ghost glass" href="resume.pdf" download><span class="th">ดาวน์โหลดเรซูเม่</span><span class="en">Download résumé</span></a>
+    <p class="lead"><span class="th">นิสิตปี 4 สาขาเทคโนโลยีการศึกษา คณะครุศาสตร์ จุฬาลงกรณ์มหาวิทยาลัย กำลังฝึกสอนที่โรงเรียนสามเสนวิทยาลัย</span><span class="en">Fourth-year Educational Technology student, Faculty of Education, Chulalongkorn University. Student teacher at Samsenwittayalai School.</span></p>
+    <div class="hero-links">
+      <a class="btn primary" href="#journey"><span class="th">ดูเส้นทางของผม</span><span class="en">See my journey</span></a>
+      <a class="link" href="resume.pdf" download><span class="th">ดาวน์โหลดเรซูเม่</span><span class="en">Download résumé</span> <span class="chev">›</span></a>
     </div>
   </div>
   <div id="stage">
     <canvas id="three"></canvas>
     <div class="portrait-card" id="portrait"><img src="assets/profile/portrait-studio.jpg" alt="Nattawut Khongdeepiean"></div>
-    <div class="float-card glass f1" data-depth="30"><b>272</b><span class="th">นักเรียนที่สอนจริง</span><span class="en">students taught</span></div>
-    <div class="float-card glass f2" data-depth="55"><b>2</b><span class="th">รางวัลหนังสั้น</span><span class="en">short-film awards</span></div>
-    <div class="float-card glass f3" data-depth="40"><b>96</b><span class="th">ครูและผู้สนใจที่อบรม AI</span><span class="en">educators trained in AI</span></div>
-    <div class="float-card glass f4" data-depth="48"><b>69→93%</b><span class="th">ผลวิจัยในชั้นเรียน</span><span class="en">classroom research gain</span></div>
+    <div class="float-card f1" data-depth="30"><b>272</b><span class="th">นักเรียนที่สอนจริง</span><span class="en">students taught</span></div>
+    <div class="float-card f2" data-depth="55"><b>2</b><span class="th">รางวัลหนังสั้น</span><span class="en">short-film awards</span></div>
+    <div class="float-card f3" data-depth="40"><b>96</b><span class="th">ครูและผู้สนใจที่อบรม AI</span><span class="en">educators trained in AI</span></div>
+    <div class="float-card f4" data-depth="48"><b>69→93%</b><span class="th">ผลวิจัยในชั้นเรียน</span><span class="en">classroom research gain</span></div>
+  </div>
+  <div class="hero-stats">
+    <div><b>272</b><span class="th">นักเรียนที่สอนจริง</span><span class="en">students taught</span></div>
+    <div><b>2</b><span class="th">รางวัลหนังสั้น</span><span class="en">short-film awards</span></div>
+    <div><b>96</b><span class="th">ผู้เข้าอบรม AI</span><span class="en">AI workshop attendees</span></div>
+    <div><b>69→93%</b><span class="th">ผลวิจัยในชั้นเรียน</span><span class="en">research gain</span></div>
   </div>
 </section>
 
@@ -299,38 +306,38 @@
       <div class="body"><div class="tag"><span class="th">หนังสั้น · รางวัลบทภาพยนตร์ยอดเยี่ยม</span><span class="en">Short film · Best Screenplay</span></div>
       <h3>The Routes</h3>
       <p><span class="th">กำกับ ถ่าย และตัดต่อเอง ได้รางวัลจาก ThaiAECT Short Film Festival 2025 และฉายในโรงหนังที่ One Bangkok</span><span class="en">Directed, shot and edited. Best Screenplay at ThaiAECT Short Film Festival 2025, screened at One Bangkok.</span></p>
-      <div class="more"><span class="th">ดูรายละเอียด →</span><span class="en">See details →</span></div></div>
+      <div class="more"><span class="th">ดูรายละเอียด</span><span class="en">See details</span> <span class="chev">›</span></div></div>
     </article></a>
     <a href="#p-research" class="reveal"><article class="card glass tilt">
       <img src="assets/y4/roblox-cover.jpg" alt="Roblox × SketchUp" loading="lazy" onerror="this.src='assets/hs/school-3d.jpg'">
       <div class="body"><div class="tag"><span class="th">วิจัยในชั้นเรียน · โรงเรียนสามเสนวิทยาลัย</span><span class="en">Classroom research · Samsenwittayalai</span></div>
       <h3><span class="th">สอน SketchUp ผ่านโลก Roblox</span><span class="en">Teaching SketchUp inside Roblox</span></h3>
       <p><span class="th">สร้างโลกเสมือนขึ้นเองเพื่อสอนโมเดล 3 มิติ คะแนนทักษะนักเรียน ม.5 ขึ้นจาก 69% เป็น 93% ผ่านเกณฑ์ครบทั้งห้อง</span><span class="en">Built a game world to teach 3D modelling. Grade-11 skill scores rose from 69% to 93%, whole class passing.</span></p>
-      <div class="more"><span class="th">ดูรายละเอียด →</span><span class="en">See details →</span></div></div>
+      <div class="more"><span class="th">ดูรายละเอียด</span><span class="en">See details</span> <span class="chev">›</span></div></div>
     </article></a>
     <a href="#p-visura" class="reveal"><article class="card glass tilt">
       <img src="assets/y3/visura-web-gallery.jpg" alt="Visura website" loading="lazy" style="object-position:50% 40%">
       <div class="body"><div class="tag"><span class="th">เว็บนิทรรศการ 3 มิติ · หัวหน้าโครงการ</span><span class="en">3D web exhibition · Project lead</span></div>
       <h3>Visura</h3>
       <p><span class="th">เว็บ WordPress ที่สแกนงานศิลปะเป็นโมเดล 3 มิติด้วย LiDAR และฝัง AI Chatbot ที่ตอบเฉพาะเรื่องในนิทรรศการ</span><span class="en">A WordPress site with LiDAR-scanned 3D artworks and an embedded AI chatbot trained on the exhibition.</span></p>
-      <div class="more"><span class="th">ดูรายละเอียด →</span><span class="en">See details →</span></div></div>
+      <div class="more"><span class="th">ดูรายละเอียด</span><span class="en">See details</span> <span class="chev">›</span></div></div>
     </article></a>
   </div>
   <a href="#p-photobook" class="bookcta glass reveal" style="text-decoration:none;color:inherit">
     <img src="assets/book/p01.jpg" alt="แฟ้มภาพถ่าย" loading="lazy">
     <div><b><span class="th">📖 เปิดอีบุ๊ก: แฟ้มเทคนิคการถ่ายภาพ 30 โจทย์</span><span class="en">📖 Open the e-book: my 30-brief photography portfolio</span></b><span><span class="th">พลิกดูทีละหน้า พร้อมค่ากล้อง แนวคิด และเทคนิคของทุกภาพ</span><span class="en">Flip page by page, with camera settings, concept and technique for every photo</span></span></div>
-    <span class="btn primary"><span class="th">พลิกอ่านเลย</span><span class="en">Start reading</span> →</span>
+    <span class="link"><span class="th">พลิกอ่านเลย</span><span class="en">Start reading</span> <span class="chev">›</span></span>
   </a>
 </section>
 
 <!-- ============ JOURNEY ============ -->
 <section id="journey">
   <div class="eyebrow reveal"><span class="th">เส้นทาง 5 บท</span><span class="en">The journey in five chapters</span></div>
-  <h2 class="reveal"><span class="th">จากกล้องตัวแรก สู่ห้องเรียนจริง</span><span class="en">From my first camera to a real classroom</span></h2>
+  <h2 class="reveal big"><span class="th">จากกล้องตัวแรก สู่ห้องเรียนจริง</span><span class="en">From my first camera to a real classroom</span></h2>
   <p class="lead reveal"><span class="th">เลื่อนลงเพื่ออ่านทีละปี ผลงานทุกชิ้นมีรูปหรือวิดีโอจริงประกอบ กดที่รูปเพื่อขยายได้</span><span class="en">Scroll through year by year. Every project has real photos or video. Click any photo to enlarge.</span></p>
 
   <!-- ---- CHAPTER: HIGH SCHOOL ---- -->
-  <div class="chapter" id="ch-hs">
+  <div class="chapter" id="ch-hs"><div class="ch-inner">
     <aside class="ch-side">
       <div class="badge glass"><i>0</i>2562–2565 · <span class="th">มัธยม</span><span class="en">High school</span></div>
       <h3><span class="th">จุดเริ่มต้น: กล้อง โดรน และห้องเรียนที่อยากเปลี่ยน</span><span class="en">Where it started: cameras, drones, and a classroom I wanted to change</span></h3>
@@ -374,11 +381,11 @@
         <div class="gal g3"><img src="assets/hs/drone-training.jpg" alt="อบรมโดรน" loading="lazy"><img src="assets/hs/drone-letters.jpg" alt="AYUTTHAYA drone" loading="lazy"><img src="assets/hs/rc-plane.jpg" alt="RC plane" loading="lazy"></div>
         <div class="tags"><span>Drone</span><span>SketchUp</span><span>Photoshop</span><span>Illustrator</span><span>After Effects</span></div>
       </article>
-    </div>
+    </div></div>
   </div>
 
   <!-- ---- CHAPTER: YEAR 1 ---- -->
-  <div class="chapter" id="ch-y1">
+  <div class="chapter" id="ch-y1"><div class="ch-inner">
     <aside class="ch-side">
       <div class="badge glass"><i>1</i>2566 · <span class="th">ปี 1</span><span class="en">Year 1</span></div>
       <h3><span class="th">ปีแรกที่จุฬาฯ: หลังเวที หน้ากล้อง และการ์ตูนเรื่องแรก</span><span class="en">First year at Chula: backstage, on camera, and my first cartoon</span></h3>
@@ -426,11 +433,11 @@
         </article>
       </div>
       <div class="unlock reveal"><div class="eyebrow"><span class="th">ทักษะที่ปลดล็อกในปีนี้</span><span class="en">Skills unlocked this year</span></div><div class="tags"><span><span class="th">ระบบเสียง-ภาพงานอีเวนต์</span><span class="en">Event audio &amp; video systems</span></span><span><span class="th">จัดแสงสตูดิโอ</span><span class="en">Studio lighting</span></span><span><span class="th">แอนิเมชัน 2D</span><span class="en">2D animation</span></span><span><span class="th">ออกแบบสื่อสำหรับเด็กประถม</span><span class="en">Designing for young learners</span></span></div></div>
-    </div>
+    </div></div>
   </div>
 
   <!-- ---- CHAPTER: YEAR 2 ---- -->
-  <div class="chapter" id="ch-y2">
+  <div class="chapter" id="ch-y2"><div class="ch-inner">
     <aside class="ch-side">
       <div class="badge glass"><i>2</i>2567 · <span class="th">ปี 2</span><span class="en">Year 2</span></div>
       <h3><span class="th">ปีที่สอง: คุมภาพทั้งงาน จัดการทั้งโครงการ และแขวนภาพของตัวเอง</span><span class="en">Second year: running the live feed, managing a whole project, and hanging my own photos</span></h3>
@@ -501,11 +508,11 @@
         <div class="gal"><img src="assets/y2/krucamp18-collage.jpg" alt="ห้องควบคุม" loading="lazy"><img src="assets/y2/krucamp18-photographer.jpg" alt="ถ่ายภาพ" loading="lazy"><img src="assets/y2/krucamp18-candle.jpg" alt="กิจกรรมเทียน" loading="lazy"><img src="assets/y2/krucamp18-team.jpg" alt="ทีมโสตฯ" loading="lazy"></div>
       </article>
       <div class="unlock reveal"><div class="eyebrow"><span class="th">ทักษะที่ปลดล็อกในปีนี้</span><span class="en">Skills unlocked this year</span></div><div class="tags"><span><span class="th">ถ่ายทอดสดหลายกล้อง</span><span class="en">Multi-camera live streaming</span></span><span><span class="th">บริหารโครงการและงบประมาณ</span><span class="en">Project &amp; budget management</span></span><span><span class="th">ถ่ายภาพขั้นสูง</span><span class="en">Advanced photography</span></span><span><span class="th">นำเสนอผลงานต่อสาธารณะ</span><span class="en">Presenting to the public</span></span></div></div>
-    </div>
+    </div></div>
   </div>
 
   <!-- ---- CHAPTER: YEAR 3 ---- -->
-  <div class="chapter" id="ch-y3">
+  <div class="chapter dark" id="ch-y3"><div class="ch-inner">
     <aside class="ch-side">
       <div class="badge glass"><i>3</i>2568 · <span class="th">ปี 3</span><span class="en">Year 3</span></div>
       <h3><span class="th">ปีที่สาม: กำกับ ออกแบบ สร้างเว็บ และสอนครูใช้ AI</span><span class="en">Third year: directing, designing, building a 3D web gallery, and teaching teachers AI</span></h3>
@@ -561,11 +568,11 @@
         <div class="tags"><span>Illustrator</span><span>Canva</span><span>CapCut</span><span>Motion</span></div>
       </article>
       <div class="unlock reveal"><div class="eyebrow"><span class="th">ทักษะที่ปลดล็อกในปีนี้</span><span class="en">Skills unlocked this year</span></div><div class="tags"><span><span class="th">กำกับภาพยนตร์สั้นครบวงจร</span><span class="en">End-to-end short-film directing</span></span><span>WordPress</span><span><span class="th">สแกน 3D ด้วย LiDAR</span><span class="en">LiDAR 3D scanning</span></span><span><span class="th">ฝัง AI ด้วย API</span><span class="en">Embedding AI via API</span></span><span><span class="th">วิทยากรออนไลน์</span><span class="en">Online facilitation</span></span></div></div>
-    </div>
+    </div></div>
   </div>
 
   <!-- ---- CHAPTER: YEAR 4 ---- -->
-  <div class="chapter" id="ch-y4">
+  <div class="chapter" id="ch-y4"><div class="ch-inner">
     <aside class="ch-side">
       <div class="badge glass"><i>4</i>2569 · <span class="th">ปี 4 · ฝึกสอน</span><span class="en">Year 4 · Practicum</span></div>
       <h3><span class="th">ปีที่สี่: ห้องเรียนจริง 272 คน และเครื่องมือที่สร้างเองเพื่อพวกเขา</span><span class="en">Fourth year: 272 real students, and the tools I built for them</span></h3>
@@ -619,7 +626,7 @@
       </div>
       <div class="quote glass reveal"><span class="th">"เทคโนโลยีที่ครูสร้างขึ้นเอง ใช้เวลาพัฒนาไม่นาน แต่คืนเวลาสอนให้ทุกคาบ"</span><span class="en">"Technology a teacher builds herself takes little time to make, and gives teaching time back in every single period."</span><small><span class="th">บันทึกสะท้อนคิดจากการฝึกสอน ภาคต้น 2569</span><span class="en">From my practicum reflection, first semester 2026</span></small></div>
       <div class="unlock reveal"><div class="eyebrow"><span class="th">ทักษะที่ปลดล็อกในปีนี้</span><span class="en">Skills unlocked this year</span></div><div class="tags"><span><span class="th">ออกแบบการสอนและวัดผล</span><span class="en">Instructional design &amp; assessment</span></span><span><span class="th">วิจัยในชั้นเรียน</span><span class="en">Classroom research</span></span><span><span class="th">พัฒนาเว็บแอปเพื่อครู</span><span class="en">Building web apps for teachers</span></span><span>Roblox Studio</span><span><span class="th">งานครูที่ปรึกษาและ PLC</span><span class="en">Homeroom &amp; PLC</span></span></div></div>
-    </div>
+    </div></div>
   </div>
 </section>
 
@@ -677,9 +684,8 @@
   </div>
 </section>
 </main>
-<footer>© <span id="year"></span> Nattawut Khongdeepiean · <span class="th">ออกแบบและสร้างเว็บนี้เอง</span><span class="en">Designed and built by me</span></footer>
+<footer><div class="in"><span>© <span id="year"></span> Nattawut Khongdeepiean. <span class="th">ออกแบบและสร้างเว็บนี้เอง</span><span class="en">Designed and built by me.</span></span><span><a href="mailto:satang16530@gmail.com">satang16530@gmail.com</a> · <a href="https://www.instagram.com/_s_atang.248__" target="_blank" rel="noopener">Instagram</a> · <a href="resume.pdf" download><span class="th">เรซูเม่</span><span class="en">Résumé</span></a></span></div></footer>
 <div id="lb"><img alt=""></div>
-
 <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
 <script>
   // ---- language ----
@@ -711,7 +717,7 @@
   if(fine) document.querySelectorAll('.tilt').forEach(card=>{
     card.addEventListener('pointermove',e=>{
       const r=card.getBoundingClientRect();const x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
-      card.style.transform=`rotateY(${x*8}deg) rotateX(${-y*8}deg) translateZ(6px)`;
+      card.style.transform=`rotateY(${x*4}deg) rotateX(${-y*4}deg) translateZ(4px)`;
       card.style.setProperty('--ang',`${Math.atan2(y,x)*180/Math.PI+90}deg`);
     });
     card.addEventListener('pointerleave',()=>{card.style.transform='';});
@@ -773,12 +779,12 @@
     const scene=new THREE.Scene();const cam=new THREE.PerspectiveCamera(38,1,.1,100);cam.position.set(0,0,7);
     const envMat=new THREE.ShaderMaterial({side:THREE.BackSide,uniforms:{t:{value:0}},
       vertexShader:`varying vec3 p;void main(){p=position;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}`,
-      fragmentShader:`varying vec3 p;uniform float t;void main(){vec3 n=normalize(p);vec3 a=vec3(.62,.82,1.),b=vec3(.8,.82,1.),c=vec3(.95,.99,1.);float k=n.y*.5+.5;float s=sin(n.x*2.+t)*.5+.5;vec3 col=mix(mix(a,b,k),c,s*.5);gl_FragColor=vec4(col*.9,1.);}`});
+      fragmentShader:`varying vec3 p;uniform float t;void main(){vec3 n=normalize(p);vec3 a=vec3(.9,.93,.98),b=vec3(.96,.96,.98),c=vec3(1.,1.,1.);float k=n.y*.5+.5;float s=sin(n.x*2.+t)*.5+.5;vec3 col=mix(mix(a,b,k),c,s*.5);gl_FragColor=vec4(col*.9,1.);}`});
     const envMesh=new THREE.Mesh(new THREE.SphereGeometry(30,32,32),envMat);envMesh.visible=false;scene.add(envMesh);
     const pmrem=new THREE.PMREMGenerator(renderer);
-    const glassMat=new THREE.MeshPhysicalMaterial({color:0xeef7ff,metalness:0,roughness:.03,transmission:1,thickness:2.4,ior:1.5,attenuationColor:new THREE.Color(0x7fc0ff),attenuationDistance:1.6,clearcoat:1,clearcoatRoughness:.02,iridescence:.35,iridescenceIOR:1.3,envMapIntensity:1.6,specularIntensity:1});
+    const glassMat=new THREE.MeshPhysicalMaterial({color:0xeef7ff,metalness:0,roughness:.03,transmission:1,thickness:2.4,ior:1.5,attenuationColor:new THREE.Color(0x9cc7ff),attenuationDistance:1.4,clearcoat:1,clearcoatRoughness:.02,iridescence:.35,iridescenceIOR:1.3,envMapIntensity:1.6,specularIntensity:1});
     const R=2.75;
-    const ringMat=new THREE.MeshPhysicalMaterial({color:0x8ec6ff,transparent:true,opacity:.5,roughness:.12,metalness:0,clearcoat:1,clearcoatRoughness:.08,envMapIntensity:1.3,depthWrite:false});
+    const ringMat=new THREE.MeshPhysicalMaterial({color:0xc9d6e6,transparent:true,opacity:.55,roughness:.12,metalness:0,clearcoat:1,clearcoatRoughness:.08,envMapIntensity:1.3,depthWrite:false});
     const ring=new THREE.Mesh(new THREE.TorusGeometry(R,.065,32,180),ringMat);ring.rotation.x=-Math.PI/2.7;ring.renderOrder=1;scene.add(ring);
     const drops=[];const bands=[-2.35,-1.9,-1.45,-1.1,1.7,2.0,2.3,-2.1,1.85,-1.6];for(let i=0;i<10;i++){const m=new THREE.Mesh(new THREE.SphereGeometry(.05+Math.random()*.09,20,20),glassMat);scene.add(m);drops.push({m,a:Math.random()*6.28,r:2.9+Math.random()*1.1,s:.18+Math.random()*.25,y:bands[i]});}
     // invisible depth-only plane matching the portrait card: badges behind it are hidden, badges in front pass over it
@@ -791,7 +797,7 @@
     const tmp=new THREE.Vector3();
     scene.add(new THREE.AmbientLight(0xffffff,.6));
     const key=new THREE.DirectionalLight(0xffffff,2.6);key.position.set(4,6,5);scene.add(key);
-    const rim=new THREE.DirectionalLight(0x7cc4ff,1.4);rim.position.set(-5,-3,-4);scene.add(rim);
+    const rim=new THREE.DirectionalLight(0xbcd8ff,1.2);rim.position.set(-5,-3,-4);scene.add(rim);
     const card=document.getElementById('portrait');
     function resize(){const w=canvas.clientWidth,h=canvas.clientHeight;renderer.setSize(w,h,false);cam.aspect=w/h;cam.updateProjectionMatrix();
       const upp=(2*cam.position.z*Math.tan(cam.fov*Math.PI/360))/h;occ.scale.set(card.clientWidth*upp*0.98,card.clientHeight*upp*0.98,1);}

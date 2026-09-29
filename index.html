@@ -18,11 +18,11 @@
     --bg:#f4f9ff; --ink:#132241; --muted:rgba(19,34,65,.66); --dim:rgba(19,34,65,.45);
     --glass:rgba(255,255,255,.58); --glass2:rgba(255,255,255,.75); --stroke:rgba(47,140,255,.22);
     --a:#2f8cff; --b:#7b7dff; --c:#3fd2ff; --d:#3ccfa0; --e:#1f6fe0; --onink:#fff;
-    --radius:28px; --font:"Inter","IBM Plex Sans Thai",system-ui,sans-serif;
+    --radius:28px; --font:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Sukhumvit Set","Helvetica Neue","Inter","IBM Plex Sans Thai",system-ui,sans-serif;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{background:linear-gradient(180deg,#f8fbff 0%,#eaf3ff 45%,#eef4ff 100%) fixed,var(--bg);color:var(--ink);font-family:var(--font);-webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.55}
+  body{background:linear-gradient(180deg,#f8fbff 0%,#eaf3ff 45%,#eef4ff 100%) fixed,var(--bg);color:var(--ink);font-family:var(--font);-webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.5;letter-spacing:-.01em}
   body[lang-mode="th"] .en{display:none!important}
   body[lang-mode="en"] .th{display:none!important}
   img{display:block;max-width:100%}
@@ -70,7 +70,7 @@
   main{position:relative;z-index:2}
   section{padding:110px 24px;max-width:1180px;margin:0 auto}
   .eyebrow{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:14px}
-  h1,h2,h3{letter-spacing:-.03em;line-height:1.08}
+  h1,h2,h3{letter-spacing:-.028em;line-height:1.08;font-weight:700}
   h2{font-size:clamp(32px,4.6vw,56px);font-weight:800;margin-bottom:14px}
   .lead{color:var(--muted);font-size:clamp(16px,1.35vw,19px);max-width:680px}
   .grad{background:linear-gradient(100deg,var(--a),var(--b) 50%,var(--c));-webkit-background-clip:text;background-clip:text;color:transparent}
@@ -262,12 +262,12 @@
   <div>
     <div class="eyebrow"><span class="th">ครู · สื่อการศึกษา · EdTech</span><span class="en">Teacher · Educational Media · EdTech</span></div>
     <h1>
-      <span class="th">ครูที่<span class="grad">สร้างสื่อ</span><br>และสร้างเครื่องมือ<br>ให้ห้องเรียน</span>
-      <span class="en">A teacher who<br><span class="grad">makes media</span><br>and builds tools<br>for the classroom.</span>
+      <span class="th">ครูเทคโนโลยี<br>ที่<span class="grad">ทำสื่อเป็น</span><br>และเขียนโปรแกรมได้</span>
+      <span class="en">A technology teacher<br>who <span class="grad">makes media</span><br>and can code.</span>
     </h1>
     <div class="who">
       <span class="th">ณัฐวุฒิ คงดีเพียร (สตางค์)</span><span class="en">Nattawut Khongdeepiean (Satang)</span>
-      <small><span class="th">นิสิตปี 4 สาขาเทคโนโลยีการศึกษา คณะครุศาสตร์ จุฬาลงกรณ์มหาวิทยาลัย · กำลังฝึกสอนที่โรงเรียนสามเสนวิทยาลัย</span><span class="en">4th-year Educational Technology student, Faculty of Education, Chulalongkorn University · Student teacher at Samsenwittayalai School</span></small>
+      <small><span class="th">นิสิตชั้นปีที่ 4 สาขาวิชาเทคโนโลยีการศึกษา คณะครุศาสตร์ จุฬาลงกรณ์มหาวิทยาลัย · ฝึกปฏิบัติการสอนที่โรงเรียนสามเสนวิทยาลัย · จบการศึกษาภายใน 3 ปีครึ่ง</span><span class="en">4th-year Educational Technology student, Faculty of Education, Chulalongkorn University · Student teacher at Samsenwittayalai School · graduating in 3.5 years</span></small>
     </div>
     <div class="chips">
       <span class="chip glass"><span class="th">กำกับ · ถ่าย · ตัดต่อ</span><span class="en">Direct · Shoot · Edit</span></span>
@@ -275,71 +275,71 @@
       <span class="chip glass"><span class="th">AI &amp; เว็บเพื่อการศึกษา</span><span class="en">AI &amp; web for learning</span></span>
     </div>
     <div class="cta">
-      <a class="btn primary" href="#journey"><span class="th">ดูเส้นทางของผม</span><span class="en">See my journey</span> ↓</a>
+      <a class="btn primary" href="#journey"><span class="th">ดูผลงานตามปีที่เรียน</span><span class="en">See my journey</span> ↓</a>
       <a class="btn ghost glass" href="resume.pdf" download><span class="th">ดาวน์โหลดเรซูเม่</span><span class="en">Download résumé</span></a>
     </div>
   </div>
   <div id="stage">
     <canvas id="three"></canvas>
     <div class="portrait-card" id="portrait"><img src="assets/profile/portrait-studio.jpg" alt="Nattawut Khongdeepiean"></div>
-    <div class="float-card glass f1" data-depth="30"><b>272</b><span class="th">นักเรียนที่สอนจริง</span><span class="en">students taught</span></div>
+    <div class="float-card glass f1" data-depth="30"><b>272</b><span class="th">นักเรียนที่สอนตอนฝึกสอน</span><span class="en">students taught</span></div>
     <div class="float-card glass f2" data-depth="55"><b>2</b><span class="th">รางวัลหนังสั้น</span><span class="en">short-film awards</span></div>
-    <div class="float-card glass f3" data-depth="40"><b>96</b><span class="th">ครูและผู้สนใจที่อบรม AI</span><span class="en">educators trained in AI</span></div>
-    <div class="float-card glass f4" data-depth="48"><b>69→93%</b><span class="th">ผลวิจัยในชั้นเรียน</span><span class="en">classroom research gain</span></div>
+    <div class="float-card glass f3" data-depth="40"><b>96</b><span class="th">ผู้เข้าอบรม AI ที่ผมเป็นวิทยากร</span><span class="en">educators trained in AI</span></div>
+    <div class="float-card glass f4" data-depth="48"><b>69→93%</b><span class="th">คะแนนทักษะนักเรียนก่อน-หลังวิจัย</span><span class="en">classroom research gain</span></div>
   </div>
 </section>
 
 <!-- ============ HIGHLIGHTS ============ -->
 <section id="highlights">
-  <div class="eyebrow reveal"><span class="th">ถ้ามีเวลา 30 วินาที</span><span class="en">If you only have 30 seconds</span></div>
-  <h2 class="reveal"><span class="th">สามชิ้นที่บอกได้ว่าผมเป็นใคร</span><span class="en">Three things that say who I am</span></h2>
+  <div class="eyebrow reveal"><span class="th">ผลงานที่อยากให้ดูก่อน</span><span class="en">Start here</span></div>
+  <h2 class="reveal"><span class="th">ผลงาน 3 ชิ้นที่ผมภูมิใจที่สุด</span><span class="en">Three projects I am most proud of</span></h2>
   <div class="hl">
     <a href="#p-routes" class="reveal"><article class="card glass tilt">
       <img src="assets/y3/film-poster.jpg" alt="The Routes poster" loading="lazy" style="object-position:50% 18%">
       <div class="body"><div class="tag"><span class="th">หนังสั้น · รางวัลบทภาพยนตร์ยอดเยี่ยม</span><span class="en">Short film · Best Screenplay</span></div>
       <h3>The Routes</h3>
-      <p><span class="th">กำกับ ถ่าย และตัดต่อเอง ได้รางวัลจาก ThaiAECT Short Film Festival 2025 และฉายในโรงหนังที่ One Bangkok</span><span class="en">Directed, shot and edited. Best Screenplay at ThaiAECT Short Film Festival 2025, screened at One Bangkok.</span></p>
+      <p><span class="th">ผมเป็นผู้กำกับ ถ่ายวิดีโอ และตัดต่อเอง ได้รับรางวัลบทภาพยนตร์ยอดเยี่ยมจาก ThaiAECT Short Film Festival 2025 และได้ฉายในโรงภาพยนตร์ที่ One Bangkok</span><span class="en">Directed, shot and edited. Best Screenplay at ThaiAECT Short Film Festival 2025, screened at One Bangkok.</span></p>
       <div class="more"><span class="th">ดูรายละเอียด →</span><span class="en">See details →</span></div></div>
     </article></a>
     <a href="#p-research" class="reveal"><article class="card glass tilt">
       <img src="assets/y4/roblox-cover.jpg" alt="Roblox × SketchUp" loading="lazy" onerror="this.src='assets/hs/school-3d.jpg'">
       <div class="body"><div class="tag"><span class="th">วิจัยในชั้นเรียน · โรงเรียนสามเสนวิทยาลัย</span><span class="en">Classroom research · Samsenwittayalai</span></div>
       <h3><span class="th">สอน SketchUp ผ่านโลก Roblox</span><span class="en">Teaching SketchUp inside Roblox</span></h3>
-      <p><span class="th">สร้างโลกเสมือนขึ้นเองเพื่อสอนโมเดล 3 มิติ คะแนนทักษะนักเรียน ม.5 ขึ้นจาก 69% เป็น 93% ผ่านเกณฑ์ครบทั้งห้อง</span><span class="en">Built a game world to teach 3D modelling. Grade-11 skill scores rose from 69% to 93%, whole class passing.</span></p>
+      <p><span class="th">วิจัยปฏิบัติการในชั้นเรียนตอนฝึกสอน ผมสร้างโลกเสมือนบน Roblox ขึ้นเองเพื่อสอน SketchUp คะแนนทักษะของนักเรียน ม.5/11 เพิ่มจาก 69% เป็น 93% และผ่านเกณฑ์ครบทั้งห้อง</span><span class="en">Built a game world to teach 3D modelling. Grade-11 skill scores rose from 69% to 93%, whole class passing.</span></p>
       <div class="more"><span class="th">ดูรายละเอียด →</span><span class="en">See details →</span></div></div>
     </article></a>
     <a href="#p-visura" class="reveal"><article class="card glass tilt">
       <img src="assets/y3/visura-web-gallery.jpg" alt="Visura website" loading="lazy" style="object-position:50% 40%">
       <div class="body"><div class="tag"><span class="th">เว็บนิทรรศการ 3 มิติ · หัวหน้าโครงการ</span><span class="en">3D web exhibition · Project lead</span></div>
       <h3>Visura</h3>
-      <p><span class="th">เว็บ WordPress ที่สแกนงานศิลปะเป็นโมเดล 3 มิติด้วย LiDAR และฝัง AI Chatbot ที่ตอบเฉพาะเรื่องในนิทรรศการ</span><span class="en">A WordPress site with LiDAR-scanned 3D artworks and an embedded AI chatbot trained on the exhibition.</span></p>
+      <p><span class="th">เว็บไซต์นิทรรศการที่ผมเป็นหัวหน้าโครงการ ทำด้วย WordPress สแกนผลงานศิลปะเป็นโมเดล 3 มิติด้วยกล้อง LiDAR และฝัง AI Chatbot ที่ตอบคำถามเกี่ยวกับนิทรรศการ</span><span class="en">A WordPress site with LiDAR-scanned 3D artworks and an embedded AI chatbot trained on the exhibition.</span></p>
       <div class="more"><span class="th">ดูรายละเอียด →</span><span class="en">See details →</span></div></div>
     </article></a>
   </div>
   <a href="#p-photobook" class="bookcta glass reveal" style="text-decoration:none;color:inherit">
     <img src="assets/book/p01.jpg" alt="แฟ้มภาพถ่าย" loading="lazy">
-    <div><b><span class="th">📖 เปิดอีบุ๊ก: แฟ้มเทคนิคการถ่ายภาพ 30 โจทย์</span><span class="en">📖 Open the e-book: my 30-brief photography portfolio</span></b><span><span class="th">พลิกดูทีละหน้า พร้อมค่ากล้อง แนวคิด และเทคนิคของทุกภาพ</span><span class="en">Flip page by page, with camera settings, concept and technique for every photo</span></span></div>
-    <span class="btn primary"><span class="th">พลิกอ่านเลย</span><span class="en">Start reading</span> →</span>
+    <div><b><span class="th">📖 แฟ้มสะสมผลงานวิชาถ่ายภาพ 30 โจทย์ (อ่านแบบอีบุ๊ก)</span><span class="en">📖 Open the e-book: my 30-brief photography portfolio</span></b><span><span class="th">เปิดดูทีละหน้าได้เลย แต่ละภาพมีค่ากล้อง แนวคิด และเทคนิคที่ใช้</span><span class="en">Flip page by page, with camera settings, concept and technique for every photo</span></span></div>
+    <span class="btn primary"><span class="th">เปิดอ่าน</span><span class="en">Start reading</span> →</span>
   </a>
 </section>
 
 <!-- ============ JOURNEY ============ -->
 <section id="journey">
-  <div class="eyebrow reveal"><span class="th">เส้นทาง 5 บท</span><span class="en">The journey in five chapters</span></div>
-  <h2 class="reveal"><span class="th">จากกล้องตัวแรก สู่ห้องเรียนจริง</span><span class="en">From my first camera to a real classroom</span></h2>
-  <p class="lead reveal"><span class="th">เลื่อนลงเพื่ออ่านทีละปี ผลงานทุกชิ้นมีรูปหรือวิดีโอจริงประกอบ กดที่รูปเพื่อขยายได้</span><span class="en">Scroll through year by year. Every project has real photos or video. Click any photo to enlarge.</span></p>
+  <div class="eyebrow reveal"><span class="th">ผลงานเรียงตามปีที่เรียน</span><span class="en">The journey in five chapters</span></div>
+  <h2 class="reveal"><span class="th">จากชมรมในโรงเรียน ถึงห้องเรียนที่ได้สอนจริง</span><span class="en">From my first camera to a real classroom</span></h2>
+  <p class="lead reveal"><span class="th">ผมเรียงผลงานตามปีที่เรียน ตั้งแต่มัธยมจนถึงปีที่ฝึกสอน ทุกชิ้นมีรูปหรือวิดีโอประกอบ กดที่รูปเพื่อดูภาพใหญ่ได้</span><span class="en">Scroll through year by year. Every project has real photos or video. Click any photo to enlarge.</span></p>
 
   <!-- ---- CHAPTER: HIGH SCHOOL ---- -->
   <div class="chapter" id="ch-hs">
     <aside class="ch-side">
       <div class="badge glass"><i>0</i>2562–2565 · <span class="th">มัธยม</span><span class="en">High school</span></div>
-      <h3><span class="th">จุดเริ่มต้น: กล้อง โดรน และห้องเรียนที่อยากเปลี่ยน</span><span class="en">Where it started: cameras, drones, and a classroom I wanted to change</span></h3>
-      <p><span class="th">เด็กสายวิทย์-คณิตที่โรงเรียนอยุธยาวิทยาลัย ใช้เวลาหลังเลิกเรียนกับกล้อง โปรแกรมตัดต่อ และโดรน เริ่มจากช่างภาพชมรม จนได้เป็นประธานชมรม AYW TV ผลิตสื่อให้ทั้งโรงเรียน และค้นพบว่าสิ่งที่สนุกที่สุดคือการทำให้คนอื่น "เข้าใจ" ผ่านสื่อ</span><span class="en">A science-math kid at Ayutthaya Wittayalai School who spent every afternoon with cameras, editing software and drones. Started as the club photographer, became president of AYW TV producing media for the whole school, and discovered that the best part was helping people understand.</span></p>
+      <h3><span class="th">มัธยม: เริ่มจากชมรมถ่ายภาพของโรงเรียน</span><span class="en">Where it started: cameras, drones, and a classroom I wanted to change</span></h3>
+      <p><span class="th">ผมเรียนแผนวิทย์-คณิตที่โรงเรียนอยุธยาวิทยาลัย และเริ่มจับกล้องกับโปรแกรมตัดต่อจากการเป็นช่างภาพชมรม ต่อมาได้เป็นประธานชมรม AYW TV ทำสื่อให้โรงเรียนและดูแลเพจของโรงเรียน ช่วงนี้เองที่ผมรู้ว่าอยากเรียนต่อด้านเทคโนโลยีการศึกษา</span><span class="en">A science-math kid at Ayutthaya Wittayalai School who spent every afternoon with cameras, editing software and drones. Started as the club photographer, became president of AYW TV producing media for the whole school, and discovered that the best part was helping people understand.</span></p>
       <div class="nums">
         <div class="num glass"><b>200</b><span class="th">โดรนแปรอักษร</span><span class="en">drones in a light show</span></div>
         <div class="num glass"><b>2+1</b><span class="th">เหรียญทอง + เหรียญเงินระดับชาติ</span><span class="en">golds + a national silver</span></div>
         <div class="num glass"><b>3.80</b><span class="th">GPAX ม.ปลาย วิทย์-คณิต</span><span class="en">GPAX, science-math</span></div>
-        <div class="num glass"><b>1</b><span class="th">คลิปที่ครูเอาไปใช้สอนจริง</span><span class="en">clip used in real lessons</span></div>
+        <div class="num glass"><b>1</b><span class="th">คลิปที่ครูนำไปใช้สอนจริง</span><span class="en">clip used in real lessons</span></div>
       </div>
     </aside>
     <div class="ch-body">
@@ -348,7 +348,7 @@
         <div class="text">
           <div class="ptag"><em>★</em> <span class="th">ผู้กำกับหนังสั้น · เหรียญเงินระดับชาติ</span><span class="en">Short-film director · National silver medal</span></div>
           <h4><span class="th">หนังสั้น "ตัวจริง"</span><span class="en">Short film "Tua Jing" (The Real One)</span></h4>
-          <p><span class="th">งานศิลปหัตถกรรมนักเรียนครั้งที่ 69: เหรียญทองระดับเขต และเหรียญเงินระดับชาติ ผมเป็นผู้กำกับ เขียนสตอรี่บอร์ดเอง เรื่องนี้กลายเป็นคติสอนใจที่โรงเรียนใช้ต่อ และเป็นครั้งแรกที่รู้ว่าการเล่าเรื่องเปลี่ยนคนดูได้</span><span class="en">69th National Student Arts &amp; Crafts Competition: gold at district level and silver at national level. I directed and storyboarded it. The film became a moral lesson the school kept using, and my first proof that storytelling changes people.</span></p>
+          <p><span class="th">ผมเป็นผู้กำกับและเขียนสตอรี่บอร์ดเอง ส่งประกวดในงานศิลปหัตถกรรมนักเรียนครั้งที่ 69 ได้เหรียญทองระดับเขตและเหรียญเงินระดับชาติ เป็นหนังสั้นเรื่องแรกที่ทำจริงจัง และโรงเรียนนำไปใช้เป็นสื่อสอนคุณธรรมต่อ</span><span class="en">69th National Student Arts &amp; Crafts Competition: gold at district level and silver at national level. I directed and storyboarded it. The film became a moral lesson the school kept using, and my first proof that storytelling changes people.</span></p>
           <div class="gal g3"><img src="assets/hs/cert-silver-national.jpg" alt="เกียรติบัตรเหรียญเงินระดับชาติ" loading="lazy"><img src="assets/hs/aywtv-work.jpg" alt="งานชมรม AYW TV" loading="lazy"><img src="assets/hs/old-portfolio-cover.jpg" alt="พอร์ตโฟลิโอสมัยมัธยม" loading="lazy"></div>
           <div class="tags"><span>Premiere Pro</span><span>Storyboard</span><span>Directing</span></div>
         </div>
@@ -357,20 +357,20 @@
         <article class="proj glass reveal tilt">
           <div class="ptag"><span class="th">ผู้นำ · สื่อโรงเรียน</span><span class="en">Leadership · School media</span></div>
           <h4><span class="th">ประธานชมรม AYW TV</span><span class="en">President, AYW TV club</span></h4>
-          <p><span class="th">ดูแลทีมช่างภาพ ถ่ายวิดีโอ และตัดต่อ ผลิตสื่อให้โรงเรียน เป็นแอดมินเพจ Facebook และ YouTube ของโรงเรียน ทำ Live สำรวจการเลือกตั้งประธานนักเรียน และเป็นหัวหน้าฝ่ายโสตฯ ของสภานักเรียน</span><span class="en">Led the photo, video and editing team, ran the school's Facebook and YouTube pages, produced a live student-election broadcast, and headed the student council's AV team.</span></p>
+          <p><span class="th">ดูแลทีมช่างภาพ ถ่ายวิดีโอ และตัดต่อของชมรม ผลิตสื่อให้กิจกรรมของโรงเรียน เป็นแอดมินเพจ Facebook และ YouTube ของโรงเรียน ทำ Live รายงานผลการเลือกตั้งประธานนักเรียน และเป็นหัวหน้าฝ่ายโสตทัศนูปกรณ์ของสภานักเรียน</span><span class="en">Led the photo, video and editing team, ran the school's Facebook and YouTube pages, produced a live student-election broadcast, and headed the student council's AV team.</span></p>
           <div class="gal"><img src="assets/hs/aywtv-logo.jpg" alt="AYW TV logo" loading="lazy"><img src="assets/hs/election-live.jpg" alt="Live เลือกตั้ง" loading="lazy"><img src="assets/hs/esport-logo.jpg" alt="โลโก้ E-Sport" loading="lazy"><img src="assets/hs/school-3d.jpg" alt="ผังโรงเรียน 3 มิติ" loading="lazy"></div>
         </article>
         <article class="proj glass reveal tilt">
           <div class="ptag"><span class="th">งาน EdTech ชิ้นแรก</span><span class="en">First EdTech pieces</span></div>
           <h4><span class="th">Science Clip &amp; คู่มือ Google Classroom</span><span class="en">Science Clip &amp; a Google Classroom guide</span></h4>
-          <p><span class="th">คลิปวิทยาศาสตร์ที่ได้รองชนะเลิศอันดับ 2 และถูกครูนำไปใช้เป็นสื่อการสอนจริง กับคู่มือการใช้ Google Classroom สำหรับนักเรียนที่เขียนขึ้นเองช่วงเรียนออนไลน์ นี่คือครั้งแรกที่ผมทำ "สื่อเพื่อการเรียน" โดยตั้งใจ</span><span class="en">A science clip that placed 2nd runner-up and was used by teachers in real lessons, plus a Google Classroom manual I wrote for classmates during online learning. My first deliberate learning media.</span></p>
+          <p><span class="th">คลิปวิทยาศาสตร์ที่ส่งประกวดได้รองชนะเลิศอันดับ 2 และครูนำไปใช้สอนในห้องจริง ส่วนคู่มือการใช้ Google Classroom ผมเขียนขึ้นเองช่วงเรียนออนไลน์เพื่อให้เพื่อนในโรงเรียนใช้งานได้ ทั้งสองชิ้นเป็นสื่อการเรียนรู้ชิ้นแรก ๆ ที่ผมทำ</span><span class="en">A science clip that placed 2nd runner-up and was used by teachers in real lessons, plus a Google Classroom manual I wrote for classmates during online learning. My first deliberate learning media.</span></p>
           <div class="gal"><img src="assets/hs/science-clip.jpg" alt="Science Clip" loading="lazy"><img src="assets/hs/gclassroom-manual.jpg" alt="คู่มือ Google Classroom" loading="lazy"><img src="assets/hs/drone-letters.jpg" alt="โดรนแปรอักษร" loading="lazy"><img src="assets/hs/rc-plane.jpg" alt="เครื่องบินบังคับ" loading="lazy"></div>
         </article>
       </div>
       <article class="proj glass reveal tilt">
         <div class="ptag"><span class="th">เทคโนโลยี · การแข่งขัน</span><span class="en">Technology · Competitions</span></div>
         <h4><span class="th">โดรนแปรอักษร 200 ลำ และเครื่องบินบังคับเหรียญทอง</span><span class="en">A 200-drone light show and a gold-medal RC plane</span></h4>
-        <p><span class="th">อบรมเทคโนโลยีโดรนแปรอักษรกับสำนักงานการวิจัยแห่งชาติ (วช.) จนวางแผนการบินโดรน 200 ลำแปรอักษรได้ และออกแบบ-สร้างเครื่องบินบังคับวิทยุ "พิชิตเป้าหมาย" ได้เหรียญทองระดับเขตในงานศิลปหัตถกรรมครั้งที่ 70 รวมถึงค่าย MUSC STEM Day Camp ม.มหิดล</span><span class="en">Trained with the National Research Council of Thailand to program a 200-drone light show, designed and built a radio-controlled plane that won district gold at the 70th Arts &amp; Crafts Competition, and joined Mahidol's MUSC STEM Day Camp.</span></p>
+        <p><span class="th">ผมเข้าอบรมเทคโนโลยีโดรนแปรอักษรกับสำนักงานการวิจัยแห่งชาติ (วช.) และได้ร่วมวางแผนการบินโดรน 200 ลำ นอกจากนี้ยังออกแบบและสร้างเครื่องบินบังคับวิทยุส่งแข่งในงานศิลปหัตถกรรมนักเรียนครั้งที่ 70 ได้เหรียญทองระดับเขต และเข้าค่าย MUSC STEM Day Camp ของมหาวิทยาลัยมหิดล</span><span class="en">Trained with the National Research Council of Thailand to program a 200-drone light show, designed and built a radio-controlled plane that won district gold at the 70th Arts &amp; Crafts Competition, and joined Mahidol's MUSC STEM Day Camp.</span></p>
         <div class="gal g3"><img src="assets/hs/drone-training.jpg" alt="อบรมโดรน" loading="lazy"><img src="assets/hs/drone-letters.jpg" alt="AYUTTHAYA drone" loading="lazy"><img src="assets/hs/rc-plane.jpg" alt="RC plane" loading="lazy"></div>
         <div class="tags"><span>Drone</span><span>SketchUp</span><span>Photoshop</span><span>Illustrator</span><span>After Effects</span></div>
       </article>
@@ -381,10 +381,10 @@
   <div class="chapter" id="ch-y1">
     <aside class="ch-side">
       <div class="badge glass"><i>1</i>2566 · <span class="th">ปี 1</span><span class="en">Year 1</span></div>
-      <h3><span class="th">ปีแรกที่จุฬาฯ: หลังเวที หน้ากล้อง และการ์ตูนเรื่องแรก</span><span class="en">First year at Chula: backstage, on camera, and my first cartoon</span></h3>
-      <p><span class="th">เข้าคณะครุศาสตร์ สาขาเทคโนโลยีการศึกษา แล้วเอาทักษะจากชมรมมาใช้กับงานจริงของคณะทันที ทั้งคุมเสียงและภาพให้ค่ายร้อยกว่าคน ตั้งสตูดิโอถ่ายภาพให้ Open House เป็นกล้องหลักถ่ายวิดีโอพิธีไหว้ครูของคณะ และเป็นครั้งแรกที่ได้ "สอนจริง" โดยสร้างสื่อขึ้นมาเองทั้งเรื่อง</span><span class="en">Joined the Faculty of Education (Educational Technology) and put club skills to work right away: running sound and video for a 100-plus camp, building a studio for Open House, shooting the faculty's Wai Kru ceremony film as main camera, and teaching for the first time with a cartoon I made from scratch.</span></p>
+      <h3><span class="th">ปี 1: งานโสตฯ ของคณะ และการสอนครั้งแรก</span><span class="en">First year at Chula: backstage, on camera, and my first cartoon</span></h3>
+      <p><span class="th">ปีแรกที่คณะครุศาสตร์ ผมได้ใช้ทักษะจากชมรมกับงานของคณะตั้งแต่เทอมแรก ทั้งอยู่ทีมโสตฯ ค่ายอยากเป็นครู จัดสตูดิโอถ่ายภาพให้งาน Open House เป็นกล้องหลักถ่ายวิดีโอพิธีไหว้ครู และได้ไปสอนนักเรียนประถมเป็นครั้งแรกโดยทำสื่อประกอบการสอนขึ้นเอง</span><span class="en">Joined the Faculty of Education (Educational Technology) and put club skills to work right away: running sound and video for a 100-plus camp, building a studio for Open House, shooting the faculty's Wai Kru ceremony film as main camera, and teaching for the first time with a cartoon I made from scratch.</span></p>
       <div class="nums">
-        <div class="num glass"><b>2:23</b><span class="th">นาที แอนิเมชันวาดเองทั้งเรื่อง</span><span class="en">min of hand-drawn animation</span></div>
+        <div class="num glass"><b>2:23</b><span class="th">นาที แอนิเมชันที่วาดเองทั้งเรื่อง</span><span class="en">min of hand-drawn animation</span></div>
         <div class="num glass"><b>100+</b><span class="th">ผู้เข้าค่าย ทีมโสตฯ 4 คน</span><span class="en">campers, AV team of 4</span></div>
         <div class="num glass"><b>1</b><span class="th">วิดีโอพิธีไหว้ครู (กล้องหลัก)</span><span class="en">ceremony film (main camera)</span></div>
       </div>
@@ -393,9 +393,9 @@
       <article class="proj big glass reveal tilt" id="p-dream3">
         <div class="media"><video controls preload="none" poster="assets/y1/anim-frame2.jpg" src="assets/y1/dream3.mp4"></video></div>
         <div class="text">
-          <div class="ptag"><em>★</em> <span class="th">สอนจริงครั้งแรก · โรงเรียนสาธิตจุฬาฯ ฝ่ายประถม</span><span class="en">First real teaching · Chula Demonstration Elementary</span></div>
+          <div class="ptag"><em>★</em> <span class="th">สอนครั้งแรก · โรงเรียนสาธิตจุฬาฯ ฝ่ายประถม</span><span class="en">First real teaching · Chula Demonstration Elementary</span></div>
           <h4><span class="th">สอน ป.6 ทำแอนิเมชันด้วย Procreate พร้อมสื่อตัวอย่าง "Dream 3"</span><span class="en">Teaching Grade 6 to animate in Procreate, with my own demo film "Dream 3"</span></h4>
-          <p><span class="th">อาจารย์ชวนไปสอนนักเรียนประถมเรื่องพื้นฐานการทำแอนิเมชัน ผมวาดตัวละคร ฉาก และตัดต่อแอนิเมชันเรื่อง "Dream 3" ยาว 2 นาที 23 วินาทีบน iPad เพื่อใช้เป็นตัวอย่างในห้อง เรื่องราวคือการผจญภัยตามแผนที่สมบัติ ผ่านถ้ำ เจอปีศาจ และใช้ "ไอเดีย" แก้ปัญหา นี่คือจุดที่ "ครู" กับ "เทคโนโลยี" มาบรรจบกันครั้งแรกในเส้นทางของผม</span><span class="en">A lecturer invited me to teach elementary students the basics of animation. I drew every character and background and cut "Dream 3", a 2:23 film on iPad, as the classroom example: a treasure-map adventure through a cave, a monster, and an idea that saves the day. The first time "teacher" and "technology" met on my path.</span></p>
+          <p><span class="th">อาจารย์ที่รู้จักชวนผมไปสอนนักเรียน ป.6 เรื่องพื้นฐานการทำแอนิเมชันด้วย Procreate ผมจึงวาดตัวละคร ฉาก และตัดต่อแอนิเมชันเรื่อง "Dream 3" ความยาว 2 นาที 23 วินาทีขึ้นเองบน iPad เพื่อใช้เป็นตัวอย่างในห้อง เนื้อเรื่องเป็นการผจญภัยตามแผนที่สมบัติ นี่เป็นครั้งแรกที่ผมได้ยืนสอนหน้าห้องจริง</span><span class="en">A lecturer invited me to teach elementary students the basics of animation. I drew every character and background and cut "Dream 3", a 2:23 film on iPad, as the classroom example: a treasure-map adventure through a cave, a monster, and an idea that saves the day. The first time "teacher" and "technology" met on my path.</span></p>
           <div class="gal"><img src="assets/y1/anim-frame1.jpg" alt="Dream 3 frame" loading="lazy"><img src="assets/y1/anim-frame3.jpg" alt="Dream 3 frame" loading="lazy"><img src="assets/y1/anim-procreate.jpg" alt="วาดใน Procreate" loading="lazy"><img src="assets/y1/anim-timeline.jpg" alt="ไทม์ไลน์ตัดต่อ" loading="lazy"></div>
           <div class="tags"><span>Procreate</span><span>2D Animation</span><span>iPad editing</span><span><span class="th">สอนประถม</span><span class="en">Elementary teaching</span></span></div>
         </div>
@@ -405,7 +405,7 @@
         <div class="text">
           <div class="ptag"><em>★</em> <span class="th">กล้องหลัก · วิดีโอพิธีไหว้ครูของคณะ</span><span class="en">Main camera · Faculty Wai Kru ceremony film</span></div>
           <h4><span class="th">ครูในดวงใจ "Teacher in My Heart" — วิดีโอโครงการพิธีไหว้ครู คณะครุศาสตร์ ปีการศึกษา 2567</span><span class="en">"Teacher in My Heart" — the Faculty of Education's Wai Kru ceremony film, academic year 2024</span></h4>
-          <p><span class="th">วิดีโอสั้นเล่าเรื่องความผูกพันระหว่างครูกับศิษย์ ฉายในพิธีไหว้ครูของคณะ ผมเป็นกล้องหลักในการถ่ายทำ ตั้งแต่ออกกองถ่ายนอกสถานที่ไปจนถึงช่วยดูงานตัดต่อ นี่คือชิ้นงานเล่าเรื่องชิ้นแรกที่ได้ทำร่วมกับเพื่อนในคณะ และเป็นการซ้อมมือครั้งสำคัญก่อนไปกำกับหนังสั้น The Routes ในปี 3</span><span class="en">A short story film about the bond between teachers and students, screened at the faculty's Wai Kru ceremony. I was the main camera operator, from location shoots to supporting the edit. My first narrative piece with faculty friends, and the rehearsal that led to directing The Routes in year three.</span></p>
+          <p><span class="th">วิดีโอเล่าเรื่องความผูกพันระหว่างครูกับศิษย์ สำหรับฉายในพิธีไหว้ครูของคณะ ผมรับหน้าที่กล้องหลักตลอดการถ่ายทำ ทั้งการออกกองนอกสถานที่ และช่วยดูงานตัดต่อ เป็นงานวิดีโอเล่าเรื่องชิ้นแรกที่ได้ทำร่วมกับเพื่อนในคณะ</span><span class="en">A short story film about the bond between teachers and students, screened at the faculty's Wai Kru ceremony. I was the main camera operator, from location shoots to supporting the edit. My first narrative piece with faculty friends, and the rehearsal that led to directing The Routes in year three.</span></p>
           <div class="gal g3"><img src="assets/y1/waikru-shoot.jpg" alt="ถ่ายทำนอกสถานที่" loading="lazy"><img src="assets/y1/waikru-crew.jpg" alt="ทีมงาน" loading="lazy"><img src="assets/y1/waikru-edit.jpg" alt="ตัดต่อ" loading="lazy"></div>
           <div class="tags"><span>Cinematography</span><span>Sony A7 II</span><span>Premiere Pro</span><span><span class="th">งานเล่าเรื่อง</span><span class="en">Narrative</span></span></div>
         </div>
@@ -414,18 +414,18 @@
         <article class="proj glass reveal tilt">
           <div class="ptag"><span class="th">ฝ่ายโสตทัศนูปกรณ์</span><span class="en">AV team</span></div>
           <h4><span class="th">ค่ายอยากเป็นครู ครั้งที่ 17</span><span class="en">Kru Camp 17 (Teacher Aspirants' Camp)</span></h4>
-          <p><span class="th">4–7 มกราคม 2567 ค่ายแนะแนวของคณะครุศาสตร์ รับนักเรียน ม.ปลายที่ผ่านการคัดเลือก 100–120 คน ผมอยู่ในทีมโสตฯ 4 คน เตรียมห้องประชุม คุมมิกเซอร์เสียง สวิตเชอร์ภาพ และประสานงานกับทุกฝ่าย</span><span class="en">4–7 Jan 2024. The faculty's guidance camp for 100–120 selected high-schoolers. On a four-person AV team I set up the hall, ran the audio mixer and video switcher, and coordinated with every other team.</span></p>
+          <p><span class="th">ค่ายแนะแนวการศึกษาของคณะครุศาสตร์ จัดวันที่ 4–7 มกราคม 2567 รับนักเรียน ม.ปลายที่ผ่านการคัดเลือก 100–120 คน ผมอยู่ในทีมโสตทัศนูปกรณ์ 4 คน รับผิดชอบเตรียมห้องประชุม คุมมิกเซอร์เสียง สวิตเชอร์ภาพ และประสานงานกับฝ่ายอื่น</span><span class="en">4–7 Jan 2024. The faculty's guidance camp for 100–120 selected high-schoolers. On a four-person AV team I set up the hall, ran the audio mixer and video switcher, and coordinated with every other team.</span></p>
           <div class="gal"><img src="assets/y1/krucamp-mixer.jpg" alt="มิกเซอร์" loading="lazy"><img src="assets/y1/krucamp-switcher.jpg" alt="สวิตเชอร์" loading="lazy"><img src="assets/y1/krucamp-group.jpg" alt="รวมค่าย" loading="lazy"><img src="assets/y1/krucamp-cert.jpg" alt="เกียรติบัตร" loading="lazy"></div>
         </article>
         <article class="proj glass reveal tilt">
           <div class="ptag"><span class="th">ถ่ายภาพ · Open House</span><span class="en">Photography · Open House</span></div>
           <h4><span class="th">Photobooth "Techno Ocean 2024"</span><span class="en">"Techno Ocean 2024" photobooth</span></h4>
-          <p><span class="th">ตั้งสตูดิโอถ่ายภาพเต็มรูปแบบให้งาน Open House ของสาขา ไฟ softbox ร่มสะท้อน ฉาก กล้องต่อคอมพิวเตอร์ และออกแบบเฟรมภาพธีมทะเลให้ผู้เข้าร่วมทุกคน</span><span class="en">Built a full studio for the department's Open House: softboxes, reflectors, backdrop, tethered camera, and an ocean-themed photo frame for every visitor.</span></p>
+          <p><span class="th">จัดสตูดิโอถ่ายภาพให้งาน Open House ของสาขา ทั้งไฟ softbox ร่มสะท้อน ฉาก และกล้องที่ต่อเข้าคอมพิวเตอร์ พร้อมออกแบบกรอบภาพตามธีมงาน แล้วถ่ายให้ผู้ที่มาร่วมงาน</span><span class="en">Built a full studio for the department's Open House: softboxes, reflectors, backdrop, tethered camera, and an ocean-themed photo frame for every visitor.</span></p>
           <div class="gal"><img src="assets/y1/photobooth-studio.jpg" alt="สตูดิโอ" loading="lazy"><img src="assets/y1/photobooth-setup.jpg" alt="จัดไฟ" loading="lazy"><img src="assets/y1/photobooth-frame.jpg" alt="เฟรมภาพ" loading="lazy"><img src="assets/y1/photobooth-team.jpg" alt="ทีม" loading="lazy"></div>
           <div class="links"><a href="https://linktr.ee/OPHtechno2567" target="_blank" rel="noopener"><span class="th">ดูรวมผลงาน</span><span class="en">See the photos</span> ↗</a></div>
         </article>
       </div>
-      <div class="unlock reveal"><div class="eyebrow"><span class="th">ทักษะที่ปลดล็อกในปีนี้</span><span class="en">Skills unlocked this year</span></div><div class="tags"><span><span class="th">ระบบเสียง-ภาพงานอีเวนต์</span><span class="en">Event audio &amp; video systems</span></span><span><span class="th">จัดแสงสตูดิโอ</span><span class="en">Studio lighting</span></span><span><span class="th">แอนิเมชัน 2D</span><span class="en">2D animation</span></span><span><span class="th">ออกแบบสื่อสำหรับเด็กประถม</span><span class="en">Designing for young learners</span></span></div></div>
+      <div class="unlock reveal"><div class="eyebrow"><span class="th">สิ่งที่ได้เรียนรู้เพิ่มในปีนี้</span><span class="en">What I learned this year</span></div><div class="tags"><span><span class="th">ระบบเสียง-ภาพงานอีเวนต์</span><span class="en">Event audio &amp; video systems</span></span><span><span class="th">จัดแสงสตูดิโอ</span><span class="en">Studio lighting</span></span><span><span class="th">แอนิเมชัน 2D</span><span class="en">2D animation</span></span><span><span class="th">ทำสื่อสำหรับนักเรียนประถม</span><span class="en">Designing for young learners</span></span></div></div>
     </div>
   </div>
 
@@ -433,8 +433,8 @@
   <div class="chapter" id="ch-y2">
     <aside class="ch-side">
       <div class="badge glass"><i>2</i>2567 · <span class="th">ปี 2</span><span class="en">Year 2</span></div>
-      <h3><span class="th">ปีที่สอง: คุมภาพทั้งงาน จัดการทั้งโครงการ และแขวนภาพของตัวเอง</span><span class="en">Second year: running the live feed, managing a whole project, and hanging my own photos</span></h3>
-      <p><span class="th">งานใหญ่ขึ้นและความรับผิดชอบสูงขึ้น ได้ควบคุมการถ่ายทอดสดงานประชุมนานาชาติ เป็นรองหัวหน้าโครงการที่ดูแลเอกสาร งบประมาณ และการประสานงานทั้งหมดของค่ายถ่ายภาพ และปิดปีด้วยการเอาภาพถ่ายของตัวเองขึ้นแขวนในนิทรรศการจริง</span><span class="en">Bigger events, bigger responsibility: directing the live feed of an international conference, deputy-leading a funded photography camp from proposal to final report, and ending the year with my own photographs on a gallery wall.</span></p>
+      <h3><span class="th">ปี 2: งานถ่ายทอดสด โครงการที่ได้ทุน และนิทรรศการภาพถ่าย</span><span class="en">Second year: running the live feed, managing a whole project, and hanging my own photos</span></h3>
+      <p><span class="th">ปีนี้ผมได้รับผิดชอบงานที่ใหญ่ขึ้น ได้ควบคุมการถ่ายทอดสดงานประชุมวิชาการนานาชาติ เป็นรองหัวหน้าโครงการค่ายถ่ายภาพที่ได้รับทุนจากคณะ โดยดูแลเอกสารและการประสานงานทั้งหมด และมีภาพถ่ายของตัวเองได้จัดแสดงในนิทรรศการของคณะ</span><span class="en">Bigger events, bigger responsibility: directing the live feed of an international conference, deputy-leading a funded photography camp from proposal to final report, and ending the year with my own photographs on a gallery wall.</span></p>
       <div class="nums">
         <div class="num glass"><b>76th</b><span class="th">OMEP งานประชุมนานาชาติ</span><span class="en">OMEP World Assembly</span></div>
         <div class="num glass"><b>30/16</b><span class="th">ผู้เข้าค่าย / ทีมงาน 3 วัน 2 คืน</span><span class="en">campers / staff, 3 days</span></div>
@@ -446,9 +446,9 @@
       <article class="proj big glass reveal tilt" id="p-omep">
         <div class="media"><div class="yt" data-id="S-sazWWdxvE" style="background-image:url('https://i.ytimg.com/vi/S-sazWWdxvE/hqdefault.jpg')"></div></div>
         <div class="text">
-          <div class="ptag"><em>★</em> <span class="th">ควบคุมการถ่ายทอดสด &amp; ฝ่ายประมวลผล</span><span class="en">Live-stream director &amp; post-production</span></div>
+          <div class="ptag"><em>★</em> <span class="th">ควบคุมการถ่ายทอดสดและตัดต่อ</span><span class="en">Live-stream director &amp; post-production</span></div>
           <h4><span class="th">76th OMEP World Assembly and Conference</span><span class="en">76th OMEP World Assembly and Conference</span></h4>
-          <p><span class="th">งานประชุมวิชาการนานาชาติด้านการศึกษาปฐมวัย จัดที่คณะครุศาสตร์ จุฬาฯ กรกฎาคม 2567 ผมรับหน้าที่ควบคุมการ Live สด คุมสวิตเชอร์หลายกล้อง สตรีมและบันทึกด้วย OBS ถ่ายวิดีโอประจำห้องประชุม และตัดต่อวิดีโอหลังงานด้วย Premiere Pro (กดดูวิดีโอที่ตัดต่อได้ด้านบน)</span><span class="en">An international early-childhood education conference hosted at Chula's Faculty of Education, July 2024. I directed the live stream: multi-camera switching, OBS streaming and recording, room camera work, and post-event editing in Premiere Pro (watch the edit above).</span></p>
+          <p><span class="th">งานประชุมวิชาการนานาชาติด้านการศึกษาปฐมวัย จัดที่คณะครุศาสตร์ จุฬาฯ เดือนกรกฎาคม 2567 ผมรับหน้าที่ควบคุมการถ่ายทอดสด คุมสวิตเชอร์หลายกล้อง สตรีมและบันทึกด้วย OBS ถ่ายวิดีโอประจำห้องประชุม และตัดต่อวิดีโอหลังงานด้วย Premiere Pro (วิดีโอที่ตัดต่ออยู่ด้านบน)</span><span class="en">An international early-childhood education conference hosted at Chula's Faculty of Education, July 2024. I directed the live stream: multi-camera switching, OBS streaming and recording, room camera work, and post-event editing in Premiere Pro (watch the edit above).</span></p>
           <div class="gal"><img src="assets/y2/omep-switcher.jpg" alt="สวิตเชอร์" loading="lazy"><img src="assets/y2/omep-control.jpg" alt="ห้องควบคุม" loading="lazy"><img src="assets/y2/omep-cameraman.jpg" alt="ถ่ายวิดีโอ" loading="lazy"><img src="assets/y2/omep-team-banner.jpg" alt="ทีม OMEP" loading="lazy"></div>
           <div class="tags"><span>OBS</span><span>Video switcher</span><span>Multi-cam</span><span>Premiere Pro</span></div>
         </div>
@@ -458,7 +458,7 @@
         <div class="text">
           <div class="ptag"><em>★</em> <span class="th">รองหัวหน้าโครงการ · โครงการที่ได้รับทุน</span><span class="en">Deputy project lead · Funded project</span></div>
           <h4><span class="th">ค่ายถ่ายภาพนอกสถานที่ให้นักศึกษา สจล. (ทุนโลกกว้าง จุฬาฯ)</span><span class="en">A funded photography field camp for KMITL students</span></h4>
-          <p><span class="th">โครงการในวิชาการจัดการศึกษานอกสถานที่ ได้รับทุนจากโครงการเสริมประสบการณ์การเรียนรู้สู่โลกกว้าง จัด 4–6 มีนาคม 2568 ที่หาดน้ำใส สัตหีบ ผู้เข้าร่วม 30 คนจาก สจล. ทีมงาน 16 คน สปอนเซอร์หลักคือแลคตาซอย ผมดูแลเอกสารทั้งระบบ ตั้งแต่เขียนแบบเสนอโครงการขอทุน ประสานงานในมหาวิทยาลัย ขอสปอนเซอร์ ประสานกับ สจล. จนถึงรายงานสรุปโครงการ ผลประเมินผู้เข้าร่วมพัฒนาทักษะถ่ายภาพอย่างมากและบรรลุตัวชี้วัดทุกข้อ</span><span class="en">A course project that won a faculty "Wide World" learning grant. Held 4–6 March 2025 at Nam Sai Beach, Sattahip, for 30 KMITL students with a 16-person team and Lactasoy as main sponsor. I owned every document: the grant proposal, university coordination, sponsorship requests, liaison with KMITL, and the final report. Participants reported strong photography gains and every indicator was met.</span></p>
+          <p><span class="th">เป็นโครงการในรายวิชาการจัดการศึกษานอกสถานที่ ได้รับทุนสนับสนุนจากโครงการเสริมประสบการณ์การเรียนรู้สู่โลกกว้างของคณะ จัดวันที่ 4–6 มีนาคม 2568 ที่หาดน้ำใส อำเภอสัตหีบ มีผู้เข้าร่วมจาก สจล. 30 คน ทีมงาน 16 คน สปอนเซอร์หลักคือแลคตาซอย ผมเป็นรองหัวหน้าโครงการ รับผิดชอบเอกสารทั้งหมด ตั้งแต่เขียนแบบเสนอโครงการขอทุน ประสานงานภายในมหาวิทยาลัย ติดต่อขอสปอนเซอร์ ประสานงานกับ สจล. จนถึงจัดทำรายงานสรุปโครงการ ผลการประเมินพบว่าผู้เข้าร่วมพัฒนาทักษะการถ่ายภาพได้มากและโครงการบรรลุตัวชี้วัดทุกข้อ</span><span class="en">A course project that won a faculty "Wide World" learning grant. Held 4–6 March 2025 at Nam Sai Beach, Sattahip, for 30 KMITL students with a 16-person team and Lactasoy as main sponsor. I owned every document: the grant proposal, university coordination, sponsorship requests, liaison with KMITL, and the final report. Participants reported strong photography gains and every indicator was met.</span></p>
           <div class="gal"><img src="assets/y2/fieldtrip-prep.jpg" alt="เตรียมงาน" loading="lazy"><img src="assets/y2/fieldtrip-hall.jpg" alt="กิจกรรมในห้อง" loading="lazy"><img src="assets/y2/fieldtrip-beach-team.jpg" alt="ทีมงาน" loading="lazy"><img src="assets/y2/fieldtrip-lawn.jpg" alt="กิจกรรมกลางแจ้ง" loading="lazy"></div>
           <div class="tags"><span><span class="th">เขียนโครงการขอทุน</span><span class="en">Grant writing</span></span><span><span class="th">ประสานงานข้ามสถาบัน</span><span class="en">Cross-institution coordination</span></span><span><span class="th">หาสปอนเซอร์</span><span class="en">Sponsorship</span></span><span><span class="th">รายงานสรุปโครงการ</span><span class="en">Project reporting</span></span></div>
         </div>
@@ -466,9 +466,9 @@
       <article class="proj big glass reveal book" id="p-photobook">
         <div class="head">
           <div>
-            <div class="ptag"><em>★★</em> <span class="th">อีบุ๊ก · แฟ้มเทคนิคการถ่ายภาพ 30 โจทย์</span><span class="en">E-book · 30-brief photography portfolio</span></div>
+            <div class="ptag"><em>★★</em> <span class="th">อีบุ๊ก · แฟ้มสะสมผลงานวิชาถ่ายภาพ 30 โจทย์</span><span class="en">E-book · 30-brief photography portfolio</span></div>
             <h4><span class="th">แฟ้มสะสมผลงาน วิชาการถ่ายภาพเพื่อการสื่อสารทางการศึกษา</span><span class="en">Photography for Educational Communication: the full portfolio</span></h4>
-            <p style="margin:8px 0 0"><span class="th">32 หน้า ครบทุกโจทย์ตั้งแต่ Aperture, Shutter, White Balance, Macro, Portrait, Story จนถึง Generative Fill และ AI ทุกภาพระบุค่ากล้อง สถานที่ แนวคิด และเทคนิคที่ใช้ กดลูกศรหรือปัดเพื่อพลิกหน้า</span><span class="en">32 pages covering every brief from aperture, shutter, white balance, macro, portrait and story to Generative Fill and AI. Each photo lists camera settings, location, concept and technique. Use the arrows or swipe to turn pages.</span></p>
+            <p style="margin:8px 0 0"><span class="th">แฟ้มสะสมผลงาน 32 หน้า มีครบทั้ง 30 โจทย์ ตั้งแต่ Aperture, Shutter, White Balance, Macro, Portrait, Story จนถึง Generative Fill และ AI ทุกภาพผมบันทึกค่ากล้อง สถานที่ แนวคิด และเทคนิคที่ใช้ไว้ กดลูกศรหรือปัดหน้าจอเพื่อเปิดหน้าถัดไป</span><span class="en">32 pages covering every brief from aperture, shutter, white balance, macro, portrait and story to Generative Fill and AI. Each photo lists camera settings, location, concept and technique. Use the arrows or swipe to turn pages.</span></p>
           </div>
         </div>
         <div class="stage">
@@ -488,7 +488,7 @@
         <div class="text">
           <div class="ptag"><em>★</em> <span class="th">นิทรรศการภาพถ่าย</span><span class="en">Photography exhibition</span></div>
           <h4>Journey Through the Lens</h4>
-          <p><span class="th">12–15 พฤศจิกายน 2567 ห้องนิทรรศการ 104 คณะครุศาสตร์ จากวิชาการถ่ายภาพเพื่อการสื่อสารทางการศึกษา ผมทำแฟ้ม 30 โจทย์ ตั้งแต่ค่ากล้องพื้นฐาน มาโคร พอร์เทรต ภาพเล่าเรื่อง จนถึงการใช้ AI ช่วยงานภาพ และภาพชุด "สิ่งมีชีวิตตัวเล็ก" 5 ภาพได้ขึ้นแขวนในนิทรรศการ พร้อมยืนอธิบายแนวคิดให้ผู้ชมและอาจารย์ฟัง</span><span class="en">12–15 Nov 2024, Gallery 104, Faculty of Education. From the Photography for Educational Communication course: a 30-brief portfolio from exposure basics through macro, portrait and story to AI-assisted imaging. Five of my "tiny lives" macro photos were exhibited, and I presented them to visitors and lecturers.</span></p>
+          <p><span class="th">นิทรรศการของรายวิชาการถ่ายภาพเพื่อการสื่อสารทางการศึกษา จัดวันที่ 12–15 พฤศจิกายน 2567 ที่ห้องนิทรรศการ 104 คณะครุศาสตร์ ภาพชุดมาโครสิ่งมีชีวิตตัวเล็กของผม 5 ภาพได้รับคัดเลือกให้จัดแสดง และผมได้อธิบายแนวคิดของภาพให้ผู้เข้าชมและอาจารย์ฟังในงาน</span><span class="en">12–15 Nov 2024, Gallery 104, Faculty of Education. From the Photography for Educational Communication course: a 30-brief portfolio from exposure basics through macro, portrait and story to AI-assisted imaging. Five of my "tiny lives" macro photos were exhibited, and I presented them to visitors and lecturers.</span></p>
           <div class="gal g5"><img src="assets/y2/photo-DSC00417.jpg" alt="แมลงปอ" loading="lazy"><img src="assets/y2/photo-DSC08268.jpg" alt="ผึ้ง" loading="lazy"><img src="assets/y2/photo-DSC08767.jpg" alt="ผีเสื้อ" loading="lazy"><img src="assets/y2/photo-DSC00505.jpg" alt="มด" loading="lazy"><img src="assets/y2/photo-DSC09388.jpg" alt="หอยทาก" loading="lazy"></div>
           <div class="gal g3" style="margin-top:8px"><img src="assets/y2/expo-poster.jpg" alt="โปสเตอร์นิทรรศการ" loading="lazy"><img src="assets/y2/expo-presenting.jpg" alt="นำเสนอผลงาน" loading="lazy"><img src="assets/y2/expo-wall.jpg" alt="ผลงานบนผนัง" loading="lazy"></div>
           <div class="tags"><span>Sony A7 II</span><span>Macro</span><span>Lightroom</span><span>Generative AI</span></div>
@@ -497,10 +497,10 @@
       <article class="proj glass reveal tilt">
         <div class="ptag"><span class="th">ฝ่ายโสตทัศนูปกรณ์ · ปีที่สอง</span><span class="en">AV team · second year</span></div>
         <h4><span class="th">ค่ายอยากเป็นครู ครั้งที่ 18</span><span class="en">Kru Camp 18</span></h4>
-        <p><span class="th">19–22 ธันวาคม 2567 ปีนี้ดูแลทั้งระบบ วิทยุสื่อสารทั้งทีม มิกเซอร์ สวิตเชอร์ ภาพขึ้นจอ และเป็นช่างภาพงานพิธี</span><span class="en">19–22 Dec 2024. This year I owned the whole system: team radios, mixer, switcher, projection, and ceremony photography.</span></p>
+        <p><span class="th">จัดวันที่ 19–22 ธันวาคม 2567 ปีนี้ผมดูแลระบบโสตฯ ทั้งหมดของค่าย ทั้งวิทยุสื่อสารของทีม มิกเซอร์ สวิตเชอร์ ภาพขึ้นจอ และเป็นช่างภาพในพิธีต่าง ๆ</span><span class="en">19–22 Dec 2024. This year I owned the whole system: team radios, mixer, switcher, projection, and ceremony photography.</span></p>
         <div class="gal"><img src="assets/y2/krucamp18-collage.jpg" alt="ห้องควบคุม" loading="lazy"><img src="assets/y2/krucamp18-photographer.jpg" alt="ถ่ายภาพ" loading="lazy"><img src="assets/y2/krucamp18-candle.jpg" alt="กิจกรรมเทียน" loading="lazy"><img src="assets/y2/krucamp18-team.jpg" alt="ทีมโสตฯ" loading="lazy"></div>
       </article>
-      <div class="unlock reveal"><div class="eyebrow"><span class="th">ทักษะที่ปลดล็อกในปีนี้</span><span class="en">Skills unlocked this year</span></div><div class="tags"><span><span class="th">ถ่ายทอดสดหลายกล้อง</span><span class="en">Multi-camera live streaming</span></span><span><span class="th">บริหารโครงการและงบประมาณ</span><span class="en">Project &amp; budget management</span></span><span><span class="th">ถ่ายภาพขั้นสูง</span><span class="en">Advanced photography</span></span><span><span class="th">นำเสนอผลงานต่อสาธารณะ</span><span class="en">Presenting to the public</span></span></div></div>
+      <div class="unlock reveal"><div class="eyebrow"><span class="th">สิ่งที่ได้เรียนรู้เพิ่มในปีนี้</span><span class="en">What I learned this year</span></div><div class="tags"><span><span class="th">ถ่ายทอดสดหลายกล้อง</span><span class="en">Multi-camera live streaming</span></span><span><span class="th">บริหารโครงการและงบประมาณ</span><span class="en">Project &amp; budget management</span></span><span><span class="th">ถ่ายภาพขั้นสูง</span><span class="en">Advanced photography</span></span><span><span class="th">นำเสนอผลงานต่อสาธารณะ</span><span class="en">Presenting to the public</span></span></div></div>
     </div>
   </div>
 
@@ -508,8 +508,8 @@
   <div class="chapter" id="ch-y3">
     <aside class="ch-side">
       <div class="badge glass"><i>3</i>2568 · <span class="th">ปี 3</span><span class="en">Year 3</span></div>
-      <h3><span class="th">ปีที่สาม: กำกับ ออกแบบ สร้างเว็บ และสอนครูใช้ AI</span><span class="en">Third year: directing, designing, building a 3D web gallery, and teaching teachers AI</span></h3>
-      <p><span class="th">ปีที่ผลงานออกไปนอกรั้วคณะ หนังสั้นที่กำกับเองได้รางวัลระดับสมาคมและฉายในโรงหนัง ได้ออกแบบงานให้บุคลากรทั้งมหาวิทยาลัย สร้างเว็บนิทรรศการ 3 มิติที่ใครก็เข้าชมได้ และเป็นครั้งแรกที่ได้ยืนสอน "ครู" ให้ใช้ AI สร้างสื่อการเรียนรู้</span><span class="en">The year my work left the faculty. A film I directed won an association award and screened in a cinema, I designed for a university-wide event, led a 3D exhibition website anyone can visit, and taught teachers to make learning media with AI.</span></p>
+      <h3><span class="th">ปี 3: หนังสั้นที่ได้รางวัล เว็บนิทรรศการ และเป็นวิทยากร</span><span class="en">Third year: directing, designing, building a 3D web gallery, and teaching teachers AI</span></h3>
+      <p><span class="th">ปีนี้ผลงานของผมได้ออกไปนอกคณะ หนังสั้นที่ผมกำกับได้รางวัลจากสมาคมเทคโนโลยีและสื่อสารการศึกษาแห่งประเทศไทยและได้ฉายในโรงภาพยนตร์ ผมได้ออกแบบกราฟิกให้งานของมหาวิทยาลัย เป็นหัวหน้าโครงการทำเว็บไซต์นิทรรศการ 3 มิติ และเป็นวิทยากรอบรมการใช้ AI ให้ครูเป็นครั้งแรก</span><span class="en">The year my work left the faculty. A film I directed won an association award and screened in a cinema, I designed for a university-wide event, led a 3D exhibition website anyone can visit, and taught teachers to make learning media with AI.</span></p>
       <div class="nums">
         <div class="num glass"><b>1</b><span class="th">รางวัลบทภาพยนตร์ยอดเยี่ยม</span><span class="en">Best Screenplay award</span></div>
         <div class="num glass"><b>96</b><span class="th">ผู้เข้าอบรม AI (ครู 41 คน)</span><span class="en">AI workshop attendees (41 educators)</span></div>
@@ -523,7 +523,7 @@
         <div class="text">
           <div class="ptag"><em>★★</em> <span class="th">ผู้กำกับ · ถ่ายวิดีโอ · ตัดต่อ</span><span class="en">Director · Cinematographer · Editor</span></div>
           <h4><span class="th">หนังสั้น "The Routes" — รางวัลบทภาพยนตร์ยอดเยี่ยม ThaiAECT Short Film Festival 2025</span><span class="en">"The Routes" — Best Screenplay, ThaiAECT Short Film Festival 2025</span></h4>
-          <p><span class="th">เทศกาลหนังสั้นหัวข้อ "Gateway to Tomorrow's Education" ของสมาคมเทคโนโลยีและสื่อสารการศึกษาแห่งประเทศไทย รับรางวัล 28 พฤศจิกายน 2568 ในงานประชุมวิชาการโสตฯ-เทคโนฯ สัมพันธ์แห่งประเทศไทย ครั้งที่ 38 และได้ฉายในโรงภาพยนตร์ที่ One Bangkok จากเหรียญเงินระดับชาติตอน ม.ปลาย สู่จอโรงหนังในปี 3 เรื่องเล่าเดิมของผมยังเหมือนเดิม: ไม่ใช่ทุกเส้นทางสู่อนาคตจะเริ่มในห้องเรียน</span><span class="en">Made for the Thailand Association for Educational Communications and Technology festival themed "Gateway to Tomorrow's Education". Awarded 28 Nov 2025 at the 38th national conference and screened in a cinema at One Bangkok. From a national silver medal in high school to a cinema screen in year three, the story stayed the same: not all routes to the future begin in a classroom.</span></p>
+          <p><span class="th">หนังสั้นที่ส่งเข้าประกวดในหัวข้อ "Gateway to Tomorrow's Education" ของสมาคมเทคโนโลยีและสื่อสารการศึกษาแห่งประเทศไทย ผมเป็นผู้กำกับ ถ่ายวิดีโอ และตัดต่อ ได้รับรางวัลบทภาพยนตร์ยอดเยี่ยมเมื่อวันที่ 28 พฤศจิกายน 2568 ในงานประชุมวิชาการโสตฯ-เทคโนฯ สัมพันธ์แห่งประเทศไทย ครั้งที่ 38 และได้ฉายในโรงภาพยนตร์ที่ One Bangkok</span><span class="en">Made for the Thailand Association for Educational Communications and Technology festival themed "Gateway to Tomorrow's Education". Awarded 28 Nov 2025 at the 38th national conference and screened in a cinema at One Bangkok. From a national silver medal in high school to a cinema screen in year three, the story stayed the same: not all routes to the future begin in a classroom.</span></p>
           <div class="gal"><img src="assets/y3/film-onebangkok.jpg" alt="จอ One Bangkok" loading="lazy"><img src="assets/y3/film-best-screenplay.jpg" alt="รับรางวัล" loading="lazy"><img src="assets/y3/film-award-team.jpg" alt="ทีมงาน" loading="lazy"><img src="assets/y3/film-edit1.jpg" alt="ตัดต่อ" loading="lazy"></div>
           <div class="tags"><span>Directing</span><span>Cinematography</span><span>Premiere Pro</span><span>Screenwriting</span></div>
         </div>
@@ -533,7 +533,7 @@
         <div class="text">
           <div class="ptag"><em>★★</em> <span class="th">หัวหน้าโครงการ · เว็บไซต์นิทรรศการ 3 มิติ</span><span class="en">Project lead · 3D exhibition website</span></div>
           <h4>Visura: Where Art Meets Immersion</h4>
-          <p><span class="th">เว็บไซต์ของนิทรรศการ "ART × ED-TECH: Philosophy and Journey of Art Education" (28 ตุลาคม – 4 พฤศจิกายน 2568) การบูรณาการระหว่างสาขาศิลปศึกษาและเทคโนโลยีการศึกษา ผมตั้งค่า WordPress ทั้งระบบ เลือกปลั๊กอิน แบ่งงานให้ทีม สแกนผลงานศิลปะของนิสิตเอกศิลป์เป็นโมเดล 3 มิติด้วยกล้อง LiDAR ให้หมุนดูบนเว็บได้ และฝัง AI Chatbot (ChatGPT API) ที่เทรนให้ตอบเฉพาะเรื่องในนิทรรศการ</span><span class="en">The website for "ART × ED-TECH: Philosophy and Journey of Art Education" (28 Oct – 4 Nov 2025), a collaboration between Art Education and Educational Technology. I set up the whole WordPress stack, chose plugins, split the work across the team, LiDAR-scanned art students' works into rotatable 3D models, and embedded an AI chatbot (ChatGPT API) trained to answer only about the exhibition.</span></p>
+          <p><span class="th">เว็บไซต์ของนิทรรศการ "ART × ED-TECH: Philosophy and Journey of Art Education" (28 ตุลาคม – 4 พฤศจิกายน 2568) ซึ่งเป็นงานบูรณาการระหว่างสาขาศิลปศึกษาและเทคโนโลยีการศึกษา ผมเป็นหัวหน้าโครงการ ตั้งค่า WordPress ทั้งระบบ เลือกปลั๊กอิน และแบ่งงานให้เพื่อนในทีม จากนั้นสแกนผลงานศิลปะของนิสิตเอกศิลปศึกษาเป็นโมเดล 3 มิติด้วยกล้อง LiDAR ให้หมุนดูบนเว็บได้ และฝัง AI Chatbot ที่ใช้ ChatGPT API โดยเทรนให้ตอบเฉพาะเนื้อหาในนิทรรศการ</span><span class="en">The website for "ART × ED-TECH: Philosophy and Journey of Art Education" (28 Oct – 4 Nov 2025), a collaboration between Art Education and Educational Technology. I set up the whole WordPress stack, chose plugins, split the work across the team, LiDAR-scanned art students' works into rotatable 3D models, and embedded an AI chatbot (ChatGPT API) trained to answer only about the exhibition.</span></p>
           <div class="gal"><img src="assets/y3/visura-3d-model.jpg" alt="โมเดล 3 มิติ" loading="lazy"><img src="assets/y3/visura-web-gallery.jpg" alt="Gallery" loading="lazy"><img src="assets/y3/visura-visitors.jpg" alt="ผู้ชม" loading="lazy"><img src="assets/y3/visura-web-home.jpg" alt="หน้าแรกเว็บ Visura" loading="lazy"></div>
           <div class="tags"><span>WordPress</span><span>LiDAR 3D scan</span><span>ChatGPT API</span><span>UX</span></div>
           <div class="links"><a href="https://visura.edii.in.th/" target="_blank" rel="noopener"><span class="th">เข้าชมเว็บไซต์</span><span class="en">Visit the site</span> ↗</a></div>
@@ -543,8 +543,8 @@
         <div class="media"><div class="yt" data-id="cQ6ijVkWBrI" style="background-image:url('https://i.ytimg.com/vi/cQ6ijVkWBrI/hqdefault.jpg')"></div></div>
         <div class="text">
           <div class="ptag"><em>★</em> <span class="th">วิทยากร · อบรมออนไลน์</span><span class="en">Speaker · Online workshop</span></div>
-          <h4><span class="th">AI Empowered Educator: สอนครูสร้างวิดีโอการสอนด้วย HeyGen</span><span class="en">AI Empowered Educator: teaching teachers to build lesson videos with HeyGen</span></h4>
-          <p><span class="th">โครงการอบรม "การประยุกต์ใช้เครื่องมือ AI เพื่อการผลิตสื่อการศึกษาแบบครบวงจร" 26 เมษายน 2569 ผ่าน Zoom ผมรับผิดชอบช่วง HeyGen: ทำไมครูควรรู้จัก ใช้ในชั้นเรียนได้อย่างไร และสร้างอวตารสอนใน 4 ขั้นตอน พร้อมทำสไลด์ คู่มือ Zoom และวิดีโอตัวอย่าง ผมประชาสัมพันธ์เองผ่านเพจต่างๆ และปฏิทินเว็บไซต์จุฬาฯ จนมีผู้เข้าอบรม 96 คน เป็นบุคลากรทางการศึกษา 41 คน</span><span class="en">"Applying AI tools for end-to-end educational media", 26 April 2026 on Zoom. I ran the HeyGen session: why teachers should know it, how to use it in class, and a four-step avatar workflow, plus slides, a Zoom guide and a finished demo video. I promoted it myself through Facebook pages and Chula's event calendar to 96 attendees, 41 of them educators.</span></p>
+          <h4><span class="th">AI Empowered Educator: อบรมครูสร้างวิดีโอการสอนด้วย HeyGen</span><span class="en">AI Empowered Educator: teaching teachers to build lesson videos with HeyGen</span></h4>
+          <p><span class="th">โครงการอบรม "การประยุกต์ใช้เครื่องมือ AI เพื่อการผลิตสื่อการศึกษาแบบครบวงจร" จัดวันที่ 26 เมษายน 2569 ผ่าน Zoom ผมรับผิดชอบช่วง HeyGen โดยอธิบายว่า HeyGen คืออะไร ครูนำไปใช้ในชั้นเรียนได้อย่างไร และสาธิตการสร้างวิดีโอสอนด้วยอวตารใน 4 ขั้นตอน พร้อมจัดทำสไลด์ คู่มือการใช้ Zoom และวิดีโอตัวอย่าง ผมดูแลการประชาสัมพันธ์เองผ่านเพจต่าง ๆ และปฏิทินกิจกรรมบนเว็บไซต์จุฬาฯ มีผู้เข้าอบรม 96 คน เป็นบุคลากรทางการศึกษา 41 คน</span><span class="en">"Applying AI tools for end-to-end educational media", 26 April 2026 on Zoom. I ran the HeyGen session: why teachers should know it, how to use it in class, and a four-step avatar workflow, plus slides, a Zoom guide and a finished demo video. I promoted it myself through Facebook pages and Chula's event calendar to 96 attendees, 41 of them educators.</span></p>
           <div class="gal"><img src="assets/y3/heygen-poster.jpg" alt="โปสเตอร์" loading="lazy"><img src="assets/y3/heygen-slide2.jpg" alt="สไลด์" loading="lazy"><img src="assets/y3/heygen-slide4.jpg" alt="สไลด์ 4 ขั้นตอน" loading="lazy"><img src="assets/y3/heygen-live2.jpg" alt="ถ่ายทอดสด" loading="lazy"></div>
           <div class="tags"><span>HeyGen</span><span>AI avatars</span><span>Zoom</span><span><span class="th">การเป็นวิทยากร</span><span class="en">Public speaking</span></span></div>
           <div class="links"><a href="https://www.chula.ac.th/event-calendar/294352/" target="_blank" rel="noopener"><span class="th">ประกาศบนเว็บจุฬาฯ</span><span class="en">Chula event listing</span> ↗</a><a href="https://drive.google.com/file/d/1a44Z-9F7nQQEgkM4V9Eo4y8Mo59LLJtx/view" target="_blank" rel="noopener"><span class="th">วิดีโอตัวอย่างอวตาร</span><span class="en">Avatar demo video</span> ↗</a></div>
@@ -553,14 +553,14 @@
       <article class="proj glass reveal tilt">
         <div class="ptag"><span class="th">ออกแบบกราฟิก · วิดีโอแนะนำระบบ</span><span class="en">Graphic design · How-to video</span></div>
         <h4>Chula Townhall 2026</h4>
-        <p><span class="th">งานพบปะบุคลากรทั้งมหาวิทยาลัย 13 กุมภาพันธ์ 2569 ผมออกแบบป้ายนำทางทั้งงาน (ทางเข้า ลงทะเบียน จุดรับกระเป๋า Photo Booth) และทำวิดีโอแนวตั้งสอนบุคลากรใช้ระบบ CU ERP ยื่นเบิกสวัสดิการทีละขั้นตอน</span><span class="en">The university-wide staff gathering, 13 Feb 2026. I designed all event signage (entrance, registration, bag pickup, photo booth) and a vertical how-to video guiding staff through benefit claims on CU ERP.</span></p>
+        <p><span class="th">งานพบปะบุคลากรของจุฬาฯ จัดวันที่ 13 กุมภาพันธ์ 2569 ผมปฏิบัติงานเป็นนิสิต Staff รับผิดชอบออกแบบป้ายนำทางภายในงาน (ทางเข้า จุดลงทะเบียน จุดรับกระเป๋า Photo Booth) และทำวิดีโอแนวตั้งสอนบุคลากรใช้ระบบ CU ERP ยื่นเบิกสวัสดิการทีละขั้นตอน</span><span class="en">The university-wide staff gathering, 13 Feb 2026. I designed all event signage (entrance, registration, bag pickup, photo booth) and a vertical how-to video guiding staff through benefit claims on CU ERP.</span></p>
         <div class="two" style="align-items:start">
           <div class="gal" style="margin-top:0"><img src="assets/y3/townhall-sign2.jpg" alt="ป้ายลงทะเบียน" loading="lazy"><img src="assets/y3/townhall-sign3.jpg" alt="ป้ายจุดรับกระเป๋า" loading="lazy"><img src="assets/y3/townhall-hall.jpg" alt="ห้องงาน" loading="lazy"><img src="assets/y3/townhall-team.jpg" alt="ทีม" loading="lazy"></div>
           <video controls preload="none" poster="assets/y3/townhall-video2.jpg" src="assets/y3/townhall-howto.mp4" style="width:100%;max-height:360px;border-radius:16px;background:#000;border:1px solid var(--stroke)"></video>
         </div>
         <div class="tags"><span>Illustrator</span><span>Canva</span><span>CapCut</span><span>Motion</span></div>
       </article>
-      <div class="unlock reveal"><div class="eyebrow"><span class="th">ทักษะที่ปลดล็อกในปีนี้</span><span class="en">Skills unlocked this year</span></div><div class="tags"><span><span class="th">กำกับภาพยนตร์สั้นครบวงจร</span><span class="en">End-to-end short-film directing</span></span><span>WordPress</span><span><span class="th">สแกน 3D ด้วย LiDAR</span><span class="en">LiDAR 3D scanning</span></span><span><span class="th">ฝัง AI ด้วย API</span><span class="en">Embedding AI via API</span></span><span><span class="th">วิทยากรออนไลน์</span><span class="en">Online facilitation</span></span></div></div>
+      <div class="unlock reveal"><div class="eyebrow"><span class="th">สิ่งที่ได้เรียนรู้เพิ่มในปีนี้</span><span class="en">What I learned this year</span></div><div class="tags"><span><span class="th">กำกับภาพยนตร์สั้นครบวงจร</span><span class="en">End-to-end short-film directing</span></span><span>WordPress</span><span><span class="th">สแกน 3D ด้วย LiDAR</span><span class="en">LiDAR 3D scanning</span></span><span><span class="th">ฝัง AI ด้วย API</span><span class="en">Embedding AI via API</span></span><span><span class="th">วิทยากรออนไลน์</span><span class="en">Online facilitation</span></span></div></div>
     </div>
   </div>
 
@@ -568,8 +568,8 @@
   <div class="chapter" id="ch-y4">
     <aside class="ch-side">
       <div class="badge glass"><i>4</i>2569 · <span class="th">ปี 4 · ฝึกสอน</span><span class="en">Year 4 · Practicum</span></div>
-      <h3><span class="th">ปีที่สี่: ห้องเรียนจริง 272 คน และเครื่องมือที่สร้างเองเพื่อพวกเขา</span><span class="en">Fourth year: 272 real students, and the tools I built for them</span></h3>
-      <p><span class="th">ทุกอย่างที่สะสมมาถูกใช้พร้อมกันในหนึ่งภาคเรียนที่โรงเรียนสามเสนวิทยาลัย (11 พฤษภาคม – 30 กันยายน 2569) สอน 2 วิชา 8 ห้อง สร้างโลกเสมือนบน Roblox เพื่อสอน SketchUp เขียนระบบเช็คชื่อ QR ใช้เองทุกห้อง และพานักเรียน ม.6 ทำพอร์ตโฟลิโอยื่น TCAS จริง</span><span class="en">Everything came together in one semester at Samsenwittayalai School, Bangkok (11 May – 30 Sep 2026): two courses across eight classes, a Roblox world built to teach SketchUp, a QR attendance system I coded and used in every class, and 199 seniors building real TCAS portfolios.</span></p>
+      <h3><span class="th">ปี 4: ฝึกปฏิบัติการสอนที่โรงเรียนสามเสนวิทยาลัย</span><span class="en">Fourth year: 272 real students, and the tools I built for them</span></h3>
+      <p><span class="th">ผมฝึกปฏิบัติการสอนที่โรงเรียนสามเสนวิทยาลัย ภาคเรียนที่ 1 ปีการศึกษา 2569 (11 พฤษภาคม – 30 กันยายน) สอน 2 รายวิชา รวม 8 ห้อง เป็นครูที่ปรึกษาชั้น ม.6/4 และรับผิดชอบงานโสตทัศนศึกษาของโรงเรียน ระหว่างฝึกสอนผมทำวิจัยปฏิบัติการในชั้นเรียนโดยสร้างโลกเสมือนบน Roblox เพื่อสอน SketchUp พัฒนาระบบเช็คชื่อด้วย QR Code ใช้เองทุกห้อง และพานักเรียน ม.6 ทำแฟ้มสะสมผลงานสำหรับยื่น TCAS</span><span class="en">Everything came together in one semester at Samsenwittayalai School, Bangkok (11 May – 30 Sep 2026): two courses across eight classes, a Roblox world built to teach SketchUp, a QR attendance system I coded and used in every class, and 199 seniors building real TCAS portfolios.</span></p>
       <div class="nums">
         <div class="num glass"><b>272</b><span class="th">นักเรียน 8 ห้อง ม.5–ม.6</span><span class="en">students, 8 classes, grades 11–12</span></div>
         <div class="num glass"><b>450</b><span class="th">ชั่วโมงฝึกปฏิบัติ · 24 แผน</span><span class="en">practicum hours · 24 lesson plans</span></div>
@@ -583,23 +583,24 @@
         <div class="text">
           <div class="ptag"><em>★★</em> <span class="th">วิจัยปฏิบัติการในชั้นเรียน · ม.5/11</span><span class="en">Classroom action research · Grade 11/11</span></div>
           <h4><span class="th">การจัดการเรียนรู้โดยใช้เกมเป็นฐานผ่าน Roblox เพื่อพัฒนาทักษะสร้างโมเดล 3 มิติด้วย SketchUp</span><span class="en">Game-based learning through Roblox to develop 3D-modelling skills in SketchUp</span></h4>
-          <p><span class="th">นักเรียนสร้างโมเดลไม่เสร็จในคาบและพลาดขั้นตอนตอนครูสาธิต ผมจึงสร้างโลกเสมือน "SketchUp เรียนรู้" ด้วย Roblox Studio: คอนโดริมทะเล 6 พื้นที่ มีโซนความรู้ โซนสำรวจโมเดล ประตูภารกิจ และระบบตรวจงานอัตโนมัติ ทดลอง 3 วงจร (PAOR) ในเดือนสิงหาคม 2569 กับนักเรียน 33 คน</span><span class="en">Students weren't finishing models in class and missed steps during demos, so I built "SketchUp Learn" in Roblox Studio: a seaside condo with six zones, knowledge rooms, model-exploration areas, quest gates and auto-grading. Three action-research cycles in August 2026 with 33 students.</span></p>
-          <p><strong style="color:var(--ink)"><span class="th">ผล:</span><span class="en">Result:</span></strong> <span class="th">คะแนนทักษะเฉลี่ยจาก 6.94/10 (69%) เป็น 9.27/10 (93%) ผ่านเกณฑ์จาก 5 คนเป็น 33 คนทั้งห้อง ความถูกต้องของขนาดเพิ่มเกือบเท่าตัว นักเรียนทำเสร็จในคาบ 31 คน และการประเมินตนเองเพิ่มจาก 3.44 เป็น 4.38 ที่ปรึกษาวิจัย รศ.ดร.ปราวีณยา สุวรรณณัฐโชติ</span><span class="en">mean skill score rose from 6.94/10 (69%) to 9.27/10 (93%), students passing went from 5 to all 33, dimensional accuracy nearly doubled, 31 finished within class time, and self-assessment rose from 3.44 to 4.38. Advisor: Assoc. Prof. Dr. Praweenya Suwannatthachote.</span></p>
+          <p><span class="th">จากบันทึกหลังการสอน ผมพบว่านักเรียนห้อง 5/11 สร้างโมเดลไม่ทันในคาบและมักพลาดขั้นตอนระหว่างที่ครูสาธิต จึงพัฒนาโลกเสมือน "SketchUp เรียนรู้" ด้วย Roblox Studio เป็นคอนโดริมทะเล 6 พื้นที่ มีโซนความรู้ โซนสำรวจโมเดล ประตูภารกิจตอบคำถาม และระบบตรวจงานอัตโนมัติ ทดลองใช้ 3 วงจรตามกระบวนการ PAOR ในเดือนสิงหาคม 2569 กับนักเรียน 33 คน</span><span class="en">Students weren't finishing models in class and missed steps during demos, so I built "SketchUp Learn" in Roblox Studio: a seaside condo with six zones, knowledge rooms, model-exploration areas, quest gates and auto-grading. Three action-research cycles in August 2026 with 33 students.</span></p>
+          <p><strong style="color:var(--ink)"><span class="th">ผล:</span><span class="en">Result:</span></strong> <span class="th">คะแนนทักษะเฉลี่ยเพิ่มจาก 6.94 เป็น 9.27 จากคะแนนเต็ม 10 (ร้อยละ 69 เป็น 93) นักเรียนผ่านเกณฑ์เพิ่มจาก 5 คนเป็น 33 คนครบทั้งห้อง ด้านความถูกต้องของขนาดเพิ่มขึ้นเกือบเท่าตัว นักเรียนทำชิ้นงานเสร็จในคาบ 31 คน และผลการประเมินตนเองเพิ่มจาก 3.44 เป็น 4.38 อาจารย์ที่ปรึกษาวิจัย รศ.ดร.ปราวีณยา สุวรรณณัฐโชติ</span><span class="en">mean skill score rose from 6.94/10 (69%) to 9.27/10 (93%), students passing went from 5 to all 33, dimensional accuracy nearly doubled, 31 finished within class time, and self-assessment rose from 3.44 to 4.38. Advisor: Assoc. Prof. Dr. Praweenya Suwannatthachote.</span></p>
           <div class="tags"><span>Roblox Studio</span><span>SketchUp</span><span>Game-based learning</span><span>Action research</span></div>
+          <div class="links"><a href="https://drive.google.com/drive/u/0/folders/1qmw953MC_b8OyE6KddXb9Xhqh3Vuy3UE" target="_blank" rel="noopener"><span class="th">อ่านรายงานวิจัยและแผนการสอนฉบับเต็ม (Google Drive)</span><span class="en">Full research report and lesson plans (Google Drive)</span> ↗</a></div>
         </div>
       </article>
       <div class="two">
         <article class="proj glass reveal tilt" id="p-qr">
-          <div class="ptag"><em>★</em> <span class="th">สร้างเครื่องมือเอง</span><span class="en">Built my own tool</span></div>
+          <div class="ptag"><em>★</em> <span class="th">เครื่องมือที่พัฒนาเอง</span><span class="en">Built my own tool</span></div>
           <h4><span class="th">ระบบเช็คชื่อด้วย QR Code</span><span class="en">QR-code attendance system</span></h4>
-          <p><span class="th">เขียนด้วย React + Google Apps Script + Google Sheets ใช้จริงทุกห้องทั้ง 2 วิชาตั้งแต่ 22 มิถุนายน 2569 เช็คชื่อทั้งห้องเหลือประมาณ 1 นาที ป้องกันการเช็คแทน 3 ชั้น สรุปมา/สาย/ลา/ขาดอัตโนมัติ และสุ่มชื่อนักเรียนตอบคำถามได้</span><span class="en">React + Google Apps Script + Google Sheets, used in every class of both courses from 22 June 2026. Attendance takes about a minute, with three layers of anti-proxy checks, automatic present/late/leave/absent reports, and a random-name picker.</span></p>
+          <p><span class="th">ผมเขียนด้วย React ร่วมกับ Google Apps Script และ Google Sheets เริ่มใช้จริงทุกห้องทั้ง 2 รายวิชาตั้งแต่วันที่ 22 มิถุนายน 2569 ทำให้การเช็คชื่อทั้งห้องใช้เวลาประมาณ 1 นาที มีการป้องกันการเช็คชื่อแทนกัน 3 ชั้น สรุปสถิติมา สาย ลา ขาด ให้อัตโนมัติ และมีฟังก์ชันสุ่มชื่อนักเรียนตอบคำถาม</span><span class="en">React + Google Apps Script + Google Sheets, used in every class of both courses from 22 June 2026. Attendance takes about a minute, with three layers of anti-proxy checks, automatic present/late/leave/absent reports, and a random-name picker.</span></p>
           <div class="tags"><span>React</span><span>Apps Script</span><span>Google Sheets</span></div>
           <div class="links"><a href="https://nattawut01.netlify.app" target="_blank" rel="noopener"><span class="th">เปิดระบบ</span><span class="en">Open the app</span> ↗</a></div>
         </article>
         <article class="proj glass reveal tilt" id="p-tcas">
           <div class="ptag"><em>★</em> <span class="th">การสอน ม.6 · 199 คน</span><span class="en">Teaching grade 12 · 199 students</span></div>
-          <h4><span class="th">พอร์ตโฟลิโอยื่น TCAS จริง และ PLC บูรณาการ 4 วิชา</span><span class="en">Real TCAS portfolios and a four-subject integrated project</span></h4>
-          <p><span class="th">วิชา I30204 การสื่อสารและการนำเสนอด้วยเทคโนโลยี พานักเรียน ม.6 ทั้ง 6 ห้องออกแบบกราฟิก สร้างแฟ้มบนระบบ TCASFolio ปีแรก และทำเว็บพอร์ตโฟลิโอด้วย Canva ทุกคน ร่วมกลุ่ม PLC กับครู 3 กลุ่มสาระออกแบบภาระงาน VLOG ชิ้นเดียวเก็บคะแนน 4 วิชา นักเรียนใช้เวลาน้อยลงราว 3 เท่า ส่งงาน 193 คน ผ่านเกณฑ์ทุกคน</span><span class="en">In I30204 Communication and Presentation with Technology, all six grade-12 classes learned graphic design, built TCASFolio entries in the system's first year, and made Canva web portfolios. In a PLC with teachers from three departments we designed one VLOG task graded across four subjects: students spent about a third of the time, 193 submitted, all passed.</span></p>
+          <h4><span class="th">แฟ้มสะสมผลงานยื่น TCAS และงาน PLC บูรณาการ 4 รายวิชา</span><span class="en">Real TCAS portfolios and a four-subject integrated project</span></h4>
+          <p><span class="th">ในรายวิชา I30204 การสื่อสารและการนำเสนอด้วยเทคโนโลยี ผมปรับชิ้นงานให้นักเรียน ม.6 ทั้ง 6 ห้องได้ทำสิ่งที่ใช้จริง คือออกแบบกราฟิก สร้างแฟ้มบนระบบ TCASFolio ซึ่งเป็นปีแรกที่ ทปอ. เปิดใช้ และทำเว็บพอร์ตโฟลิโอด้วย Canva นอกจากนี้ยังร่วมกลุ่ม PLC กับครู 3 กลุ่มสาระ ออกแบบภาระงาน VLOG ชิ้นเดียวที่เก็บคะแนนได้ 4 รายวิชา ช่วยลดเวลาทำงานของนักเรียนลงประมาณ 3 เท่า มีนักเรียนส่งงาน 193 คนและผ่านเกณฑ์ทุกคน</span><span class="en">In I30204 Communication and Presentation with Technology, all six grade-12 classes learned graphic design, built TCASFolio entries in the system's first year, and made Canva web portfolios. In a PLC with teachers from three departments we designed one VLOG task graded across four subjects: students spent about a third of the time, 193 submitted, all passed.</span></p>
           <div class="tags"><span>Canva</span><span>TCASFolio</span><span>CapCut</span><span>Mentimeter</span><span>Gemini</span></div>
         </article>
       </div>
@@ -607,18 +608,18 @@
         <article class="proj glass reveal tilt">
           <div class="ptag"><span class="th">การสอน ม.5 · 73 คน</span><span class="en">Teaching grade 11 · 73 students</span></div>
           <h4><span class="th">ว30261 การออกแบบและเทคโนโลยี</span><span class="en">Design &amp; Technology (SketchUp)</span></h4>
-          <p><span class="th">12 แผน 4 หน่วย จากรูปทรงพื้นฐาน ภาชนะ เฟอร์นิเจอร์และโคมไฟ จนถึงโมเดลห้องคอนโดสอบปลายภาค ให้นักเรียนวัดของจริงด้วยแอป AR แล้วนำขนาดมาสร้างโมเดล และใช้ Generative AI หาภาพอ้างอิง</span><span class="en">12 plans in 4 units, from basic shapes and vessels to furniture, lamps and a final condo-room model. Students measured real objects with AR apps and used generative AI for reference images.</span></p>
+          <p><span class="th">ผมออกแบบแผนการจัดการเรียนรู้ 12 แผน 4 หน่วย สอนสร้างโมเดล 3 มิติด้วย SketchUp ตั้งแต่รูปทรงพื้นฐาน ภาชนะ เฟอร์นิเจอร์และโคมไฟ จนถึงโมเดลห้องคอนโดในการสอบปลายภาค ให้นักเรียนวัดขนาดของจริงด้วยแอป AR แล้วนำมาสร้างโมเดล และใช้ Generative AI ช่วยหาภาพอ้างอิง</span><span class="en">12 plans in 4 units, from basic shapes and vessels to furniture, lamps and a final condo-room model. Students measured real objects with AR apps and used generative AI for reference images.</span></p>
           <div class="tags"><span>SketchUp</span><span>AR Measure</span><span>Google Classroom</span></div>
         </article>
         <article class="proj glass reveal tilt">
-          <div class="ptag"><span class="th">งานครูและงานโสตฯ ของโรงเรียน</span><span class="en">Teacher duties &amp; school AV</span></div>
+          <div class="ptag"><span class="th">งานครูที่ปรึกษาและงานโสตทัศนศึกษา</span><span class="en">Teacher duties &amp; school AV</span></div>
           <h4><span class="th">เกม AR วันวิทย์ · วิดีโอไหว้ครู · ฝ่ายโสตงาน พสวท.</span><span class="en">Science-day AR game · Wai Kru video · DPST conference AV</span></h4>
-          <p><span class="th">ครูที่ปรึกษา ม.6/4 ออกแบบเกม AR และบูธนิทรรศการวันวิทยาศาสตร์ ถ่ายและตัดต่อวิดีโอพิธีไหว้ครู ทำ Infographic Video ด้วย After Effects ถ่ายภาพประชุมผู้ปกครอง 4 ครั้ง และเป็นฝ่ายโสตฯ งานประชุมวิชาการ พสวท. ระดับชาติ ครั้งที่ 6 ตลอด 3 วัน</span><span class="en">Homeroom teacher for 6/4. Designed an AR game and booth for Science Day, shot and edited the Wai Kru ceremony video, made an After Effects infographic video, photographed four parent meetings, and ran AV for the 6th national DPST conference for three days.</span></p>
-          <div class="links"><a href="https://ar-explorer-pc.vercel.app/" target="_blank" rel="noopener"><span class="th">ลองเล่นเกม AR</span><span class="en">Try the AR game</span> ↗</a></div>
+          <p><span class="th">นอกจากการสอน ผมเป็นครูที่ปรึกษาชั้น ม.6/4 ดูแลนักเรียนทุกเช้าและประชุมผู้ปกครอง 2 ครั้ง ออกแบบเกม AR และบูธนิทรรศการวันวิทยาศาสตร์ ถ่ายและตัดต่อวิดีโอพิธีไหว้ครู ทำ Infographic Video ด้วย After Effects ถ่ายภาพการประชุมผู้ปกครอง 4 ครั้ง และปฏิบัติงานฝ่ายโสตทัศนศึกษาในงานประชุมวิชาการ พสวท. ระดับชาติ ครั้งที่ 6 เป็นเวลา 3 วัน</span><span class="en">Homeroom teacher for 6/4. Designed an AR game and booth for Science Day, shot and edited the Wai Kru ceremony video, made an After Effects infographic video, photographed four parent meetings, and ran AV for the 6th national DPST conference for three days.</span></p>
+          <div class="links"><a href="https://ar-explorer-pc.vercel.app/" target="_blank" rel="noopener"><span class="th">ลองเล่นเกม AR</span><span class="en">Try the AR game</span> ↗</a><a href="https://drive.google.com/drive/u/0/folders/1qmw953MC_b8OyE6KddXb9Xhqh3Vuy3UE" target="_blank" rel="noopener"><span class="th">เอกสารรายงานการฝึกสอนทั้งหมด (Google Drive)</span><span class="en">All practicum reports (Google Drive)</span> ↗</a></div>
         </article>
       </div>
-      <div class="quote glass reveal"><span class="th">"เทคโนโลยีที่ครูสร้างขึ้นเอง ใช้เวลาพัฒนาไม่นาน แต่คืนเวลาสอนให้ทุกคาบ"</span><span class="en">"Technology a teacher builds herself takes little time to make, and gives teaching time back in every single period."</span><small><span class="th">บันทึกสะท้อนคิดจากการฝึกสอน ภาคต้น 2569</span><span class="en">From my practicum reflection, first semester 2026</span></small></div>
-      <div class="unlock reveal"><div class="eyebrow"><span class="th">ทักษะที่ปลดล็อกในปีนี้</span><span class="en">Skills unlocked this year</span></div><div class="tags"><span><span class="th">ออกแบบการสอนและวัดผล</span><span class="en">Instructional design &amp; assessment</span></span><span><span class="th">วิจัยในชั้นเรียน</span><span class="en">Classroom research</span></span><span><span class="th">พัฒนาเว็บแอปเพื่อครู</span><span class="en">Building web apps for teachers</span></span><span>Roblox Studio</span><span><span class="th">งานครูที่ปรึกษาและ PLC</span><span class="en">Homeroom &amp; PLC</span></span></div></div>
+      <div class="quote glass reveal"><span class="th">"นักเรียนไม่ได้ขี้เกียจหรือไม่สนใจ แต่นักเรียนจะทุ่มเทให้กับสิ่งที่เห็นว่ามีประโยชน์กับตัวเองจริง"</span><span class="en">"Students are not lazy or uninterested. They commit to what they can see is genuinely useful to them."</span><small><span class="th">จากบทเรียนที่ได้รับจากการฝึกประสบการณ์วิชาชีพครู ภาคต้น 2569</span><span class="en">From my practicum reflection, first semester 2026</span></small></div>
+      <div class="unlock reveal"><div class="eyebrow"><span class="th">สิ่งที่ได้เรียนรู้เพิ่มในปีนี้</span><span class="en">What I learned this year</span></div><div class="tags"><span><span class="th">ออกแบบการสอนและวัดผล</span><span class="en">Instructional design &amp; assessment</span></span><span><span class="th">วิจัยในชั้นเรียน</span><span class="en">Classroom research</span></span><span><span class="th">พัฒนาเว็บแอปเพื่อครู</span><span class="en">Building web apps for teachers</span></span><span>Roblox Studio</span><span><span class="th">งานครูที่ปรึกษาและ PLC</span><span class="en">Homeroom &amp; PLC</span></span></div></div>
     </div>
   </div>
 </section>
@@ -626,8 +627,8 @@
 <!-- ============ SKILLS ============ -->
 <section id="skills">
   <div class="eyebrow reveal"><span class="th">ทักษะ</span><span class="en">Skills</span></div>
-  <h2 class="reveal"><span class="th">เครื่องมือในกระเป๋า</span><span class="en">My toolkit</span></h2>
-  <p class="lead reveal"><span class="th">ทุกชิ้นด้านบนใช้เครื่องมือเหล่านี้จริง ไม่ใช่รายการที่แค่เคยเปิดดู</span><span class="en">Everything above was made with these. No tools listed that I merely opened once.</span></p>
+  <h2 class="reveal"><span class="th">เครื่องมือที่ใช้งานได้</span><span class="en">My toolkit</span></h2>
+  <p class="lead reveal"><span class="th">เป็นเครื่องมือที่ใช้ทำผลงานด้านบนจริงทุกชิ้น</span><span class="en">These are the tools every project above was actually made with.</span></p>
   <div class="skills">
     <div class="skill glass reveal tilt"><div class="ic">🎬</div><h3><span class="th">ผลิตวิดีโอ &amp; ถ่ายทอดสด</span><span class="en">Video &amp; live production</span></h3><div class="tags"><span>Premiere Pro</span><span>After Effects</span><span>CapCut</span><span>OBS</span><span>Video switcher</span><span>Audio mixer</span><span>Directing</span></div></div>
     <div class="skill glass reveal tilt"><div class="ic">📷</div><h3><span class="th">ภาพถ่าย &amp; กราฟิก</span><span class="en">Photography &amp; graphics</span></h3><div class="tags"><span>Sony A7 II</span><span>Macro</span><span>Studio lighting</span><span>Lightroom</span><span>Photoshop</span><span>Illustrator</span><span>Canva</span><span>Procreate</span></div></div>
@@ -648,17 +649,17 @@
 <!-- ============ ABOUT ============ -->
 <section id="about">
   <div class="eyebrow reveal"><span class="th">เกี่ยวกับผม</span><span class="en">About me</span></div>
-  <h2 class="reveal"><span class="th">ทำไมถึงอยากเป็นครู</span><span class="en">Why I want to teach</span></h2>
+  <h2 class="reveal"><span class="th">เกี่ยวกับผม</span><span class="en">Why I want to teach</span></h2>
   <div class="about">
     <div class="glass pic reveal"><img src="assets/profile/portrait-camera.jpg" alt="Nattawut with camera" loading="lazy"></div>
     <div class="glass text reveal">
-      <p class="th"><strong>คุณแม่ผมเป็นครู</strong> ตอนเด็กผมตามแม่ไปโรงเรียนบ่อยๆ และเห็นว่าท่านสอนด้วยความตั้งใจ อดทน และหยิบเทคโนโลยีมาใช้ให้เกิดประโยชน์กับเด็กจริงๆ นั่นคือแรงบันดาลใจว่าผมอยากสอนผู้คน และเรียนรู้เทคโนโลยีไปพร้อมกัน</p>
-      <p class="th">ผมเชื่อว่านักเรียนไม่จำเป็นต้องเก่งทุกคน แต่ทุกคนควรได้ค้นพบความถนัดของตัวเอง หน้าที่ของครูคือทำให้สิ่งที่ยากมองเห็นเป็นภาพได้ และหน้าที่ของเทคโนโลยีคือคืนเวลาให้ครูได้อยู่กับนักเรียนมากขึ้น ตลอดเส้นทางที่ผ่านมาผมจึงทำสองอย่างนี้สลับกันเสมอ: สร้างสื่อ แล้วสร้างเครื่องมือ</p>
-      <p class="th"><strong>สิ่งที่มองหาต่อไป</strong> คือโรงเรียนหรือทีม EdTech ที่ให้ผมได้ทั้งสอนและสร้าง ไม่ว่าจะเป็นครูเทคโนโลยี ผู้ผลิตสื่อการศึกษา หรือคนออกแบบประสบการณ์การเรียนรู้</p>
-      <p class="en"><strong>My mother is a teacher.</strong> As a kid I tagged along to her school and watched her teach with patience and care, using technology in ways that actually helped children. That is where the wish to teach people, and keep learning technology alongside them, comes from.</p>
-      <p class="en">I believe not every student has to be brilliant, but every student deserves to find what they are good at. A teacher's job is to make hard things visible; technology's job is to give teachers more time with their students. That is why my path keeps alternating between two moves: make the media, then build the tool.</p>
-      <p class="en"><strong>What I'm looking for next</strong> is a school or EdTech team where I can both teach and build, whether as a technology teacher, an educational media producer, or a learning-experience designer.</p>
-      <div class="tags" style="margin-top:6px"><span><span class="th">คติ: ทุกอย่างจะไม่สำเร็จถ้าไม่ลงมือทำ</span><span class="en">Motto: nothing gets done unless you start</span></span><span><span class="th">ภาษาไทย · อังกฤษ</span><span class="en">Thai · English</span></span><span><span class="th">พระนครศรีอยุธยา → กรุงเทพฯ</span><span class="en">Ayutthaya → Bangkok</span></span></div>
+      <p class="th"><strong>ผมชื่อณัฐวุฒิ คงดีเพียร ชื่อเล่นสตางค์</strong> เป็นนิสิตชั้นปีที่ 4 สาขาวิชาเทคโนโลยีการศึกษา คณะครุศาสตร์ จุฬาลงกรณ์มหาวิทยาลัย และจะจบการศึกษาภายใน 3 ปีครึ่ง คุณแม่ผมเป็นครู ตอนเด็กผมตามแม่ไปโรงเรียนบ่อย และเห็นว่าท่านสอนด้วยความตั้งใจและนำเทคโนโลยีมาใช้กับนักเรียนจริง จึงอยากเป็นครูที่ใช้เทคโนโลยีเป็น</p>
+      <p class="th">จากการฝึกสอน ผมพบว่านักเรียนไม่ได้ขี้เกียจหรือไม่สนใจ แต่จะทุ่มเทให้กับสิ่งที่เห็นว่ามีประโยชน์กับตัวเองจริง ครูจึงต้องเข้าใจผู้เรียนเป็นรายบุคคล และออกแบบกิจกรรมให้เชื่อมกับเป้าหมายจริงของนักเรียน ส่วนเทคโนโลยีที่ครูสร้างขึ้นเองไม่จำเป็นต้องซับซ้อน แต่ต้องคืนเวลาให้ครูได้อยู่กับนักเรียนมากขึ้น</p>
+      <p class="th"><strong>งานที่ผมกำลังมองหา</strong> คืองานครูเทคโนโลยี งานผลิตสื่อการศึกษา หรืองานในทีม EdTech ที่ได้ใช้ทั้งทักษะการสอนและทักษะการทำสื่อและเขียนโปรแกรม ผมยังต้องพัฒนาเรื่องการจัดการชั้นเรียนและการบริหารเวลาเมื่อมีงานหลายด้านพร้อมกัน ซึ่งเป็นสิ่งที่ตั้งใจฝึกต่อในการทำงานจริง</p>
+      <p class="en"><strong>I am Nattawut Khongdeepiean (Satang),</strong> a fourth-year Educational Technology student at the Faculty of Education, Chulalongkorn University, graduating in three and a half years. My mother is a teacher. I grew up watching her teach with care and put technology to real use with her students, and that is why I want to be a teacher who can do the same.</p>
+      <p class="en">During my practicum I learned that students are not lazy or uninterested. They commit to what they can see is genuinely useful to them. A teacher has to understand each student and design activities around their real goals. Tools a teacher builds do not need to be complex, but they should give teaching time back.</p>
+      <p class="en"><strong>I am looking for</strong> a technology-teacher, educational-media or EdTech role where I can use both my teaching and my media and coding skills. I still want to improve my classroom management and time management when many tasks overlap, and I plan to keep working on that on the job.</p>
+      <div class="tags" style="margin-top:6px"><span><span class="th">คติประจำใจ: ทุกอย่างจะไม่สำเร็จถ้าไม่ลงมือทำ</span><span class="en">Motto: nothing gets done unless you start</span></span><span><span class="th">ภาษาไทย · อังกฤษ</span><span class="en">Thai · English</span></span><span><span class="th">พระนครศรีอยุธยา → กรุงเทพฯ</span><span class="en">Ayutthaya → Bangkok</span></span></div>
     </div>
   </div>
 </section>
@@ -667,8 +668,8 @@
 <section id="contact">
   <div class="glass reveal">
     <div class="eyebrow"><span class="th">ติดต่อ</span><span class="en">Contact</span></div>
-    <h2><span class="th">มาสร้างห้องเรียนที่ดีกว่าด้วยกัน</span><span class="en">Let's build better classrooms together.</span></h2>
-    <p class="lead" style="margin:0 auto"><span class="th">เปิดรับงานสายครู สื่อการศึกษา และ EdTech ทั้งงานประจำและโปรเจกต์ เริ่มงานได้หลังจบการศึกษา ปี 2570</span><span class="en">Open to teaching, educational media and EdTech roles, full-time or project-based, available after graduation in 2027.</span></p>
+    <h2><span class="th">ติดต่อผม</span><span class="en">Get in touch</span></h2>
+    <p class="lead" style="margin:0 auto"><span class="th">ผมกำลังหางานครูเทคโนโลยี งานสื่อการศึกษา และงาน EdTech ทั้งงานประจำและงานโปรเจกต์ จบการศึกษาภายใน 3 ปีครึ่งและพร้อมเริ่มงานทันทีหลังจบ ส่งอีเมลหรือทักทางอินสตาแกรมได้เลยครับ</span><span class="en">I am looking for technology-teaching, educational-media and EdTech roles, full-time or project-based. I graduate in three and a half years and can start right after. Email or Instagram works best.</span></p>
     <div class="links-row">
       <a class="btn primary" href="mailto:satang16530@gmail.com">✉️ satang16530@gmail.com</a>
       <a class="btn ghost glass" href="https://www.instagram.com/_s_atang.248__" target="_blank" rel="noopener">Instagram @_s_atang.248__</a>
@@ -677,7 +678,7 @@
   </div>
 </section>
 </main>
-<footer>© <span id="year"></span> Nattawut Khongdeepiean · <span class="th">ออกแบบและสร้างเว็บนี้เอง</span><span class="en">Designed and built by me</span></footer>
+<footer>© <span id="year"></span> Nattawut Khongdeepiean · <span class="th">ทำเว็บไซต์นี้เอง</span><span class="en">Designed and built by me</span></footer>
 <div id="lb"><img alt=""></div>
 
 <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>

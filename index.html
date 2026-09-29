@@ -12,13 +12,13 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232f8cff'/%3E%3Cstop offset='1' stop-color='%233fd2ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='18' fill='url(%23g)'/%3E%3Ctext x='32' y='42' font-family='Inter,Arial' font-weight='800' font-size='30' text-anchor='middle' fill='%23ffffff'%3EN%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Anuphan:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
     --bg:#f4f9ff; --ink:#132241; --muted:rgba(19,34,65,.66); --dim:rgba(19,34,65,.45);
     --glass:rgba(255,255,255,.58); --glass2:rgba(255,255,255,.75); --stroke:rgba(47,140,255,.22);
     --a:#2f8cff; --b:#7b7dff; --c:#3fd2ff; --d:#3ccfa0; --e:#1f6fe0; --onink:#fff;
-    --radius:28px; --font:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Sukhumvit Set","Helvetica Neue","Inter","IBM Plex Sans Thai",system-ui,sans-serif;
+    --radius:28px; --font:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Sukhumvit Set","Inter","Anuphan","Helvetica Neue",system-ui,sans-serif;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
@@ -70,7 +70,9 @@
   main{position:relative;z-index:2}
   section{padding:110px 24px;max-width:1180px;margin:0 auto}
   .eyebrow{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:14px}
-  h1,h2,h3{letter-spacing:-.028em;line-height:1.08;font-weight:700}
+  h1,h2,h3{letter-spacing:-.028em;line-height:1.1;font-weight:700}
+  body[lang-mode="th"] h1,body[lang-mode="th"] h2,body[lang-mode="th"] h3,body[lang-mode="th"] h4,body[lang-mode="th"] .ch-side h3{letter-spacing:0;line-height:1.22}
+  h1 .nw{white-space:nowrap}
   h2{font-size:clamp(32px,4.6vw,56px);font-weight:800;margin-bottom:14px}
   .lead{color:var(--muted);font-size:clamp(16px,1.35vw,19px);max-width:680px}
   .grad{background:linear-gradient(100deg,var(--a),var(--b) 50%,var(--c));-webkit-background-clip:text;background-clip:text;color:transparent}
@@ -83,7 +85,7 @@
 
   /* ---------- hero ---------- */
   #hero{min-height:100vh;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:40px;padding-top:130px}
-  #hero h1{font-size:clamp(38px,5.5vw,76px);font-weight:800}
+  #hero h1{font-size:clamp(34px,4.8vw,68px);font-weight:800;padding-top:.08em}
   #hero .who{margin:22px 0 10px;font-size:clamp(17px,1.5vw,21px);font-weight:600}
   #hero .who small{display:block;color:var(--muted);font-weight:400;font-size:.85em;margin-top:4px}
   .chips{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 30px}
@@ -262,7 +264,7 @@
   <div>
     <div class="eyebrow"><span class="th">ครู · สื่อการศึกษา · EdTech</span><span class="en">Teacher · Educational Media · EdTech</span></div>
     <h1>
-      <span class="th">ครูเทคโนโลยี<br>ที่<span class="grad">ทำสื่อเป็น</span><br>และเขียนโปรแกรมได้</span>
+      <span class="th"><span class="nw">ครูเทคโนโลยี</span><br><span class="nw">ที่<span class="grad">ทำสื่อเป็น</span></span><br><span class="nw">และเขียนโปรแกรมได้</span></span>
       <span class="en">A technology teacher<br>who <span class="grad">makes media</span><br>and can code.</span>
     </h1>
     <div class="who">
@@ -525,7 +527,7 @@
           <h4><span class="th">หนังสั้น "The Routes" — รางวัลบทภาพยนตร์ยอดเยี่ยม ThaiAECT Short Film Festival 2025</span><span class="en">"The Routes" — Best Screenplay, ThaiAECT Short Film Festival 2025</span></h4>
           <p><span class="th">หนังสั้นที่ส่งเข้าประกวดในหัวข้อ "Gateway to Tomorrow's Education" ของสมาคมเทคโนโลยีและสื่อสารการศึกษาแห่งประเทศไทย ผมเป็นผู้กำกับ ถ่ายวิดีโอ และตัดต่อ ได้รับรางวัลบทภาพยนตร์ยอดเยี่ยมเมื่อวันที่ 28 พฤศจิกายน 2568 ในงานประชุมวิชาการโสตฯ-เทคโนฯ สัมพันธ์แห่งประเทศไทย ครั้งที่ 38 และได้ฉายในโรงภาพยนตร์ที่ One Bangkok</span><span class="en">Made for the Thailand Association for Educational Communications and Technology festival themed "Gateway to Tomorrow's Education". Awarded 28 Nov 2025 at the 38th national conference and screened in a cinema at One Bangkok. From a national silver medal in high school to a cinema screen in year three, the story stayed the same: not all routes to the future begin in a classroom.</span></p>
           <div class="gal"><img src="assets/y3/film-onebangkok.jpg" alt="จอ One Bangkok" loading="lazy"><img src="assets/y3/film-best-screenplay.jpg" alt="รับรางวัล" loading="lazy"><img src="assets/y3/film-award-team.jpg" alt="ทีมงาน" loading="lazy"><img src="assets/y3/film-edit1.jpg" alt="ตัดต่อ" loading="lazy"></div>
-          <div class="tags"><span>Directing</span><span>Cinematography</span><span>Premiere Pro</span><span>Screenwriting</span></div>
+          <div class="tags"><span>Directing</span><span>Cinematography</span><span>Premiere Pro</span><span>DaVinci Resolve</span><span>Screenwriting</span></div>
         </div>
       </article>
       <article class="proj big glass reveal tilt" id="p-visura">
@@ -630,7 +632,7 @@
   <h2 class="reveal"><span class="th">เครื่องมือที่ใช้งานได้</span><span class="en">My toolkit</span></h2>
   <p class="lead reveal"><span class="th">เป็นเครื่องมือที่ใช้ทำผลงานด้านบนจริงทุกชิ้น</span><span class="en">These are the tools every project above was actually made with.</span></p>
   <div class="skills">
-    <div class="skill glass reveal tilt"><div class="ic">🎬</div><h3><span class="th">ผลิตวิดีโอ &amp; ถ่ายทอดสด</span><span class="en">Video &amp; live production</span></h3><div class="tags"><span>Premiere Pro</span><span>After Effects</span><span>CapCut</span><span>OBS</span><span>Video switcher</span><span>Audio mixer</span><span>Directing</span></div></div>
+    <div class="skill glass reveal tilt"><div class="ic">🎬</div><h3><span class="th">ผลิตวิดีโอ &amp; ถ่ายทอดสด</span><span class="en">Video &amp; live production</span></h3><div class="tags"><span>Premiere Pro</span><span>DaVinci Resolve</span><span>Final Cut Pro</span><span>After Effects</span><span>CapCut</span><span>OBS</span><span>Video switcher</span><span>Audio mixer</span><span>Directing</span></div></div>
     <div class="skill glass reveal tilt"><div class="ic">📷</div><h3><span class="th">ภาพถ่าย &amp; กราฟิก</span><span class="en">Photography &amp; graphics</span></h3><div class="tags"><span>Sony A7 II</span><span>Macro</span><span>Studio lighting</span><span>Lightroom</span><span>Photoshop</span><span>Illustrator</span><span>Canva</span><span>Procreate</span></div></div>
     <div class="skill glass reveal tilt"><div class="ic">🧑‍🏫</div><h3><span class="th">การสอน &amp; EdTech</span><span class="en">Teaching &amp; EdTech</span></h3><div class="tags"><span><span class="th">ออกแบบแผนการสอน</span><span class="en">Lesson design</span></span><span>Game-based learning</span><span>Google Classroom</span><span>TCASFolio</span><span>Mentimeter</span><span>HeyGen</span><span>Gemini / ChatGPT</span><span>SketchUp</span></div></div>
     <div class="skill glass reveal tilt"><div class="ic">💻</div><h3><span class="th">เว็บ &amp; การพัฒนา</span><span class="en">Web &amp; development</span></h3><div class="tags"><span>React</span><span>Google Apps Script</span><span>WordPress</span><span>Roblox Studio</span><span>ChatGPT API</span><span>LiDAR 3D scan</span><span>AR (web)</span><span>Netlify / Vercel</span></div></div>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>Nattawut Khongdeepiean — Brochure</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Anuphan:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  @page{size:1123px 794px;margin:0}
+  *{box-sizing:border-box;margin:0;padding:0}
+  :root{--ink:#132241;--muted:#4d5b78;--dim:#7c89a3;--a:#2f8cff;--b:#7b7dff;--c:#3fd2ff;--stroke:rgba(47,140,255,.28);--card:rgba(255,255,255,.78)}
+  html,body{width:1123px;background:#fff}
+  body{font-family:"Inter","Anuphan",sans-serif;color:var(--ink);font-size:11.5px;line-height:1.52;-webkit-font-smoothing:antialiased}
+  .page{width:1123px;height:794px;position:relative;overflow:hidden;page-break-after:always;display:grid;grid-template-columns:374px 375px 374px;
+    background:#eef4ff center/cover no-repeat}
+  .page.p1{background-image:url(bg1.jpg)}
+  .page.p2{background-image:url(bg2.jpg)}
+  .blob{display:none!important}
+  .page:last-child{page-break-after:auto}
+  .blob{position:absolute;border-radius:50%;z-index:0}
+  .b1{width:520px;height:520px;left:-160px;top:-200px;background:radial-gradient(circle,rgba(150,205,255,.75),rgba(150,205,255,0) 68%)}
+  .b2{width:560px;height:560px;right:-180px;top:160px;background:radial-gradient(circle,rgba(196,200,255,.7),rgba(196,200,255,0) 68%)}
+  .b3{width:460px;height:460px;left:330px;bottom:-240px;background:radial-gradient(circle,rgba(160,232,255,.7),rgba(160,232,255,0) 68%)}
+  .panel{position:relative;z-index:1;padding:30px 26px 26px;display:flex;flex-direction:column}
+
+  .eyebrow{font-size:9px;font-weight:700;letter-spacing:.3px;color:var(--a);margin-bottom:6px}
+  h1{font-size:30px;font-weight:700;line-height:1.22;letter-spacing:0}
+  h1 .g,.g{background:linear-gradient(100deg,var(--a),var(--b) 55%,var(--c));-webkit-background-clip:text;background-clip:text;color:transparent}
+  h2{font-size:17px;font-weight:700;line-height:1.25;margin-bottom:8px}
+  h3{font-size:12.4px;font-weight:700;line-height:1.3}
+  p{color:var(--muted)}
+  .card{background:rgba(255,255,255,.86);border:1px solid var(--stroke);border-radius:16px;padding:12px 14px}
+  .card + .card{margin-top:10px}
+  .pill{display:inline-block;font-size:8.6px;font-weight:600;padding:3px 9px;border-radius:999px;background:#fff;border:1px solid var(--stroke);color:var(--ink);margin:0 4px 4px 0}
+  .pill.dark{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .stat{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .stat .card{margin:0;padding:10px 12px}
+  .stat b{display:block;font-size:20px;font-weight:800;letter-spacing:-.5px;line-height:1.1}
+  .stat span{font-size:8.8px;color:var(--muted)}
+  ul{margin:5px 0 0 13px;color:var(--muted)}
+  li{margin-bottom:3px}
+  li b,p b{color:var(--ink);font-weight:700}
+  .tag{font-size:8.6px;font-weight:700;letter-spacing:.2px;color:var(--a);margin-bottom:3px}
+  .mini{display:grid;grid-template-columns:86px 1fr;gap:11px;align-items:center}
+  .mini img{width:86px;height:62px;object-fit:cover;border-radius:10px;border:1px solid var(--stroke)}
+  .mini p{font-size:10.5px;line-height:1.42}
+  /* cover */
+  .cover{align-items:center;text-align:center;padding-top:34px}
+  .portrait{width:176px;height:214px;border-radius:26px;overflow:hidden;border:1px solid var(--stroke);box-shadow:0 18px 40px rgba(47,140,255,.25);margin:16px auto 0;position:relative}
+  .portrait img{width:100%;height:100%;object-fit:cover}
+  .orbit{position:relative;width:300px;height:236px;margin:0 auto}
+  .orbit .ring{position:absolute;left:8px;right:8px;top:118px;height:92px;border:5px solid rgba(120,185,255,.55);border-radius:50%}
+  .orbit .portrait{position:absolute;left:62px;top:0;margin:0}
+  .orbit .lg{position:absolute;width:52px;height:52px}
+  .orbit .l1{left:0;top:112px}.orbit .l2{right:0;top:120px}.orbit .l3{left:124px;top:186px}
+  .name{font-size:15px;font-weight:700;margin-top:12px}
+  .sub{font-size:10.5px;color:var(--muted);margin-top:2px;line-height:1.45}
+  .qr{display:grid;grid-template-columns:92px 1fr;gap:12px;align-items:center;text-align:left;margin-top:auto;width:100%}
+  .qr img{width:92px;height:92px;border-radius:10px}
+  .qr b{display:block;font-size:11.6px;line-height:1.3}
+  .qr span{font-size:9.4px;color:var(--muted)}
+  .qr .url{display:inline-block;margin-top:5px;font-size:10.5px;font-weight:700;color:var(--a)}
+  .logos{display:flex;gap:10px;align-items:center;margin-top:10px}
+  .logos img{width:40px;height:40px}
+  .logos span{font-size:8.8px;color:var(--muted);line-height:1.4}
+  .contact .row{display:grid;grid-template-columns:64px 1fr;gap:8px;padding:6px 0;border-top:1px solid rgba(47,140,255,.16);font-size:10.2px}
+  .contact .row:first-child{border-top:0}
+  .contact .row b{font-size:9px;color:var(--dim);font-weight:700;padding-top:1px}
+  .tl{display:grid;grid-template-columns:54px 1fr;gap:10px;padding:8px 0;border-top:1px solid rgba(47,140,255,.16)}
+  .tl:first-of-type{border-top:0}
+  .tl .yr{font-size:9px;font-weight:800;color:var(--a);line-height:1.3}
+  .tl .yr small{display:block;font-weight:600;color:var(--dim);font-size:8.2px}
+  .tl p{font-size:10.6px;line-height:1.5}
+  .quote{font-size:12.2px;font-weight:600;line-height:1.5;color:var(--ink)}
+  .foot{margin-top:auto;font-size:8.2px;color:var(--dim)}
+</style>
+</head>
+<body>
+
+<!-- ============ PAGE 1 : OUTSIDE (left = inside flap · middle = back · right = front cover) ============ -->
+<div class="page p1" data-document-role="page" data-label="ด้านนอก (ปกหน้า · ปกหลัง · พับใน)">
+  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+
+  <!-- inside flap -->
+  <section class="panel">
+    <div class="eyebrow">ผลงานที่อยากให้ดูก่อน</div>
+    <h2>ผลงาน 3 ชิ้น<br>ที่ผม<span class="g">ภูมิใจที่สุด</span></h2>
+
+    <div class="card mini">
+      <img src="film-poster.jpg" alt="" style="object-position:50% 18%">
+      <div><div class="tag">หนังสั้น · ปี 3</div><h3>The Routes</h3><p>ผมเป็นผู้กำกับ ถ่ายวิดีโอ และตัดต่อ ได้รางวัลบทภาพยนตร์ยอดเยี่ยม ThaiAECT Short Film Festival 2025 และได้ฉายในโรงภาพยนตร์ที่ One Bangkok</p></div>
+    </div>
+    <div class="card mini">
+      <img src="roblox-cover.jpg" alt="">
+      <div><div class="tag">วิจัยในชั้นเรียน · ปี 4</div><h3>สอน SketchUp ผ่านโลก Roblox</h3><p>สร้างโลกเสมือนขึ้นเองเพื่อสอนโมเดล 3 มิติ คะแนนทักษะนักเรียน ม.5/11 เพิ่มจากร้อยละ 69 เป็น 93 ผ่านเกณฑ์ครบทั้งห้อง</p></div>
+    </div>
+    <div class="card mini">
+      <img src="visura-web-gallery.jpg" alt="">
+      <div><div class="tag">เว็บนิทรรศการ 3 มิติ · ปี 3</div><h3>Visura</h3><p>ผมเป็นหัวหน้าโครงการ ทำเว็บด้วย WordPress สแกนงานศิลปะเป็นโมเดล 3 มิติด้วย LiDAR และฝัง AI Chatbot</p></div>
+    </div>
+
+    <div class="stat" style="margin-top:12px">
+      <div class="card"><b>272</b><span>นักเรียนที่สอนตอนฝึกสอน 8 ห้อง</span></div>
+      <div class="card"><b>69→93%</b><span>คะแนนทักษะก่อน-หลังวิจัย</span></div>
+      <div class="card"><b>2</b><span>รางวัลหนังสั้น ระดับชาติและสมาคม</span></div>
+      <div class="card"><b>96</b><span>ผู้เข้าอบรม AI ที่ผมเป็นวิทยากร</span></div>
+    </div>
+    <div class="foot">เปิดด้านในเพื่อดูประสบการณ์สอนและผลงานตามปีที่เรียน</div>
+  </section>
+
+  <!-- back cover -->
+  <section class="panel">
+    <div class="eyebrow">ติดต่อ</div>
+    <h2>ติดต่อผม</h2>
+    <p style="margin-bottom:10px">ผมกำลังหางานครูเทคโนโลยี งานสื่อการศึกษา และงาน EdTech จบการศึกษาภายใน 3 ปีครึ่ง และพร้อมเริ่มงานทันทีหลังจบ</p>
+    <div class="card contact">
+      <div class="row"><b>ชื่อ</b><span>ณัฐวุฒิ คงดีเพียร (สตางค์)<br>Nattawut Khongdeepiean</span></div>
+      <div class="row"><b>อีเมล</b><span>satang16530@gmail.com</span></div>
+      <div class="row"><b>Instagram</b><span>@_s_atang.248__</span></div>
+      <div class="row"><b>เว็บไซต์</b><span>nattawut-dotcom.github.io</span></div>
+      <div class="row"><b>เรซูเม่</b><span>nattawut-dotcom.github.io/resume.pdf</span></div>
+    </div>
+
+    <div class="eyebrow" style="margin-top:16px">เครื่องมือที่ใช้งานได้</div>
+    <div>
+      <span class="pill dark">Premiere Pro</span><span class="pill dark">DaVinci Resolve</span><span class="pill dark">Final Cut Pro</span><span class="pill dark">After Effects</span><span class="pill">CapCut</span><span class="pill">OBS</span><span class="pill">Photoshop</span><span class="pill">Illustrator</span><span class="pill">Lightroom</span><span class="pill">Canva</span><span class="pill">Procreate</span><span class="pill">SketchUp</span><span class="pill">Roblox Studio</span><span class="pill">HeyGen</span><span class="pill">Gemini / ChatGPT</span><span class="pill">React</span><span class="pill">Google Apps Script</span><span class="pill">WordPress</span>
+    </div>
+
+    <div class="eyebrow" style="margin-top:14px">การศึกษา</div>
+    <div class="card" style="padding:10px 12px">
+      <h3>ครุศาสตรบัณฑิต สาขาวิชาเทคโนโลยีการศึกษา</h3>
+      <p style="font-size:10.5px">คณะครุศาสตร์ จุฬาลงกรณ์มหาวิทยาลัย · จบภายใน 3 ปีครึ่ง</p>
+      <p style="font-size:10.5px;margin-top:3px">มัธยมศึกษา แผนวิทย์-คณิต โรงเรียนอยุธยาวิทยาลัย</p>
+    </div>
+    <div class="logos" style="margin-top:auto">
+      <img src="chula.png" alt=""><img src="samsen.png" alt=""><img src="ayw.png" alt="">
+      <span>จุฬาลงกรณ์มหาวิทยาลัย<br>โรงเรียนสามเสนวิทยาลัย · โรงเรียนอยุธยาวิทยาลัย</span>
+    </div>
+  </section>
+
+  <!-- front cover -->
+  <section class="panel cover">
+    <div class="eyebrow">ครู · สื่อการศึกษา · EdTech</div>
+    <h1>ครูเทคโนโลยี<br>ที่<span class="g">ทำสื่อเป็น</span><br>และเขียนโปรแกรมได้</h1>
+    <div class="orbit" style="margin-top:16px">
+      <div class="ring"></div>
+      <div class="portrait"><img src="portrait-studio.jpg" alt=""></div>
+      <img class="lg l1" src="chula.png" alt=""><img class="lg l2" src="samsen.png" alt=""><img class="lg l3" src="ayw.png" alt="">
+    </div>
+    <div class="name">ณัฐวุฒิ คงดีเพียร (สตางค์)</div>
+    <div class="sub">นิสิตชั้นปีที่ 4 สาขาวิชาเทคโนโลยีการศึกษา<br>คณะครุศาสตร์ จุฬาลงกรณ์มหาวิทยาลัย</div>
+    <div class="card qr">
+      <img src="qr.png" alt="QR">
+      <div><b>สแกนเพื่อดูผลงานทั้งหมด</b><span>เว็บพอร์ตโฟลิโอ มีวิดีโอ รูปผลงาน และรายงานการฝึกสอนฉบับเต็ม</span><br><span class="url">nattawut-dotcom.github.io</span></div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ PAGE 2 : INSIDE ============ -->
+<div class="page p2" data-document-role="page" data-label="ด้านใน">
+  <div class="blob b1" style="left:auto;right:-140px;top:-220px"></div><div class="blob b2" style="right:auto;left:-200px;top:240px"></div><div class="blob b3" style="left:520px"></div>
+
+  <!-- inside left -->
+  <section class="panel">
+    <div class="eyebrow">เกี่ยวกับผม</div>
+    <h2>เกี่ยวกับผม</h2>
+    <div style="display:grid;grid-template-columns:92px 1fr;gap:12px;align-items:start;margin-bottom:10px">
+      <img src="portrait-camera.jpg" alt="" style="width:92px;height:116px;object-fit:cover;border-radius:16px;border:1px solid var(--stroke)">
+      <p>ผมชื่อ<b>ณัฐวุฒิ คงดีเพียร ชื่อเล่นสตางค์</b> เป็นนิสิตชั้นปีที่ 4 สาขาวิชาเทคโนโลยีการศึกษา คณะครุศาสตร์ จุฬาฯ คุณแม่ผมเป็นครู ผมเห็นท่านนำเทคโนโลยีมาใช้กับนักเรียนจริง จึงอยากเป็นครูที่ใช้เทคโนโลยีเป็น</p>
+    </div>
+    <div class="card">
+      <p class="quote">"นักเรียนไม่ได้ขี้เกียจหรือไม่สนใจ แต่จะทุ่มเทให้กับสิ่งที่เห็นว่ามีประโยชน์กับตัวเองจริง"</p>
+      <p style="font-size:8.8px;margin-top:5px">บทเรียนที่ได้จากการฝึกประสบการณ์วิชาชีพครู ภาคต้น 2569</p>
+    </div>
+    <div class="eyebrow" style="margin-top:14px">สิ่งที่ผมทำได้</div>
+    <div class="card">
+      <h3>การสอนและออกแบบการเรียนรู้</h3>
+      <p style="font-size:10.5px">ออกแบบแผนการจัดการเรียนรู้และรูบริค · Game-based learning · วิจัยปฏิบัติการในชั้นเรียน · PLC · งานครูที่ปรึกษา</p>
+    </div>
+    <div class="card">
+      <h3>ผลิตสื่อ</h3>
+      <p style="font-size:10.5px">กำกับ ถ่าย ตัดต่อวิดีโอ · ถ่ายทอดสดหลายกล้อง · ระบบเสียงงานอีเวนต์ · ถ่ายภาพสตูดิโอและมาโคร · กราฟิกและแอนิเมชัน 2D</p>
+    </div>
+    <div class="card">
+      <h3>เทคโนโลยีและ AI</h3>
+      <p style="font-size:10.5px">เขียนเว็บแอปสำหรับครู (React, Apps Script) · WordPress · Roblox Studio · SketchUp · สแกน 3 มิติด้วย LiDAR · ใช้ AI ทำสื่อการสอน</p>
+    </div>
+    <div class="card">
+      <h3>การจัดการโครงการ</h3>
+      <p style="font-size:10.5px">เขียนโครงการขอทุน · ประสานงานข้ามสถาบัน · ติดต่อขอสปอนเซอร์ · จัดทำรายงานสรุปโครงการ · เป็นวิทยากร</p>
+    </div>
+  </section>
+
+  <!-- inside middle -->
+  <section class="panel">
+    <div class="eyebrow">ปี 4 · ฝึกปฏิบัติการสอน</div>
+    <h2>ฝึกสอนที่<span class="g">โรงเรียนสามเสนวิทยาลัย</span></h2>
+    <p style="margin-bottom:8px">ภาคเรียนที่ 1 ปีการศึกษา 2569 (11 พฤษภาคม – 30 กันยายน) รวม 450 ชั่วโมง ผมสอน 2 รายวิชา 8 ห้อง และเป็นครูที่ปรึกษาชั้น ม.6/4</p>
+    <img src="roblox-cover.jpg" alt="" style="width:100%;height:112px;object-fit:cover;border-radius:14px;border:1px solid var(--stroke);margin-bottom:9px">
+    <div class="card">
+      <div class="tag">วิจัยปฏิบัติการในชั้นเรียน · ม.5/11</div>
+      <h3>การเรียนรู้โดยใช้เกมเป็นฐานผ่าน Roblox เพื่อพัฒนาทักษะ SketchUp</h3>
+      <p style="font-size:10.5px">ผมพบว่านักเรียนสร้างโมเดลไม่ทันในคาบ จึงพัฒนาโลกเสมือน 6 พื้นที่ด้วย Roblox Studio ทดลองใช้ 3 วงจรกับนักเรียน 33 คน คะแนนทักษะเฉลี่ยเพิ่มจาก 6.94 เป็น 9.27 จากคะแนนเต็ม 10 และนักเรียนผ่านเกณฑ์จาก 5 คนเป็น 33 คน</p>
+    </div>
+    <div class="card">
+      <div class="tag">เครื่องมือที่พัฒนาเอง</div>
+      <h3>ระบบเช็คชื่อด้วย QR Code</h3>
+      <p style="font-size:10.5px">เขียนด้วย React และ Google Apps Script ใช้จริงทุกห้อง ทำให้เช็คชื่อทั้งห้องใช้เวลาประมาณ 1 นาที และสรุปสถิติการเข้าเรียนให้อัตโนมัติ</p>
+    </div>
+    <div class="card">
+      <div class="tag">การสอน ม.6 · 199 คน</div>
+      <h3>แฟ้มสะสมผลงานยื่น TCAS และงาน PLC 4 รายวิชา</h3>
+      <p style="font-size:10.5px">พานักเรียน 6 ห้องทำแฟ้มบนระบบ TCASFolio และเว็บพอร์ตโฟลิโอ ร่วมกับครู 3 กลุ่มสาระออกแบบภาระงานชิ้นเดียวที่เก็บคะแนนได้ 4 รายวิชา นักเรียนส่งงาน 193 คนและผ่านเกณฑ์ทุกคน</p>
+    </div>
+    <div class="card">
+      <div class="tag">งานโสตทัศนศึกษาของโรงเรียน</div>
+      <p style="font-size:10.5px">ทำเกม AR และบูธวันวิทยาศาสตร์ ถ่ายและตัดต่อวิดีโอพิธีไหว้ครู และปฏิบัติงานฝ่ายโสตฯ งานประชุมวิชาการ พสวท. ระดับชาติ 3 วัน</p>
+    </div>
+  </section>
+
+  <!-- inside right -->
+  <section class="panel">
+    <div class="eyebrow">ผลงานเรียงตามปีที่เรียน</div>
+    <h2>จากชมรมในโรงเรียน<br>ถึงห้องเรียนที่ได้สอนจริง</h2>
+    <div class="card" style="padding:6px 14px">
+      <div class="tl"><div class="yr">มัธยม<small>2562–65</small></div><p><b>ประธานชมรม AYW TV</b> โรงเรียนอยุธยาวิทยาลัย · กำกับหนังสั้น "ตัวจริง" ได้<b>เหรียญเงินระดับชาติ</b> · เครื่องบินบังคับวิทยุได้เหรียญทองระดับเขต</p></div>
+      <div class="tl"><div class="yr">ปี 1<small>2566</small></div><p>ทีมโสตฯ <b>ค่ายอยากเป็นครู ครั้งที่ 17</b> · กล้องหลักวิดีโอพิธีไหว้ครูของคณะ · สอนนักเรียน ป.6 ทำแอนิเมชันด้วย Procreate</p></div>
+      <div class="tl"><div class="yr">ปี 2<small>2567</small></div><p>ควบคุมการถ่ายทอดสด<b>งานประชุมนานาชาติ OMEP ครั้งที่ 76</b> · รองหัวหน้าโครงการค่ายถ่ายภาพที่ได้รับทุนจากคณะ · ภาพถ่ายได้จัดแสดงในนิทรรศการ Journey Through the Lens</p></div>
+      <div class="tl"><div class="yr">ปี 3<small>2568</small></div><p>หนังสั้น <b>The Routes</b> ได้รางวัลบทภาพยนตร์ยอดเยี่ยม · หัวหน้าโครงการเว็บ <b>Visura</b> · วิทยากรอบรม <b>AI Empowered Educator</b> มีผู้เข้าอบรม 96 คน · ออกแบบกราฟิกงาน Chula Townhall 2026</p></div>
+      <div class="tl"><div class="yr">ปี 4<small>2569</small></div><p><b>ฝึกปฏิบัติการสอน</b>ที่โรงเรียนสามเสนวิทยาลัย สอน 272 คน ทำวิจัยในชั้นเรียน และพัฒนาระบบเช็คชื่อ QR Code</p></div>
+    </div>
+    <div class="eyebrow" style="margin-top:14px">รางวัล</div>
+    <div class="card" style="padding:10px 14px">
+      <ul style="margin-top:0;font-size:10.5px">
+        <li><b>รางวัลบทภาพยนตร์ยอดเยี่ยม</b> ThaiAECT Short Film Festival 2025</li>
+        <li><b>เหรียญเงินระดับชาติ</b> ภาพยนตร์สั้น งานศิลปหัตถกรรมนักเรียน ครั้งที่ 69</li>
+        <li><b>เหรียญทองระดับเขต</b> อากาศยานบังคับวิทยุ ครั้งที่ 70</li>
+        <li><b>ทุนโครงการเสริมประสบการณ์การเรียนรู้สู่โลกกว้าง</b> คณะครุศาสตร์ จุฬาฯ</li>
+      </ul>
+    </div>
+    <div class="foot">ดูวิดีโอ รูปผลงาน และรายงานการฝึกสอนฉบับเต็มได้ที่ nattawut-dotcom.github.io</div>
+  </section>
+</div>
+</body>
+</html>
